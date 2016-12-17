@@ -1,0 +1,68 @@
+c:\users\ahmed\onedrive\documents\visual studio 2015\Updated Gui\Weapon shop\bin\Debug\Weapon shop.exe.config
+c:\users\ahmed\onedrive\documents\visual studio 2015\Updated Gui\Weapon shop\bin\Debug\Weapon shop.exe
+c:\users\ahmed\onedrive\documents\visual studio 2015\Updated Gui\Weapon shop\bin\Debug\Weapon shop.pdb
+c:\users\ahmed\onedrive\documents\visual studio 2015\Updated Gui\Weapon shop\obj\Debug\Weapon shop.csprojResolveAssemblyReference.cache
+c:\users\ahmed\onedrive\documents\visual studio 2015\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Properties.Resources.resources
+c:\users\ahmed\onedrive\documents\visual studio 2015\Updated Gui\Weapon shop\obj\Debug\Weapon shop.csproj.GenerateResource.Cache
+c:\users\ahmed\onedrive\documents\visual studio 2015\Updated Gui\Weapon shop\obj\Debug\Weapon shop.exe
+c:\users\ahmed\onedrive\documents\visual studio 2015\Updated Gui\Weapon shop\obj\Debug\Weapon shop.pdb
+c:\users\ahmed\onedrive\documents\visual studio 2015\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Form_login.resources
+c:\users\ahmed\onedrive\documents\visual studio 2015\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.MainForm.resources
+C:\Users\ahmed\OneDrive\Documents\Visual Studio 2015\Updated Gui\Weapon shop\bin\Debug\CodeVendor.Controls.dll
+C:\Users\ahmed\OneDrive\Documents\Visual Studio 2015\Updated Gui\Weapon shop\bin\Debug\CodeVendor.Controls.pdb
+C:\Users\ahmed\OneDrive\Documents\Visual Studio 2015\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Staff.resources
+C:\Users\ahmed\OneDrive\Documents\Visual Studio 2015\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Product.resources
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\bin\Debug\Weapon shop.exe.config
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\obj\Debug\Weapon shop.exe
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\obj\Debug\Weapon shop.pdb
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\bin\Debug\Weapon shop.exe
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\bin\Debug\Weapon shop.pdb
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\bin\Debug\CodeVendor.Controls.dll
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\bin\Debug\CodeVendor.Controls.pdb
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\obj\Debug\Weapon shop.csprojResolveAssemblyReference.cache
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Customer.resources
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Form_login.resources
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.MainForm.resources
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.POS.resources
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Product.resources
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Properties.Resources.resources
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Staff.resources
+C:\Users\ahmed\OneDrive\Updated Gui\Weapon shop\obj\Debug\Weapon shop.csproj.GenerateResource.Cache
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\bin\Debug\Weapon shop.exe.config
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\obj\Debug\Weapon shop.exe
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\obj\Debug\Weapon shop.pdb
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\bin\Debug\Weapon shop.exe
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\bin\Debug\Weapon shop.pdb
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\bin\Debug\CodeVendor.Controls.dll
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\bin\Debug\CodeVendor.Controls.pdb
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\obj\Debug\Weapon shop.csprojResolveAssemblyReference.cache
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Customer.resources
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Form_Login.resources
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.MainForm.resources
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.POS.resources
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Product.resources
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Properties.Resources.resources
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Staff.resources
+C:\Users\ahmed\Desktop\Updated Gui\Weapon shop\obj\Debug\Weapon shop.csproj.GenerateResource.Cache
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\bin\Debug\Weapon shop.exe.config
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon shop.exe
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon shop.pdb
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\bin\Debug\Weapon shop.exe
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\bin\Debug\Weapon shop.pdb
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\bin\Debug\CodeVendor.Controls.dll
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\bin\Debug\CodeVendor.Controls.pdb
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon shop.csprojResolveAssemblyReference.cache
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Customer.resources
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Form_Login.resources
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.MainForm.resources
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.POS.resources
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Product.resources
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Properties.Resources.resources
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.Staff.resources
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon shop.csproj.GenerateResource.Cache
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.ManagerInfo.resources
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.ManagerLogin.resources
+C:\Users\ahmed\Desktop\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon_shop.SellsInfo.resources
+C:\Users\ahmed\OneDrive\New folder\Balsal\Updated Gui\Weapon shop\bin\Debug\Weapon shop.exe.config
+C:\Users\ahmed\OneDrive\New folder\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon shop.exe
+C:\Users\ahmed\OneDrive\New folder\Balsal\Updated Gui\Weapon shop\obj\Debug\Weapon shop.pdb
