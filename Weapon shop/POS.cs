@@ -92,7 +92,7 @@ namespace Weapon_shop
         public uint InvoiceTotalItems
         {
             set { }
-            get { return Convert.ToUInt32(textTotalItems.Text); }
+            get { return Convert.ToUInt32(textBoxInvoiceTotalItems.Text); }
         }
         public double InvoiceTotalVAT
         {
@@ -102,26 +102,26 @@ namespace Weapon_shop
         public double InvoiceTotalPrice
         {
             set { }
-            get { return Convert.ToDouble(textBox9.Text); }
+            get { return Convert.ToDouble(textBoxInvoiceTotalCost.Text); }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            //Utility_Classes.Product tempProduct = new Presenter_Classes.POSPresenter(this).ReturnProductIfPossible();
-            //if(tempProduct != null)
-            //{
-            //    textPCode.Text = tempProduct.ProductCode;
-            //    textPCode.Enabled = false;
-            //    text_P_Name.Text = tempProduct.ProductName;
-            //    text_P_Name.Enabled = false;
+            WCSA_Entity_Classes.Product tempProduct = new POSPresenter().returnProductDetails(textPCode.Text);
+            if (tempProduct != null)
+            {
+                textPCode.Text = tempProduct.ProductCode;
+                textPCode.Enabled = false;
+                text_P_Name.Text = tempProduct.ProductName;
+                text_P_Name.Enabled = false;
 
-            //    textQuantity.Text = "";
+                textQuantity.Text = "";
 
-            //    textTotalPrice.Text = tempProduct.Price.ToString();
-            //    textTotalPrice.Enabled = false;
+                textTotalPrice.Text = tempProduct.Price.ToString();
+                textTotalPrice.Enabled = false;
 
 
-            //}
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -130,10 +130,14 @@ namespace Weapon_shop
             WCSA_Entity_Classes.Product srcProd = new POSPresenter().returnProductDetails(textPCode.Text);
             if (srcProd != null)
             {
-                textPCode.Text = srcProd.ProductCode;
-                text_P_Name.Text = srcProd.ProductName;
-                textUnitPrice.Text = Convert.ToString(srcProd.Price);
-               // textQuantity.Text = Convert.ToString(srcProd.Quantity);
+                POSPresenter pp = new POSPresenter();
+                // textQuantity.Text = Convert.ToString(srcProd.Quantity);
+                textBoxInvoiceTotalCost.Text = Convert.ToString(pp.addItemToInvoice(textPCode.Text, Convert.ToDouble(textUnitPrice.Text),
+                    Convert.ToUInt32(textQuantity.Text),Convert.ToDouble(textinvoiceVAT.Text)));
+                dataGridView1.DataSource = pp.getInvoiceItemsList();
+                textBoxInvoiceTotalItems.Text = Convert.ToString(pp.getInvoiceItemsList().Count);
+                
+
             }
             else
             {
@@ -149,5 +153,18 @@ namespace Weapon_shop
             cs.Show();
         }
 
+        private void textQuantity_TextChanged(object sender, EventArgs e)
+        {
+            if(textPCode.Text != "")
+                textTotalPrice.Text = Convert.ToString(Convert.ToDouble(textUnitPrice.Text) * Convert.ToUInt32(textQuantity.Text));
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new POSPresenter().newTransaction();
+            textBoxInvoiceTotalCost.Text = "";
+            dataGridView1.DataSource = null;
+            textBoxInvoiceTotalItems.Text = Convert.ToString(0);
+        }
     }
 }

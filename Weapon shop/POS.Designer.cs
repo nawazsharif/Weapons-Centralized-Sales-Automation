@@ -51,9 +51,9 @@
             this.grouper2 = new CodeVendor.Controls.Grouper();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxInvoiceTotalCost = new System.Windows.Forms.TextBox();
             this.textinvoiceVAT = new System.Windows.Forms.TextBox();
-            this.textTotalItems = new System.Windows.Forms.TextBox();
+            this.textBoxInvoiceTotalItems = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -169,6 +169,7 @@
             this.textQuantity.Name = "textQuantity";
             this.textQuantity.Size = new System.Drawing.Size(60, 20);
             this.textQuantity.TabIndex = 10;
+            this.textQuantity.TextChanged += new System.EventHandler(this.textQuantity_TextChanged);
             // 
             // textUnitPrice
             // 
@@ -315,13 +316,12 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(635, 334);
             this.dataGridView1.TabIndex = 0;
-//            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox9);
+            this.groupBox3.Controls.Add(this.textBoxInvoiceTotalCost);
             this.groupBox3.Controls.Add(this.textinvoiceVAT);
-            this.groupBox3.Controls.Add(this.textTotalItems);
+            this.groupBox3.Controls.Add(this.textBoxInvoiceTotalItems);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label10);
@@ -333,12 +333,12 @@
             this.groupBox3.Text = "Information";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // textBox9
+            // textBoxInvoiceTotalCost
             // 
-            this.textBox9.Location = new System.Drawing.Point(91, 95);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(119, 20);
-            this.textBox9.TabIndex = 11;
+            this.textBoxInvoiceTotalCost.Location = new System.Drawing.Point(91, 95);
+            this.textBoxInvoiceTotalCost.Name = "textBoxInvoiceTotalCost";
+            this.textBoxInvoiceTotalCost.Size = new System.Drawing.Size(119, 20);
+            this.textBoxInvoiceTotalCost.TabIndex = 11;
             // 
             // textinvoiceVAT
             // 
@@ -347,12 +347,12 @@
             this.textinvoiceVAT.Size = new System.Drawing.Size(102, 20);
             this.textinvoiceVAT.TabIndex = 10;
             // 
-            // textTotalItems
+            // textBoxInvoiceTotalItems
             // 
-            this.textTotalItems.Location = new System.Drawing.Point(108, 25);
-            this.textTotalItems.Name = "textTotalItems";
-            this.textTotalItems.Size = new System.Drawing.Size(102, 20);
-            this.textTotalItems.TabIndex = 9;
+            this.textBoxInvoiceTotalItems.Location = new System.Drawing.Point(108, 25);
+            this.textBoxInvoiceTotalItems.Name = "textBoxInvoiceTotalItems";
+            this.textBoxInvoiceTotalItems.Size = new System.Drawing.Size(102, 20);
+            this.textBoxInvoiceTotalItems.TabIndex = 9;
             // 
             // label12
             // 
@@ -464,6 +464,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "New Tranjection";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox5
             // 
@@ -555,9 +556,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBoxInvoiceTotalCost;
         private System.Windows.Forms.TextBox textinvoiceVAT;
-        private System.Windows.Forms.TextBox textTotalItems;
+        private System.Windows.Forms.TextBox textBoxInvoiceTotalItems;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;

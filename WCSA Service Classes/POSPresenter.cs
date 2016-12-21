@@ -55,5 +55,11 @@ namespace WCSA_Service_Classes
             totalCost = 0;
         }
 
+        //Method to return the entire purchase list
+        public List<WCSA_Entity_Classes.Product> getInvoiceItemsList()
+        {
+            return purchaseList;
+        }
+
     }
 }
