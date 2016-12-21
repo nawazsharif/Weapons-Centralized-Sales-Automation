@@ -117,8 +117,10 @@ namespace Weapon_shop
 
                 textQuantity.Text = "";
 
-                textTotalPrice.Text = tempProduct.Price.ToString();
+                //textTotalPrice.Text = tempProduct.Price.ToString();
                 textTotalPrice.Enabled = false;
+
+                textUnitPrice.Text = Convert.ToString(tempProduct.Price);
 
 
             }

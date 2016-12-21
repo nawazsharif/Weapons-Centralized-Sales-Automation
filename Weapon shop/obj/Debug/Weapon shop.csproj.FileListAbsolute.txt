@@ -69,3 +69,28 @@ C:\Users\ahmed\OneDrive\New folder\Balsal\Updated Gui\Weapon shop\obj\Debug\Weap
 C:\Users\ahmed\OneDrive\Temporary Project Folder\Updated Gui\Weapon shop\bin\Debug\Weapon shop.exe.config
 C:\Users\ahmed\OneDrive\Temporary Project Folder\Updated Gui\Weapon shop\obj\Debug\Weapon shop.exe
 C:\Users\ahmed\OneDrive\Temporary Project Folder\Updated Gui\Weapon shop\obj\Debug\Weapon shop.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\Weapon shop.exe.config
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon shop.exe
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon shop.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\Weapon shop.exe
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\Weapon shop.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\CodeVendor.Controls.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\WCSA Entity Classes.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\WCSA Service Classes.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\WCSA Data Source Layer.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\CodeVendor.Controls.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\WCSA Entity Classes.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\WCSA Service Classes.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\WCSA Data Source Layer.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon shop.csprojResolveAssemblyReference.cache
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.Customer.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.Form_Login.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.MainForm.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.ManagerInfo.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.ManagerLogin.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.POS.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.Product.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.Properties.Resources.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.SellsInfo.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.Staff.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon shop.csproj.GenerateResource.Cache

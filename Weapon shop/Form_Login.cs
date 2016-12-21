@@ -39,6 +39,7 @@ namespace Weapon_shop
 
             if (new WCSA_Service_Classes.LoginPagePresenter().checkIfAuthorized(textBoxUserName.Text,textBoxPassword.Text))
             {
+                //MessageBox.Show("Username : " + textBoxUserName.Text + "\nPassword : " + textBoxPassword.Text);
                 this.Hide();
                 MainForm mf = new MainForm(this);
                 MessageBox.Show("Login Successfull");
