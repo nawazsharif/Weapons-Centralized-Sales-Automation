@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Weapon_shop.Utility_Classes
+namespace WCSA_Entity_Classes
 {
     public class Staff : Person
     {
@@ -33,7 +33,7 @@ namespace Weapon_shop.Utility_Classes
             }
         }
 
-        public Staff(string name, string mail, string phone, string address, string nickName,string password)
+        public Staff(string name, string mail, string phone, string address, string nickName, string password)
         {
             this.name = name;
             this.mail = mail;

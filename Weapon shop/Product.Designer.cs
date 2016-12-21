@@ -38,13 +38,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnOk = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textPrice = new System.Windows.Forms.TextBox();
-            this.textQuantity = new System.Windows.Forms.TextBox();
-            this.textName = new System.Windows.Forms.TextBox();
-            this.textCode = new System.Windows.Forms.TextBox();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
+            this.textBoxQuantity = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxCode = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btn_P_add = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textSearch = new System.Windows.Forms.TextBox();
             this.btn_P_Search = new System.Windows.Forms.Button();
-            this.btnOk = new System.Windows.Forms.Button();
             this.grouper1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -175,10 +175,10 @@
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.pictureBox2);
-            this.groupBox2.Controls.Add(this.textPrice);
-            this.groupBox2.Controls.Add(this.textQuantity);
-            this.groupBox2.Controls.Add(this.textName);
-            this.groupBox2.Controls.Add(this.textCode);
+            this.groupBox2.Controls.Add(this.textBoxPrice);
+            this.groupBox2.Controls.Add(this.textBoxQuantity);
+            this.groupBox2.Controls.Add(this.textBoxName);
+            this.groupBox2.Controls.Add(this.textBoxCode);
             this.groupBox2.Controls.Add(this.btnCancel);
             this.groupBox2.Controls.Add(this.btn_P_add);
             this.groupBox2.Controls.Add(this.label6);
@@ -192,6 +192,17 @@
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add new product";
+            // 
+            // btnOk
+            // 
+            this.btnOk.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnOk.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOk.Location = new System.Drawing.Point(109, 264);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(90, 57);
+            this.btnOk.TabIndex = 13;
+            this.btnOk.Text = "Ok";
+            this.btnOk.UseVisualStyleBackColor = false;
             // 
             // textBox5
             // 
@@ -218,35 +229,35 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // textPrice
+            // textBoxPrice
             // 
-            this.textPrice.Location = new System.Drawing.Point(86, 86);
-            this.textPrice.Name = "textPrice";
-            this.textPrice.Size = new System.Drawing.Size(244, 20);
-            this.textPrice.TabIndex = 9;
-            this.textPrice.TextChanged += new System.EventHandler(this.textPrice_TextChanged);
+            this.textBoxPrice.Location = new System.Drawing.Point(86, 86);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(244, 20);
+            this.textBoxPrice.TabIndex = 9;
+            this.textBoxPrice.TextChanged += new System.EventHandler(this.textPrice_TextChanged);
             // 
-            // textQuantity
+            // textBoxQuantity
             // 
-            this.textQuantity.Location = new System.Drawing.Point(86, 114);
-            this.textQuantity.Name = "textQuantity";
-            this.textQuantity.Size = new System.Drawing.Size(244, 20);
-            this.textQuantity.TabIndex = 9;
+            this.textBoxQuantity.Location = new System.Drawing.Point(86, 114);
+            this.textBoxQuantity.Name = "textBoxQuantity";
+            this.textBoxQuantity.Size = new System.Drawing.Size(244, 20);
+            this.textBoxQuantity.TabIndex = 9;
             // 
-            // textName
+            // textBoxName
             // 
-            this.textName.Location = new System.Drawing.Point(86, 57);
-            this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(244, 20);
-            this.textName.TabIndex = 8;
+            this.textBoxName.Location = new System.Drawing.Point(86, 57);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(244, 20);
+            this.textBoxName.TabIndex = 8;
             // 
-            // textCode
+            // textBoxCode
             // 
-            this.textCode.Location = new System.Drawing.Point(86, 29);
-            this.textCode.Name = "textCode";
-            this.textCode.Size = new System.Drawing.Size(244, 20);
-            this.textCode.TabIndex = 7;
-            this.textCode.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBoxCode.Location = new System.Drawing.Point(86, 29);
+            this.textBoxCode.Name = "textBoxCode";
+            this.textBoxCode.Size = new System.Drawing.Size(244, 20);
+            this.textBoxCode.TabIndex = 7;
+            this.textBoxCode.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnCancel
             // 
@@ -325,9 +336,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 223);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 233);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(882, 284);
+            this.dataGridView1.Size = new System.Drawing.Size(882, 274);
             this.dataGridView1.TabIndex = 13;
             // 
             // textSearch
@@ -349,17 +360,6 @@
             this.btn_P_Search.Text = "Search";
             this.btn_P_Search.UseVisualStyleBackColor = false;
             this.btn_P_Search.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // btnOk
-            // 
-            this.btnOk.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnOk.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.Location = new System.Drawing.Point(109, 264);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(90, 57);
-            this.btnOk.TabIndex = 13;
-            this.btnOk.Text = "Ok";
-            this.btnOk.UseVisualStyleBackColor = false;
             // 
             // Product
             // 
@@ -397,10 +397,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textPrice;
-        private System.Windows.Forms.TextBox textQuantity;
-        private System.Windows.Forms.TextBox textName;
-        private System.Windows.Forms.TextBox textCode;
+        private System.Windows.Forms.TextBox textBoxPrice;
+        private System.Windows.Forms.TextBox textBoxQuantity;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxCode;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btn_P_add;
         private System.Windows.Forms.Label label6;

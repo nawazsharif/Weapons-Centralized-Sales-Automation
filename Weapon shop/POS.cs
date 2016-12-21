@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WCSA_Service_Classes;
+using WCSA_Entity_Classes;
 
 namespace Weapon_shop
 {
@@ -125,7 +127,7 @@ namespace Weapon_shop
         private void button1_Click(object sender, EventArgs e)
         {
             //new Presenter_Classes.POSPresenter(this).AddToPurchaseList();
-            Utility_Classes.Product srcProd = new Presenter_Classes.POSPresenter(this).checkProductDetails(textPCode.Text);
+            WCSA_Entity_Classes.Product srcProd = new POSPresenter().returnProductDetails(textPCode.Text);
             if (srcProd != null)
             {
                 textPCode.Text = srcProd.ProductCode;
@@ -146,5 +148,6 @@ namespace Weapon_shop
             Customer cs = new Customer();
             cs.Show();
         }
+
     }
 }

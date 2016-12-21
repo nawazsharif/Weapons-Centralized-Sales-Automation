@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WCSA_Service_Classes;
+using WCSA_Entity_Classes;
 
 namespace Weapon_shop
 {
@@ -77,14 +79,14 @@ namespace Weapon_shop
                 btnsearch.Hide();
                 groupBox2.Show();
                 //btnOk.Hide();
-                Utility_Classes.Staff srcStaf = new Presenter_Classes.StaffInfoPresenter(this).checkStaffDetails(textBox_search.Text);
-                textBox1.Text = srcStaf.Name;
-                textBox1.Enabled = false;
-                textBox2.Text = srcStaf.Mail;
-                textBox3.Text = srcStaf.Phone;
-                textBox4.Text = srcStaf.Address;
-                textBox5.Text = srcStaf.NickName;
-                textPassword.Text = srcStaf.Password;
+                WCSA_Entity_Classes.Staff srcStaf = new StaffInfoPresenter().checkStaffDetails(textBox_search.Text);
+                textBoxName.Text = srcStaf.Name;
+                textBoxName.Enabled = false;
+                textBoxMail.Text = srcStaf.Mail;
+                textBoxAddress.Text = srcStaf.Phone;
+                textBoxPhone.Text = srcStaf.Address;
+                textBoxNickName.Text = srcStaf.NickName;
+                textBoxPassword.Text = srcStaf.Password;
 
             }
             else
@@ -94,14 +96,14 @@ namespace Weapon_shop
                 groupBox2.Show();
                 btn_staff_add.Hide();
                 btnOk.Show();
-                Utility_Classes.Staff srcStaf = new Presenter_Classes.StaffInfoPresenter(this).checkStaffDetails(textBox_search.Text);
-                textBox1.Text = srcStaf.Name;
-                textBox1.Enabled = false;
-                textBox2.Text = srcStaf.Mail;
-                textBox3.Text = srcStaf.Phone;
-                textBox4.Text = srcStaf.Address;
-                textBox5.Text = srcStaf.NickName;
-                textPassword.Text = srcStaf.Password;
+                WCSA_Entity_Classes.Staff srcStaf = new StaffInfoPresenter().checkStaffDetails(textBox_search.Text);
+                textBoxName.Text = srcStaf.Name;
+                textBoxName.Enabled = false;
+                textBoxMail.Text = srcStaf.Mail;
+                textBoxAddress.Text = srcStaf.Phone;
+                textBoxPhone.Text = srcStaf.Address;
+                textBoxNickName.Text = srcStaf.NickName;
+                textBoxPassword.Text = srcStaf.Password;
             }
         }
 
@@ -113,7 +115,7 @@ namespace Weapon_shop
             dataGridView1.Show();
             textBox_search.Show();
             btnsearch.Show();
-            dataGridView1.DataSource = new Weapon_shop.Presenter_Classes.StaffInfoPresenter(this).fetchStaffList();
+            dataGridView1.DataSource = new StaffInfoPresenter().fetchStaffList();
 
             //groupBox2.Hide();
 
@@ -123,7 +125,8 @@ namespace Weapon_shop
         {
             //List<Utility_Classes.Staff> staffList = new List<Utility_Classes.Staff>() {
             //new Utility_Classes.Staff(StaffName,StaffMail, StaffPhone,StaffAddress, StaffNickname,StaffPassword)};
-                new Weapon_shop.Presenter_Classes.StaffInfoPresenter(this).Add();
+                new StaffInfoPresenter().Add(textBoxName.Text,textBoxMail.Text, textBoxPhone.Text, 
+                                        textBoxAddress.Text, textBoxNickName.Text, textBoxPassword.Text);
                 MessageBox.Show("Successfull");
                 this.Hide();
             
@@ -147,37 +150,37 @@ namespace Weapon_shop
         public string StaffName
         {
             set { }
-            get { return textBox1.Text; }
+            get { return textBoxName.Text; }
         }
         public string StaffMail
         {
             set { }
-            get { return textBox2.Text; }
+            get { return textBoxMail.Text; }
         }
         public string StaffPhone
         {
             set { }
-            get { return textBox3.Text; }
+            get { return textBoxAddress.Text; }
         }
         public string StaffAddress
         {
             set { }
-            get { return textBox4.Text; }
+            get { return textBoxPhone.Text; }
         }
         public string StaffNickname
         {
             set { }
-            get { return textBox5.Text; }
+            get { return textBoxNickName.Text; }
         }
         public string StaffPassword
         {
             set { }
-            get { return textPassword.Text; }
+            get { return textBoxPassword.Text; }
         }
         public string ConfirmPassword
         {
             set { }
-            get { return text_C_Password.Text; }
+            get { return textBoxConfirmPassword.Text; }
         }
 
         private void Staff_Load(object sender, EventArgs e)
@@ -187,7 +190,7 @@ namespace Weapon_shop
 
         private void text_C_Password_TextChanged(object sender, EventArgs e)
         {
-            if (textPassword.Text == text_C_Password.Text)
+            if (textBoxPassword.Text == textBoxConfirmPassword.Text)
             {
                 label8.Text = "Password Matched";
             }
@@ -204,7 +207,8 @@ namespace Weapon_shop
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            new Presenter_Classes.StaffInfoPresenter(this).modifyStaffDetails();
+            new StaffInfoPresenter().modifyStaffDetails(textBoxName.Text, textBoxMail.Text, textBoxPhone.Text,
+                                        textBoxAddress.Text, textBoxNickName.Text, textBoxPassword.Text);
             MessageBox.Show("Edit Successfull");
         }
     }

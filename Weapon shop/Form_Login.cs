@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WCSA_Service_Classes;
 
 namespace Weapon_shop
 {
@@ -35,14 +36,14 @@ namespace Weapon_shop
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
-            if (new Weapon_shop.Presenter_Classes.LoginPagePresenter(this).checkIfAuthorized())
+
+            if (new WCSA_Service_Classes.LoginPagePresenter().checkIfAuthorized(textBoxUserName.Text,textBoxPassword.Text))
             {
                 this.Hide();
                 MainForm mf = new MainForm(this);
                 MessageBox.Show("Login Successfull");
-                this.textBox1.Text = "";
-                this.textBox2.Text = "";
+                this.textBoxUserName.Text = "";
+                this.textBoxPassword.Text = "";
                 mf.Show();
                 
                 //MessageBox.Show(textBox1.Text);
@@ -61,12 +62,12 @@ namespace Weapon_shop
         public string UserName
         {
             set { }
-            get { return textBox1.Text; }
+            get { return textBoxUserName.Text; }
         }
         public string Password
         {
             set { }
-            get { return textBox2.Text; }
+            get { return textBoxPassword.Text; }
         }
     }
 }

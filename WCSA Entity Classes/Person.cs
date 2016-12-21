@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Weapon_shop.Utility_Classes
+namespace WCSA_Entity_Classes
 {
     public abstract class Person
     {

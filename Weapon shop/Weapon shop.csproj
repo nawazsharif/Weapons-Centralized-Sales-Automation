@@ -52,11 +52,6 @@
     <Compile Include="Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data Source\CustomerDataSource.cs" />
-    <Compile Include="Data Source\ICommonFunctionalities.cs" />
-    <Compile Include="Data Source\ProuctDataSource.cs" />
-    <Compile Include="Data Source\StaffDataSource.cs" />
-    <Compile Include="Data Source\SupplierDatasource.cs" />
     <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,10 +82,6 @@
     <Compile Include="POS.Designer.cs">
       <DependentUpon>POS.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presenter Classes\LoginPagePresenter.cs" />
-    <Compile Include="Presenter Classes\POSPresenter.cs" />
-    <Compile Include="Presenter Classes\ProductPresenter.cs" />
-    <Compile Include="Presenter Classes\StaffInfoPresenter.cs" />
     <Compile Include="Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,11 +102,6 @@
     <Compile Include="Staff.Designer.cs">
       <DependentUpon>Staff.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utility Classes\Customer.cs" />
-    <Compile Include="Utility Classes\Person.cs" />
-    <Compile Include="Utility Classes\Product.cs" />
-    <Compile Include="Utility Classes\Staff.cs" />
-    <Compile Include="Utility Classes\Supplier.cs" />
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,8 +157,15 @@
       <Project>{d5d88eb0-23b9-46ce-b23c-c6245ecf023c}</Project>
       <Name>CodeVendor.Controls</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WCSA Entity Classes\WCSA Entity Layer.csproj">
+      <Project>{227cdd07-1c1a-4179-a53e-658297f5dc04}</Project>
+      <Name>WCSA Entity Layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WCSA Service Classes\WCSA Service Layer.csproj">
+      <Project>{49c1b352-8665-45a0-ac42-f3ffdc8cdc96}</Project>
+      <Name>WCSA Service Layer</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
 
-namespace Weapon_shop.Utility_Classes
+namespace WCSA_Entity_Classes
 {
     public class Product
     {
@@ -13,17 +15,8 @@ namespace Weapon_shop.Utility_Classes
         string productName;
         double price;
         uint quantity;
-        Image picture;
-        string searchCode;
 
-        public Product(string productCode, string productName, double price, uint quantity, Image picture)
-        {
-            this.productCode = productCode;
-            this.productName = productName;
-            this.price = price;
-            this.quantity = quantity;
-            this.picture = picture;
-        }
+        string searchCode;
 
         public Product(string productCode, string productName, double price, uint quantity)
         {
@@ -31,7 +24,6 @@ namespace Weapon_shop.Utility_Classes
             this.productName = productName;
             this.price = price;
             this.quantity = quantity;
-            this.picture = null;
         }
 
         public Product()
@@ -40,14 +32,13 @@ namespace Weapon_shop.Utility_Classes
             this.productName = null;
             this.price = 0;
             this.quantity = 0;
-            this.picture = null;
         }
 
         public string ProductCode
         {
             set
             {
-             
+
             }
             get { return productCode; }
         }
@@ -65,13 +56,13 @@ namespace Weapon_shop.Utility_Classes
             {
                 //price = value;
             }
-            get { return price ; }
+            get { return price; }
         }
         public uint Quantity
         {
             set
             {
-               // quantity = value;
+                // quantity = value;
             }
             get { return quantity; }
         }
@@ -83,9 +74,6 @@ namespace Weapon_shop.Utility_Classes
             }
             get { return searchCode; }
         }
-
-
-
 
     }
 }

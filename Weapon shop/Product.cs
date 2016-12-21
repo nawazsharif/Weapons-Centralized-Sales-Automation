@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WCSA_Service_Classes;
+using WCSA_Entity_Classes;
 
 namespace Weapon_shop
 {
@@ -71,7 +73,7 @@ namespace Weapon_shop
                 btn_P_Search.Show();
                 groupBox2.Hide();
                 dataGridView1.Show();
-                dataGridView1.DataSource = new Weapon_shop.Presenter_Classes.ProductPresenter(this).fetchProductList() ;
+                dataGridView1.DataSource = new ProductPresenter().fetchProductList() ;
 
             }
             else if (chk == 0)
@@ -81,11 +83,11 @@ namespace Weapon_shop
                 btn_P_Search.Hide();
                 groupBox2.Show();
                 btn_P_add.Show();
-                Utility_Classes.Product srcProd = new Presenter_Classes.ProductPresenter(this).checkProductDetails(textSearch.Text);
-                textCode.Text = srcProd.ProductCode;
-                textName.Text = srcProd.ProductName;
-                textPrice.Text = Convert.ToString(srcProd.Price);
-                textQuantity.Text = Convert.ToString(srcProd.Quantity);
+                WCSA_Entity_Classes.Product srcProd = new ProductPresenter().checkProductDetails(textSearch.Text);
+                textBoxCode.Text = srcProd.ProductCode;
+                textBoxName.Text = srcProd.ProductName;
+                textBoxPrice.Text = Convert.ToString(srcProd.Price);
+                textBoxQuantity.Text = Convert.ToString(srcProd.Quantity);
 
             }
             else
@@ -96,13 +98,13 @@ namespace Weapon_shop
                 groupBox2.Show();
                 btn_P_add.Hide();
                 btnOk.Show();
-                Utility_Classes.Product srcProd = new Presenter_Classes.ProductPresenter(this).checkProductDetails(textSearch.Text);
+                WCSA_Entity_Classes.Product srcProd = new ProductPresenter().checkProductDetails(textSearch.Text);
                 if(srcProd != null)
                 {
-                    textCode.Text = srcProd.ProductCode;
-                    textName.Text = srcProd.ProductName;
-                    textPrice.Text = Convert.ToString(srcProd.Price);
-                    textQuantity.Text = Convert.ToString(srcProd.Quantity);
+                    textBoxCode.Text = srcProd.ProductCode;
+                    textBoxName.Text = srcProd.ProductName;
+                    textBoxPrice.Text = Convert.ToString(srcProd.Price);
+                    textBoxQuantity.Text = Convert.ToString(srcProd.Quantity);
                 }
                 else
                 {
@@ -138,7 +140,7 @@ namespace Weapon_shop
             textSearch.Show();
             btn_P_Search.Show();
             dataGridView1.DataSource = null;
-            List<Utility_Classes.Product> pl = new Weapon_shop.Presenter_Classes.ProductPresenter(this).fetchProductList();
+            List<WCSA_Entity_Classes.Product> pl = new ProductPresenter().fetchProductList();
             dataGridView1.DataSource = pl;
 
             dataGridView1.Show();
@@ -154,9 +156,9 @@ namespace Weapon_shop
         {
             set
             {
-                code = textCode.Text;
+                code = textBoxCode.Text;
             }
-            get { return textCode.Text; }
+            get { return textBoxCode.Text; }
         }
         public string ProductName
         {
@@ -164,7 +166,7 @@ namespace Weapon_shop
             {
                 //name = value;
             }
-            get { return textName.Text; }
+            get { return textBoxName.Text; }
         }
         public double Price
         {
@@ -172,8 +174,8 @@ namespace Weapon_shop
             {
                    price = value;
             }
-            get {if (textPrice.Text == "") return 0;
-                else return Convert.ToDouble(textPrice.Text); }
+            get {if (textBoxPrice.Text == "") return 0;
+                else return Convert.ToDouble(textBoxPrice.Text); }
         }
         public uint Quantity
         {
@@ -181,8 +183,8 @@ namespace Weapon_shop
             {
                 quantity = value;
             }
-            get {if (textQuantity.Text == "") return 0;
-                else return Convert.ToUInt32(textQuantity.Text); }
+            get {if (textBoxQuantity.Text == "") return 0;
+                else return Convert.ToUInt32(textBoxQuantity.Text); }
         }
 
         private void Product_Load_1(object sender, EventArgs e)
@@ -208,7 +210,8 @@ namespace Weapon_shop
 
         private void btn_staff_add_Click(object sender, EventArgs e)
         {
-            new Weapon_shop.Presenter_Classes.ProductPresenter(this).Add();
+            new ProductPresenter().Add(textBoxCode.Text,textBoxName.Text,Convert.ToDouble(textBoxPrice.Text),
+                Convert.ToUInt32(textBoxQuantity.Text));
             MessageBox.Show("Successfull");
         }
 
