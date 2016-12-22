@@ -69,3 +69,6 @@ C:\Users\ahmed\OneDrive\New folder\Balsal\Updated Gui\Weapon shop\obj\Debug\Weap
 C:\Users\ahmed\OneDrive\Temporary Project Folder\Updated Gui\Weapon shop\bin\Debug\Weapon shop.exe.config
 C:\Users\ahmed\OneDrive\Temporary Project Folder\Updated Gui\Weapon shop\obj\Debug\Weapon shop.exe
 C:\Users\ahmed\OneDrive\Temporary Project Folder\Updated Gui\Weapon shop\obj\Debug\Weapon shop.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\Weapon shop.exe.config
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon shop.exe
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon shop.pdb
