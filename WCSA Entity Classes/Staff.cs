@@ -39,7 +39,7 @@ namespace WCSA_Entity_Classes
             this.mail = mail;
             this.phone = phone;
             this.address = address;
-            this.nickName = nickName;
+            this.nickName = name;
             this.password = password;
 
         }
