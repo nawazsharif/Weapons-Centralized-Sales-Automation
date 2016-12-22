@@ -21,8 +21,17 @@ namespace Weapon_shop
             btnsearch.Hide();
             groupBox2.Hide();
             dataGridView1.Hide();
-            
-
+        }
+        public void refresh()
+        {
+            textBox_search.Text="";
+            textBoxName.Text= "";
+            textBoxAddress.Text="";
+            textBoxMail.Text="";
+            textBoxPhone.Text="";
+            textBoxNickName.Text="";
+            textBoxPassword.Text="";
+            textBoxConfirmPassword.Text = "";
         }
         public Staff()
         {
@@ -44,9 +53,12 @@ namespace Weapon_shop
         private void button1_Click(object sender, EventArgs e)
         {
             disable() ;
+            refresh();
+            btn_staff_add.Show();
             chk = 0;
             groupBox2.Show();
             btnOk.Hide();
+            
             
         }
 
@@ -60,6 +72,7 @@ namespace Weapon_shop
 
         private void btnsearch_Click(object sender, EventArgs e)
         {
+            //Show all mathood
             disable();
             // MessageBox.Show(Convert.ToString(chk));
 
@@ -69,41 +82,69 @@ namespace Weapon_shop
                 textBox_search.Show();
                 btnsearch.Show();
                 groupBox2.Hide();
+                WCSA_Entity_Classes.Staff srcStaf = new StaffInfoPresenter().checkStaffDetails(textBox_search.Text);
                 dataGridView1.Show();
+                groupBox2.Refresh();
 
 
             }
+
+            //Add Mathode
             else if (chk == 0)
             {
                 textBox_search.Hide();
                 btnsearch.Hide();
                 groupBox2.Show();
-                //btnOk.Hide();
-                WCSA_Entity_Classes.Staff srcStaf = new StaffInfoPresenter().checkStaffDetails(textBox_search.Text);
-                textBoxName.Text = srcStaf.Name;
-                textBoxName.Enabled = false;
-                textBoxMail.Text = srcStaf.Mail;
-                textBoxAddress.Text = srcStaf.Phone;
-                textBoxPhone.Text = srcStaf.Address;
-                textBoxNickName.Text = srcStaf.NickName;
-                textBoxPassword.Text = srcStaf.Password;
+                //WCSA_Entity_Classes.Staff srcStaf = new StaffInfoPresenter().checkStaffDetails(textBox_search.Text);
+                //textBoxName.Text = srcStaf.Name;
+                ////textBoxName.Enabled = false;
+                //textBoxMail.Text = srcStaf.Mail;
+                //textBoxAddress.Text = srcStaf.Phone;
+                //textBoxPhone.Text = srcStaf.Address;
+                //textBoxNickName.Text = srcStaf.NickName;
+                //textBoxPassword.Text = srcStaf.Password;
 
             }
+            // Update Mathood
             else
             {
-                textBox_search.Hide();
-                btnsearch.Hide();
-                groupBox2.Show();
-                btn_staff_add.Hide();
-                btnOk.Show();
-                WCSA_Entity_Classes.Staff srcStaf = new StaffInfoPresenter().checkStaffDetails(textBox_search.Text);
-                textBoxName.Text = srcStaf.Name;
-                textBoxName.Enabled = false;
-                textBoxMail.Text = srcStaf.Mail;
-                textBoxAddress.Text = srcStaf.Phone;
-                textBoxPhone.Text = srcStaf.Address;
-                textBoxNickName.Text = srcStaf.NickName;
-                textBoxPassword.Text = srcStaf.Password;
+                
+                if (textBox_search.Text == "")
+                {
+                    MessageBox.Show("Incert Staff Name");
+                    textBox_search.Show();
+                    btnsearch.Show();
+                }
+                else
+                {
+                    textBox_search.Hide();
+                    btnsearch.Hide();
+                    groupBox2.Show();
+                    btn_staff_add.Hide();
+                    btnOk.Show();
+
+                    WCSA_Entity_Classes.Staff srcStaf = new StaffInfoPresenter().checkStaffDetails(textBox_search.Text);
+                    if (srcStaf!=null)
+                    {
+                        textBoxName.Text = srcStaf.Name;
+                        textBoxName.Enabled = false;
+                        textBoxMail.Text = srcStaf.Mail;
+                        textBoxAddress.Text = srcStaf.Phone;
+                        textBoxPhone.Text = srcStaf.Address;
+                        textBoxNickName.Text = srcStaf.NickName;
+                        textBoxPassword.Text = srcStaf.Password;
+                    }
+                    if(srcStaf == null)
+                    {
+                        groupBox2.Hide();
+                        textBox_search.Show();
+                        btnsearch.Show();
+                        MessageBox.Show("Not found");
+                        
+                    }
+                    
+                }
+                //groupBox2.Refresh();
             }
         }
 
@@ -123,12 +164,19 @@ namespace Weapon_shop
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //List<Utility_Classes.Staff> staffList = new List<Utility_Classes.Staff>() {
-            //new Utility_Classes.Staff(StaffName,StaffMail, StaffPhone,StaffAddress, StaffNickname,StaffPassword)};
-                new StaffInfoPresenter().Add(textBoxName.Text,textBoxMail.Text, textBoxPhone.Text, 
-                                        textBoxAddress.Text, textBoxNickName.Text, textBoxPassword.Text);
+                // Cheak password matched or not then Add at list
+            if (str == "Matched")
+            {
+                new StaffInfoPresenter().Add(textBoxName.Text, textBoxMail.Text, textBoxPhone.Text,textBoxAddress.Text, textBoxNickName.Text , textBoxPassword.Text);
                 MessageBox.Show("Successfull");
-                this.Hide();
+                groupBox2.Hide();
+                str = "";
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+                
             
             
         }
@@ -187,16 +235,19 @@ namespace Weapon_shop
         {
 
         }
-
+        public string str = "";
         private void text_C_Password_TextChanged(object sender, EventArgs e)
         {
             if (textBoxPassword.Text == textBoxConfirmPassword.Text)
             {
                 label8.Text = "Password Matched";
+                str = "Matched";
+
             }
             else
             {
                 label8.Text = "Password Not Matched";
+                str = "";
             }
         }
 
