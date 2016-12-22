@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace Weapon_shop
 {
-    public partial class ManagerInfo : Form
+    public partial class BankAccountForm : Form
     {
-        public ManagerInfo()
+        public BankAccountForm()
         {
             InitializeComponent();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            SupplierInfoForm sinfo = new SupplierInfoForm(this);
-            this.Hide();
-            sinfo.Show();
-            
         }
     }
 }

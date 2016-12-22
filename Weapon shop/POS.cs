@@ -14,6 +14,7 @@ namespace Weapon_shop
 {
     public partial class POS : Form
     {
+        public string customernid;
         public uint quantity;
         Product reference;
         public POS()
@@ -117,8 +118,10 @@ namespace Weapon_shop
 
                 textQuantity.Text = "";
 
-                textTotalPrice.Text = tempProduct.Price.ToString();
+                //textTotalPrice.Text = tempProduct.Price.ToString();
                 textTotalPrice.Enabled = false;
+
+                textUnitPrice.Text = Convert.ToString(tempProduct.Price);
 
 
             }
@@ -149,7 +152,7 @@ namespace Weapon_shop
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Customer cs = new Customer();
+           AddCustomerForm cs = new AddCustomerForm(this);
             cs.Show();
         }
 
@@ -165,6 +168,20 @@ namespace Weapon_shop
             textBoxInvoiceTotalCost.Text = "";
             dataGridView1.DataSource = null;
             textBoxInvoiceTotalItems.Text = Convert.ToString(0);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (customernid == null)
+            {
+                MessageBox.Show("Please Fillup Customer Info");
+                
+            }
+            else
+            {
+                MessageBox.Show("Successfull");
+                customernid = null;
+            }
         }
     }
 }

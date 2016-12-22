@@ -17,6 +17,7 @@ namespace WCSA_Service_Classes
         public bool checkIfAuthorized(string username , string password)
         {
             StaffDataSource dataSource = new StaffDataSource();
+            Console.WriteLine(username + "  " + password);
             return dataSource.checkIfUserPassCombinationCorrect(username, password);
         }
     }

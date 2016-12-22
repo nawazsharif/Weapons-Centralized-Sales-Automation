@@ -6,3 +6,10 @@ C:\Users\ahmed\OneDrive\Documents\Visual Studio 2015\Updated Gui\Grouper\obj\Deb
 C:\Users\ahmed\OneDrive\Documents\Visual Studio 2015\Updated Gui\Grouper\obj\Debug\CodeVendor.Controls.csproj.GenerateResource.Cache
 C:\Users\ahmed\OneDrive\Documents\Visual Studio 2015\Updated Gui\Grouper\obj\Debug\CodeVendor.Controls.dll
 C:\Users\ahmed\OneDrive\Documents\Visual Studio 2015\Updated Gui\Grouper\obj\Debug\CodeVendor.Controls.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\TestHarness\bin\Debug\CodeVendor.Controls.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\TestHarness\bin\Debug\CodeVendor.Controls.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\TestHarness\bin\Debug\Grouper.xml
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Grouper\obj\Debug\CodeVendor.Controls.Grouper.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Grouper\obj\Debug\CodeVendor.Controls.csproj.GenerateResource.Cache
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Grouper\obj\Debug\CodeVendor.Controls.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Grouper\obj\Debug\CodeVendor.Controls.pdb

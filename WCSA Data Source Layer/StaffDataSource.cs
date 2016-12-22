@@ -8,9 +8,15 @@ namespace WCSA_Data_Source_Layer
 {
     public class StaffDataSource : GenericSourceClass<WCSA_Entity_Classes.Staff>
     {
-        void PopulateFromDatabase()
+
+        public override void PopulateFromDatabase()
         {
-            list.Add(new WCSA_Entity_Classes.Staff("Nawaz", "kkk@kkk.ckk", "32452623", "NK-2", "Nawaz", "123"));
+            WCSA_Entity_Classes.Staff requiredStaff = list.Find(staffList => staffList.Name.Equals("Nawaz"));
+            if (requiredStaff == null)
+            {
+                list.Add(new WCSA_Entity_Classes.Staff("Nawaz", "kkk@kkk.ckk", "32452623", "NK-2", "Nawaz", "123"));
+                Console.WriteLine("Inserted into list \n");
+            }
             //Execute query and fill up the list here
         }
 

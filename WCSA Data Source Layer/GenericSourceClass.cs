@@ -17,10 +17,8 @@ namespace WCSA_Data_Source_Layer
             PopulateFromDatabase();
         }
 
-        public void PopulateFromDatabase()
-        {
-            //Execute query and fill up the list here
-        }
+        public virtual void PopulateFromDatabase() { }
+
 
         public void AddToList(T entity)
         {
