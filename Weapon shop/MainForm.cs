@@ -70,7 +70,7 @@ namespace Weapon_shop
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Customer cm = new Customer();
+            CustomerForm cm = new CustomerForm();
             cm.Show();
         }
 

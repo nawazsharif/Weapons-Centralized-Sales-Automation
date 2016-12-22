@@ -51,6 +51,10 @@
             this.grouper2 = new CodeVendor.Controls.Grouper();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.textBoxInvoiceTotalCost = new System.Windows.Forms.TextBox();
             this.textinvoiceVAT = new System.Windows.Forms.TextBox();
             this.textBoxInvoiceTotalItems = new System.Windows.Forms.TextBox();
@@ -305,20 +309,24 @@
             this.grouper2.ShadowColor = System.Drawing.Color.DarkGray;
             this.grouper2.ShadowControl = false;
             this.grouper2.ShadowThickness = 3;
-            this.grouper2.Size = new System.Drawing.Size(646, 356);
+            this.grouper2.Size = new System.Drawing.Size(646, 398);
             this.grouper2.TabIndex = 5;
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.PowderBlue;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 16);
+            this.dataGridView1.Location = new System.Drawing.Point(5, 13);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(635, 334);
+            this.dataGridView1.Size = new System.Drawing.Size(635, 382);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.textBoxInvoiceTotalCost);
             this.groupBox3.Controls.Add(this.textinvoiceVAT);
             this.groupBox3.Controls.Add(this.textBoxInvoiceTotalItems);
@@ -327,22 +335,54 @@
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Location = new System.Drawing.Point(671, 205);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(240, 132);
+            this.groupBox3.Size = new System.Drawing.Size(240, 174);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Information";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(91, 129);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(119, 20);
+            this.textBox2.TabIndex = 15;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(16, 132);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(46, 13);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "Balance";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(91, 103);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(119, 20);
+            this.textBox1.TabIndex = 13;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(16, 106);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(28, 13);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Paid";
+            // 
             // textBoxInvoiceTotalCost
             // 
-            this.textBoxInvoiceTotalCost.Location = new System.Drawing.Point(91, 95);
+            this.textBoxInvoiceTotalCost.Location = new System.Drawing.Point(91, 78);
             this.textBoxInvoiceTotalCost.Name = "textBoxInvoiceTotalCost";
             this.textBoxInvoiceTotalCost.Size = new System.Drawing.Size(119, 20);
             this.textBoxInvoiceTotalCost.TabIndex = 11;
             // 
             // textinvoiceVAT
             // 
-            this.textinvoiceVAT.Location = new System.Drawing.Point(108, 60);
+            this.textinvoiceVAT.Location = new System.Drawing.Point(108, 52);
             this.textinvoiceVAT.Name = "textinvoiceVAT";
             this.textinvoiceVAT.Size = new System.Drawing.Size(102, 20);
             this.textinvoiceVAT.TabIndex = 10;
@@ -358,7 +398,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(11, 98);
+            this.label12.Location = new System.Drawing.Point(3, 79);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 15);
             this.label12.TabIndex = 3;
@@ -367,7 +407,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(14, 63);
+            this.label11.Location = new System.Drawing.Point(16, 55);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(28, 13);
             this.label11.TabIndex = 2;
@@ -390,7 +430,7 @@
             this.groupBox4.Controls.Add(this.button5);
             this.groupBox4.Controls.Add(this.button3);
             this.groupBox4.Controls.Add(this.button2);
-            this.groupBox4.Location = new System.Drawing.Point(671, 348);
+            this.groupBox4.Location = new System.Drawing.Point(671, 385);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(240, 146);
             this.groupBox4.TabIndex = 7;
@@ -418,6 +458,7 @@
             this.button7.TabIndex = 4;
             this.button7.Text = "Print";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -500,7 +541,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 518);
+            this.ClientSize = new System.Drawing.Size(917, 556);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -568,5 +609,9 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label Admin;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label14;
     }
 }

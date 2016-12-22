@@ -81,7 +81,6 @@ C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\WCSA Service Classes.pdb
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\WCSA Data Source Layer.pdb
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon shop.csprojResolveAssemblyReference.cache
-C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.Customer.resources
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.Form_Login.resources
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.MainForm.resources
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.ManagerInfo.resources
@@ -96,3 +95,5 @@ C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon shop.pdb
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.SupplierInfoForm.resources
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.BankAccountForm.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.CustomerForm.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.AddCustomerForm.resources

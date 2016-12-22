@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCustomerForm.Designer.cs">
+      <DependentUpon>AddCustomerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BankAccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     <Compile Include="SupplierInfoForm.Designer.cs">
       <DependentUpon>SupplierInfoForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddCustomerForm.resx">
+      <DependentUpon>AddCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BankAccountForm.resx">
       <DependentUpon>BankAccountForm.cs</DependentUpon>
     </EmbeddedResource>
