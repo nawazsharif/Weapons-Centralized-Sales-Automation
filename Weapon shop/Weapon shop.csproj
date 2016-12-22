@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BankAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankAccountForm.Designer.cs">
+      <DependentUpon>BankAccountForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,15 @@
     <Compile Include="Staff.Designer.cs">
       <DependentUpon>Staff.cs</DependentUpon>
     </Compile>
+    <Compile Include="SupplierInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierInfoForm.Designer.cs">
+      <DependentUpon>SupplierInfoForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BankAccountForm.resx">
+      <DependentUpon>BankAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierInfoForm.resx">
+      <DependentUpon>SupplierInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">

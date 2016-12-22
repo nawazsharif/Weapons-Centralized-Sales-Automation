@@ -9,11 +9,14 @@ namespace WCSA_Data_Source_Layer
     public class ProductDataSource : GenericSourceClass<WCSA_Entity_Classes.Product>
     {
 
-        void PopulateFromDatabase()
+        public override void PopulateFromDatabase()
         {
             list.Add(new WCSA_Entity_Classes.Product("1", "Glock 17", 5000, 10));
+            list.Add(new WCSA_Entity_Classes.Product("2", "ak_47", 10000, 10));
+            list.Add(new WCSA_Entity_Classes.Product("3", "Rifel", 100, 12));
             //Execute query and fill up the list here
         }
+
 
         public void DeleteFromList(string code)
         {

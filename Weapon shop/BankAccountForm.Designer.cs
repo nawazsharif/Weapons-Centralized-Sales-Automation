@@ -1,6 +1,6 @@
 ﻿namespace Weapon_shop
 {
-    partial class ManagerInfo
+    partial class BankAccountForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerInfo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BankAccountForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnShow = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -37,8 +37,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grouper1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,15 +45,13 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.btnShow);
             this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.btnAdd);
-            this.groupBox1.Location = new System.Drawing.Point(6, 96);
+            this.groupBox1.Location = new System.Drawing.Point(6, 66);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(858, 79);
-            this.groupBox1.TabIndex = 5;
+            this.groupBox1.Size = new System.Drawing.Size(765, 79);
+            this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Action";
             // 
@@ -67,7 +63,7 @@
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(103, 57);
             this.btnShow.TabIndex = 2;
-            this.btnShow.Text = "Accounce";
+            this.btnShow.Text = "Details";
             this.btnShow.UseVisualStyleBackColor = false;
             // 
             // btnUpdate
@@ -78,7 +74,7 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(103, 57);
             this.btnUpdate.TabIndex = 1;
-            this.btnUpdate.Text = "Bank Account";
+            this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // btnAdd
@@ -89,9 +85,8 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(103, 57);
             this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Supplier Info";
+            this.btnAdd.Text = "Add Bank";
             this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // grouper1
             // 
@@ -106,7 +101,7 @@
             this.grouper1.CustomGroupBoxColor = System.Drawing.Color.PowderBlue;
             this.grouper1.GroupImage = null;
             this.grouper1.GroupTitle = "";
-            this.grouper1.Location = new System.Drawing.Point(4, 3);
+            this.grouper1.Location = new System.Drawing.Point(4, -8);
             this.grouper1.Name = "grouper1";
             this.grouper1.Padding = new System.Windows.Forms.Padding(20);
             this.grouper1.PaintGroupBox = false;
@@ -114,8 +109,8 @@
             this.grouper1.ShadowColor = System.Drawing.Color.DarkGray;
             this.grouper1.ShadowControl = false;
             this.grouper1.ShadowThickness = 3;
-            this.grouper1.Size = new System.Drawing.Size(860, 87);
-            this.grouper1.TabIndex = 4;
+            this.grouper1.Size = new System.Drawing.Size(767, 66);
+            this.grouper1.TabIndex = 6;
             // 
             // button1
             // 
@@ -132,53 +127,31 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 33);
+            this.label1.Location = new System.Drawing.Point(57, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 27);
+            this.label1.Size = new System.Drawing.Size(189, 27);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Manager";
+            this.label1.Text = "Bank Information";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(43, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.PowderBlue;
-            this.button2.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(335, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 57);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Staff Payment";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.PowderBlue;
-            this.button3.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(444, 14);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 57);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Extra";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // ManagerInfo
+            // BankAccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 347);
+            this.ClientSize = new System.Drawing.Size(773, 342);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grouper1);
-            this.Name = "ManagerInfo";
-            this.Text = "ManagerInfo";
+            this.Name = "BankAccountForm";
+            this.Text = "BankAccountForm";
             this.groupBox1.ResumeLayout(false);
             this.grouper1.ResumeLayout(false);
             this.grouper1.PerformLayout();
@@ -190,8 +163,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;

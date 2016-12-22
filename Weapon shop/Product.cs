@@ -73,7 +73,7 @@ namespace Weapon_shop
                 btn_P_Search.Show();
                 groupBox2.Hide();
                 dataGridView1.Show();
-                dataGridView1.DataSource = new ProductPresenter().fetchProductList() ;
+                //dataGridView1.DataSource = new ProductPresenter().fetchProductList() ;
 
             }
             else if (chk == 0)
@@ -140,10 +140,12 @@ namespace Weapon_shop
             textSearch.Show();
             btn_P_Search.Show();
             dataGridView1.DataSource = null;
-            List<WCSA_Entity_Classes.Product> pl = new ProductPresenter().fetchProductList();
-            dataGridView1.DataSource = pl;
-
+            //List<WCSA_Entity_Classes.Product> pl = new ProductPresenter().fetchProductList();
             dataGridView1.Show();
+            //dataGridView1.DataSource = pl;
+            //dataGridView1.DataSource = new ProductPresenter().fetchProductList();
+            dataGridView1.DataSource = new ProductPresenter().fetchProductList();
+
         }
 
         private void button4_Click_1(object sender, EventArgs e)

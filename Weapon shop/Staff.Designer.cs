@@ -78,7 +78,7 @@
             this.grouper1.CustomGroupBoxColor = System.Drawing.Color.PowderBlue;
             this.grouper1.GroupImage = null;
             this.grouper1.GroupTitle = "";
-            this.grouper1.Location = new System.Drawing.Point(2, -9);
+            this.grouper1.Location = new System.Drawing.Point(2, -4);
             this.grouper1.Name = "grouper1";
             this.grouper1.Padding = new System.Windows.Forms.Padding(20);
             this.grouper1.PaintGroupBox = false;
@@ -86,7 +86,7 @@
             this.grouper1.ShadowColor = System.Drawing.Color.DarkGray;
             this.grouper1.ShadowControl = false;
             this.grouper1.ShadowThickness = 3;
-            this.grouper1.Size = new System.Drawing.Size(909, 70);
+            this.grouper1.Size = new System.Drawing.Size(909, 66);
             this.grouper1.TabIndex = 0;
             // 
             // button1
@@ -164,9 +164,9 @@
             this.groupBox1.Controls.Add(this.btnShow);
             this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.btnAdd);
-            this.groupBox1.Location = new System.Drawing.Point(4, 67);
+            this.groupBox1.Location = new System.Drawing.Point(4, 72);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(907, 83);
+            this.groupBox1.Size = new System.Drawing.Size(907, 79);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Action";
@@ -198,7 +198,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(9, 156);
+            this.groupBox2.Location = new System.Drawing.Point(9, 166);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(469, 296);
             this.groupBox2.TabIndex = 5;

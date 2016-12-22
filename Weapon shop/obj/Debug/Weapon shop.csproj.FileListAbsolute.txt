@@ -70,8 +70,6 @@ C:\Users\ahmed\OneDrive\Temporary Project Folder\Updated Gui\Weapon shop\bin\Deb
 C:\Users\ahmed\OneDrive\Temporary Project Folder\Updated Gui\Weapon shop\obj\Debug\Weapon shop.exe
 C:\Users\ahmed\OneDrive\Temporary Project Folder\Updated Gui\Weapon shop\obj\Debug\Weapon shop.pdb
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\Weapon shop.exe.config
-C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon shop.exe
-C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon shop.pdb
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\Weapon shop.exe
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\Weapon shop.pdb
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\CodeVendor.Controls.dll
@@ -94,3 +92,7 @@ C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.SellsInfo.resources
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.Staff.resources
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon shop.csproj.GenerateResource.Cache
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon shop.exe
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon shop.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.SupplierInfoForm.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.BankAccountForm.resources
