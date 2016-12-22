@@ -39,11 +39,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnOk = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBoxConfirmPassword = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.textBoxNickName = new System.Windows.Forms.TextBox();
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
@@ -58,6 +57,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_search = new System.Windows.Forms.TextBox();
             this.btnsearch = new System.Windows.Forms.Button();
+            this.textBoxConfirmPassword = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.grouper1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -181,11 +182,12 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnOk);
-            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.textBoxConfirmPassword);
+            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.textBoxPassword);
             this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.btnOk);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.textBoxNickName);
             this.groupBox2.Controls.Add(this.textBoxPhone);
             this.groupBox2.Controls.Add(this.textBoxAddress);
@@ -204,6 +206,23 @@
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add new staff";
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.Location = new System.Drawing.Point(106, 172);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(171, 20);
+            this.textBoxPassword.TabIndex = 19;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(7, 173);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 15);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Password";
             // 
             // btnOk
             // 
@@ -225,65 +244,40 @@
             this.label8.Size = new System.Drawing.Size(0, 13);
             this.label8.TabIndex = 16;
             // 
-            // textBoxConfirmPassword
-            // 
-            this.textBoxConfirmPassword.Location = new System.Drawing.Point(86, 195);
-            this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
-            this.textBoxConfirmPassword.Size = new System.Drawing.Size(191, 20);
-            this.textBoxConfirmPassword.TabIndex = 15;
-            this.textBoxConfirmPassword.TextChanged += new System.EventHandler(this.text_C_Password_TextChanged);
-            // 
-            // textBoxPassword
-            // 
-            this.textBoxPassword.Location = new System.Drawing.Point(86, 170);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(191, 20);
-            this.textBoxPassword.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 173);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 15);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Password :";
-            // 
             // textBoxNickName
             // 
-            this.textBoxNickName.Location = new System.Drawing.Point(86, 144);
+            this.textBoxNickName.Location = new System.Drawing.Point(106, 144);
             this.textBoxNickName.Name = "textBoxNickName";
-            this.textBoxNickName.Size = new System.Drawing.Size(191, 20);
+            this.textBoxNickName.Size = new System.Drawing.Size(171, 20);
             this.textBoxNickName.TabIndex = 10;
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(86, 65);
+            this.textBoxPhone.Location = new System.Drawing.Point(106, 65);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(191, 20);
+            this.textBoxPhone.Size = new System.Drawing.Size(171, 20);
             this.textBoxPhone.TabIndex = 9;
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(86, 90);
+            this.textBoxAddress.Location = new System.Drawing.Point(106, 90);
             this.textBoxAddress.Multiline = true;
             this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(298, 51);
+            this.textBoxAddress.Size = new System.Drawing.Size(278, 51);
             this.textBoxAddress.TabIndex = 9;
             // 
             // textBoxMail
             // 
-            this.textBoxMail.Location = new System.Drawing.Point(86, 40);
+            this.textBoxMail.Location = new System.Drawing.Point(106, 40);
             this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(298, 20);
+            this.textBoxMail.Size = new System.Drawing.Size(278, 20);
             this.textBoxMail.TabIndex = 8;
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(86, 16);
+            this.textBoxName.Location = new System.Drawing.Point(106, 16);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(298, 20);
+            this.textBoxName.Size = new System.Drawing.Size(278, 20);
             this.textBoxName.TabIndex = 7;
             this.textBoxName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -357,9 +351,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(15, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 15);
+            this.label2.Size = new System.Drawing.Size(73, 15);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Name       :";
+            this.label2.Text = "Shop Name";
             // 
             // textBox_search
             // 
@@ -380,6 +374,23 @@
             this.btnsearch.Text = "Search";
             this.btnsearch.UseVisualStyleBackColor = false;
             this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
+            // 
+            // textBoxConfirmPassword
+            // 
+            this.textBoxConfirmPassword.Location = new System.Drawing.Point(106, 198);
+            this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
+            this.textBoxConfirmPassword.Size = new System.Drawing.Size(171, 20);
+            this.textBoxConfirmPassword.TabIndex = 21;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(7, 199);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(107, 15);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Confirm Password";
             // 
             // Staff
             // 
@@ -432,10 +443,11 @@
         private System.Windows.Forms.Button btnsearch;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBoxConfirmPassword;
-        private System.Windows.Forms.TextBox textBoxPassword;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxConfirmPassword;
+        private System.Windows.Forms.Label label9;
     }
 }
