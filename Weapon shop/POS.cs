@@ -112,7 +112,6 @@ namespace Weapon_shop
             if (tempProduct != null)
             {
                 textPCode.Text = tempProduct.ProductCode;
-                textPCode.Enabled = false;
                 text_P_Name.Text = tempProduct.ProductName;
                 text_P_Name.Enabled = false;
 
@@ -147,6 +146,17 @@ namespace Weapon_shop
                                quantity, VAT));
                             dataGridView1.DataSource = pp.getInvoiceItemsList();
                             textBoxInvoiceTotalItems.Text = Convert.ToString(pp.getInvoiceItemsList().Count);
+
+                            textPCode.Text = "";
+                            textUnitPrice.Text = "";
+                            text_P_Name.Text ="";
+                            textQuantity.Text = "";
+                            textUnitPrice.Enabled = true;
+                            textPCode.Enabled = true;
+                            text_P_Name.Enabled = true;
+                            textTotalPrice.Text = "";
+
+
                         }
                         else MessageBox.Show("Not enough items in stock");
                     }

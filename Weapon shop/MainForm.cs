@@ -59,7 +59,7 @@ namespace Weapon_shop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Staff staff = new Staff();
+            Staff staff = new Staff(this);
             staff.Show();
         }
 
