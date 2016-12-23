@@ -14,7 +14,7 @@ namespace WCSA_Service_Classes
         
 
         static List<WCSA_Entity_Classes.Product> purchaseList = new List<WCSA_Entity_Classes.Product>();
-        static double totalCost=0;
+        static double totalCost;
 
         public POSPresenter()
         {
@@ -35,10 +35,13 @@ namespace WCSA_Service_Classes
             WCSA_Entity_Classes.Product tempP = pds.ReturnAnItem(productCode);
             purchaseList.Add(new Product(productCode, tempP.ProductName, price * quantity, quantity));
 
+            //Console.WriteLine("price = {0}  ||  quantity = {1}", price, quantity);
+
             //Update total cost
             totalCost += (price * quantity);
+            //Console.WriteLine("totalCost = " + totalCost);
 
-            return (totalCost + (totalCost * vat) / 100);
+            return (totalCost + ((totalCost * vat) / 100));
         }
 
         //Method for removing an item from list

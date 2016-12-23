@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WCSA_Service_Classes;
 using WCSA_Entity_Classes;
+using System.Text.RegularExpressions;
 
 namespace Weapon_shop
 {
@@ -94,59 +95,59 @@ namespace Weapon_shop
         {
             this.Close();
         }
-        public string BarCode
-        {
-            set { }
-            get { return textBarCode.Text; }
-        }
-        public string ProductCode
-        {
-            set { }
-            get { return textPCode.Text; }
-        }
-        public string newProductName
-        {
-            set { }
-            get { return text_P_Name.Text; }
-        }
-        public uint Quantity
-        {
-            set { this.quantity = Convert.ToUInt32(textQuantity.Text); }
-            get {
+        //public string BarCode
+        //{
+        //    set { }
+        //    get { return textBarCode.Text; }
+        //}
+        //public string ProductCode
+        //{
+        //    set { }
+        //    get { return textPCode.Text; }
+        //}
+        //public string newProductName
+        //{
+        //    set { }
+        //    get { return text_P_Name.Text; }
+        //}
+        //public uint Quantity
+        //{
+        //    set { this.quantity = Convert.ToUInt32(textQuantity.Text); }
+        //    get {
                  
-                return Convert.ToUInt32(textQuantity.Text);
-            }
-        }
+        //        return Convert.ToUInt32(textQuantity.Text);
+        //    }
+        //}
 
-        public double UnitPrice
-        {
-            set {  }
-            get {
-                 return Convert.ToDouble(textUnitPrice.Text);
-            }
-        }
-        public double TotalPrice
-        {
-            set { }
-            get {
-                return Convert.ToDouble( textTotalPrice.Text);
-            }
-        }
-        public uint InvoiceTotalItems
-        {
-            set { }
-            get { return Convert.ToUInt32(textBoxInvoiceTotalItems.Text); }
-        }
-        public double InvoiceTotalVAT
-        {
-            set { }
-            get { return Convert.ToDouble(textinvoiceVAT.Text); }
-        }
-        public double InvoiceTotalPrice
-        {
-            set { }
-            get { return Convert.ToDouble(textBoxInvoiceTotalCost.Text); }
-        }
+        //public double UnitPrice
+        //{
+        //    set {  }
+        //    get {
+        //         return Convert.ToDouble(textUnitPrice.Text);
+        //    }
+        //}
+        //public double TotalPrice
+        //{
+        //    set { }
+        //    get {
+        //        return Convert.ToDouble( textTotalPrice.Text);
+        //    }
+        //}
+        //public uint InvoiceTotalItems
+        //{
+        //    set { }
+        //    get { return Convert.ToUInt32(textBoxInvoiceTotalItems.Text); }
+        //}
+        //public double InvoiceTotalVAT
+        //{
+        //    set { }
+        //    get { return Convert.ToDouble(textinvoiceVAT.Text); }
+        //}
+        //public double InvoiceTotalPrice
+        //{
+        //    set { }
+        //    get { return Convert.ToDouble(textBoxInvoiceTotalCost.Text); }
+        //}
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -174,29 +175,30 @@ namespace Weapon_shop
             WCSA_Entity_Classes.Product srcProd = new POSPresenter().returnProductDetails(textPCode.Text);
             if (srcProd != null)
             {
-                uint originalQuantity=srcProd.Quantity;
+                uint originalQuantity = srcProd.Quantity;
                 double VAT;
                 uint quantity;
-                if (double.TryParse(textQuantity.Text, out VAT))
+                if (double.TryParse(textinvoiceVAT.Text, out VAT))
                 {
-                    if (uint.TryParse(textinvoiceVAT.Text, out quantity))
+                    if (uint.TryParse(textQuantity.Text, out quantity))
                     {
                         if (quantity <= originalQuantity)
                         {
                             POSPresenter pp = new POSPresenter();
                             textBoxInvoiceTotalCost.Text = Convert.ToString(pp.addItemToInvoice(textPCode.Text, Convert.ToDouble(textUnitPrice.Text),
-                               quantity, VAT));
+                               Convert.ToUInt32(textQuantity.Text), Convert.ToDouble(textinvoiceVAT.Text)));
+                            dataGridView1.AutoGenerateColumns = false;
                             dataGridView1.DataSource = pp.getInvoiceItemsList();
                             textBoxInvoiceTotalItems.Text = Convert.ToString(pp.getInvoiceItemsList().Count);
 
                             textPCode.Text = "";
-                            textUnitPrice.Text = "";
-                            text_P_Name.Text ="";
-                            textQuantity.Text = "";
+                            textUnitPrice.Text = "0";
+                            text_P_Name.Text = "";
+                            textQuantity.Text = "0";
                             textUnitPrice.Enabled = true;
                             textPCode.Enabled = true;
                             text_P_Name.Enabled = true;
-                            textTotalPrice.Text = "";
+                            textTotalPrice.Text = "0";
 
 
                         }
@@ -210,8 +212,6 @@ namespace Weapon_shop
             {
                 MessageBox.Show("Product Not found !");
             }
-
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -222,8 +222,24 @@ namespace Weapon_shop
 
         private void textQuantity_TextChanged(object sender, EventArgs e)
         {
-            if(textPCode.Text != "")
-                textTotalPrice.Text = Convert.ToString(Convert.ToDouble(textUnitPrice.Text) * Convert.ToUInt32(textQuantity.Text));
+            
+            if(textPCode.Text != null)
+            {
+                //string quantity = textQuantity.Text.ToString();
+                //string replacement = Regex.Replace(quantity, @"\t|\n|\r", "");
+                //replacement.Trim();
+                //string unitPrice = textUnitPrice.Text.ToString();
+                //string replacement2 = Regex.Replace(unitPrice, @"\t|\n|\r", "");
+                //replacement2.Trim();
+                //double totalPrice = Convert.ToDouble(replacement2) * (double)Convert.ToUInt32(replacement);
+                //textTotalPrice.Text = Convert.ToString(totalPrice);
+                //MessageBox.Show(textQuantity.Text);
+                double quantity = Convert.ToDouble(textQuantity.Text);
+                double unitPrice = Convert.ToDouble(textUnitPrice.Text);
+                double totalPrice = Convert.ToDouble(quantity * unitPrice);
+                textTotalPrice.Text = Convert.ToString(totalPrice);
+            }
+                
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -258,5 +274,25 @@ namespace Weapon_shop
         {
 
         }
+
+
+        /*
+        Item addition to POS table actions start here
+        */
+        private void textQuantity_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                textQuantity_EnterKeyPressed(this, new EventArgs());
+            }
+        }
+        private void textQuantity_EnterKeyPressed(object sender , EventArgs e)
+        {
+            
+        }
+        /*
+Item addition to POS table actions ends here
+*/
     }
 }
