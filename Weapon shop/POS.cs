@@ -14,6 +14,7 @@ namespace Weapon_shop
 {
     public partial class POS : Form
     {
+        Timer t = new Timer();
         public string customernid;
         public uint quantity;
         Product reference;
@@ -40,8 +41,49 @@ namespace Weapon_shop
 
         private void POS_Load(object sender, EventArgs e)
         {
-
+            //t.Interval = 1000;//In milisecond 
+            //t.Tick += new EventHandler(this.t_Tick);
+            //t.Start();
+            labelClock.Text = DateTime.Now.ToLongTimeString();
+            labelDate.Text = DateTime.Now.ToShortDateString() ;
         }
+        //private void t_Tick(Object sender, EventArgs e)
+        //{
+        //    int hh = DateTime.Now.Hour;
+        //    int mm = DateTime.Now.Minute;
+        //    int ss = DateTime.Now.Second;
+
+        //    string time = "";
+        //    if (hh < 10)
+        //    {
+        //        time += "0" + hh;
+        //    }
+        //    else
+        //    {
+        //        time += hh;
+        //    }
+        //    time += ":";
+        //    if (mm < 10)
+        //    {
+        //        time += "0" + mm;
+        //    }
+        //    else
+        //    {
+        //        time += mm;
+        //    }
+        //    time += ":";
+
+        //    if (ss < 10)
+        //    {
+        //        time += "0" + ss;
+        //    }
+        //    else
+        //    {
+        //        time += ss;
+        //    }
+        //    labelClock.Text = time;
+
+        //}
 
         private void button4_Click(object sender, EventArgs e)
         {

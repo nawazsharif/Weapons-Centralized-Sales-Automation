@@ -71,6 +71,8 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.Admin = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.labelClock = new System.Windows.Forms.Label();
+            this.labelDate = new System.Windows.Forms.Label();
             this.grouper1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -88,6 +90,8 @@
             this.grouper1.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
             this.grouper1.BorderColor = System.Drawing.Color.Black;
             this.grouper1.BorderThickness = 1F;
+            this.grouper1.Controls.Add(this.labelDate);
+            this.grouper1.Controls.Add(this.labelClock);
             this.grouper1.Controls.Add(this.label2);
             this.grouper1.Controls.Add(this.button4);
             this.grouper1.CustomGroupBoxColor = System.Drawing.Color.White;
@@ -537,6 +541,26 @@
             this.label13.TabIndex = 6;
             this.label13.Text = "Login As :";
             // 
+            // labelClock
+            // 
+            this.labelClock.AutoSize = true;
+            this.labelClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClock.Location = new System.Drawing.Point(741, 20);
+            this.labelClock.Name = "labelClock";
+            this.labelClock.Size = new System.Drawing.Size(53, 20);
+            this.labelClock.TabIndex = 15;
+            this.labelClock.Text = "Clock";
+            // 
+            // labelDate
+            // 
+            this.labelDate.AutoSize = true;
+            this.labelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDate.Location = new System.Drawing.Point(741, 39);
+            this.labelDate.Name = "labelDate";
+            this.labelDate.Size = new System.Drawing.Size(48, 20);
+            this.labelDate.TabIndex = 16;
+            this.labelDate.Text = "Date";
+            // 
             // POS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -613,5 +637,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label labelClock;
+        private System.Windows.Forms.Label labelDate;
     }
 }
