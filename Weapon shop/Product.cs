@@ -212,14 +212,39 @@ namespace Weapon_shop
 
         private void btn_staff_add_Click(object sender, EventArgs e)
         {
-            new ProductPresenter().Add(textBoxCode.Text,textBoxName.Text,Convert.ToDouble(textBoxPrice.Text),
-                Convert.ToUInt32(textBoxQuantity.Text));
-            MessageBox.Show("Successfull");
+            double price;
+            uint quantity;
+            if (double.TryParse(textBoxPrice.Text, out price))
+            {
+                if (uint.TryParse(textBoxQuantity.Text, out quantity))
+                {
+                    new ProductPresenter().Add(textBoxCode.Text, textBoxName.Text, price,quantity);
+                    MessageBox.Show("Successfull");
+                }
+                else MessageBox.Show("Please enter quantity");
+            }
+            else MessageBox.Show("Please input price");
         }
 
         private void textPrice_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            double price;
+            uint quantity;
+            if (double.TryParse(textBoxPrice.Text, out price))
+            {
+                if (uint.TryParse(textBoxQuantity.Text, out quantity))
+                {
+                    new ProductPresenter().modifyItem(textBoxCode.Text, textBoxName.Text, price, quantity);
+                    MessageBox.Show("Successfull");
+                }
+                else MessageBox.Show("Please enter quantity");
+            }
+            else MessageBox.Show("Please input price");
         }
     }
 }

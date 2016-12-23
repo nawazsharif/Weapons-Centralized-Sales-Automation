@@ -17,6 +17,12 @@ namespace WCSA_Service_Classes
             pds.AddToList(new WCSA_Entity_Classes.Product(code, name,price,quantity));
         }
 
+        public void modifyItem(string code, string name, double price, uint quantity)
+        {
+            ProductDataSource pds = new ProductDataSource();
+            pds.ModifyList(new WCSA_Entity_Classes.Product(code, name, price, quantity));
+        }
+
         public WCSA_Entity_Classes.Product checkProductDetails(string code)
         {
             ProductDataSource pds = new ProductDataSource();

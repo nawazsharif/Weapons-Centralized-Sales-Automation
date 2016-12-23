@@ -133,14 +133,26 @@ namespace Weapon_shop
             WCSA_Entity_Classes.Product srcProd = new POSPresenter().returnProductDetails(textPCode.Text);
             if (srcProd != null)
             {
-                POSPresenter pp = new POSPresenter();
-                // textQuantity.Text = Convert.ToString(srcProd.Quantity);
-                textBoxInvoiceTotalCost.Text = Convert.ToString(pp.addItemToInvoice(textPCode.Text, Convert.ToDouble(textUnitPrice.Text),
-                    Convert.ToUInt32(textQuantity.Text),Convert.ToDouble(textinvoiceVAT.Text)));
-                dataGridView1.DataSource = pp.getInvoiceItemsList();
-                textBoxInvoiceTotalItems.Text = Convert.ToString(pp.getInvoiceItemsList().Count);
-                
-
+                uint originalQuantity=srcProd.Quantity;
+                double VAT;
+                uint quantity;
+                if (double.TryParse(textQuantity.Text, out VAT))
+                {
+                    if (uint.TryParse(textinvoiceVAT.Text, out quantity))
+                    {
+                        if (quantity <= originalQuantity)
+                        {
+                            POSPresenter pp = new POSPresenter();
+                            textBoxInvoiceTotalCost.Text = Convert.ToString(pp.addItemToInvoice(textPCode.Text, Convert.ToDouble(textUnitPrice.Text),
+                               quantity, VAT));
+                            dataGridView1.DataSource = pp.getInvoiceItemsList();
+                            textBoxInvoiceTotalItems.Text = Convert.ToString(pp.getInvoiceItemsList().Count);
+                        }
+                        else MessageBox.Show("Not enough items in stock");
+                    }
+                    else MessageBox.Show("Please enter quantity");
+                }
+                else MessageBox.Show("Please input VAT");
             }
             else
             {

@@ -203,6 +203,7 @@
             this.btnOk.TabIndex = 13;
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // textBox5
             // 
@@ -336,9 +337,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 233);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 476);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(882, 274);
+            this.dataGridView1.Size = new System.Drawing.Size(882, 31);
             this.dataGridView1.TabIndex = 13;
             // 
             // textSearch
