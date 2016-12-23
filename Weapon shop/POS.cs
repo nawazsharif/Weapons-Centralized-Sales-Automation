@@ -247,5 +247,16 @@ namespace Weapon_shop
                 customernid = null;
             }
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Re_Print_Form rf = new Re_Print_Form();
+            rf.Show(); 
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

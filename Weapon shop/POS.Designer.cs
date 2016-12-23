@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.grouper1 = new CodeVendor.Controls.Grouper();
+            this.labelDate = new System.Windows.Forms.Label();
+            this.labelClock = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -71,8 +73,6 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.Admin = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.labelClock = new System.Windows.Forms.Label();
-            this.labelDate = new System.Windows.Forms.Label();
             this.grouper1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -85,7 +85,7 @@
             // 
             // grouper1
             // 
-            this.grouper1.BackgroundColor = System.Drawing.Color.Brown;
+            this.grouper1.BackgroundColor = System.Drawing.Color.DarkGray;
             this.grouper1.BackgroundGradientColor = System.Drawing.Color.White;
             this.grouper1.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
             this.grouper1.BorderColor = System.Drawing.Color.Black;
@@ -108,6 +108,26 @@
             this.grouper1.Size = new System.Drawing.Size(906, 79);
             this.grouper1.TabIndex = 2;
             // 
+            // labelDate
+            // 
+            this.labelDate.AutoSize = true;
+            this.labelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDate.Location = new System.Drawing.Point(741, 39);
+            this.labelDate.Name = "labelDate";
+            this.labelDate.Size = new System.Drawing.Size(48, 20);
+            this.labelDate.TabIndex = 16;
+            this.labelDate.Text = "Date";
+            // 
+            // labelClock
+            // 
+            this.labelClock.AutoSize = true;
+            this.labelClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClock.Location = new System.Drawing.Point(741, 20);
+            this.labelClock.Name = "labelClock";
+            this.labelClock.Size = new System.Drawing.Size(53, 20);
+            this.labelClock.TabIndex = 15;
+            this.labelClock.Text = "Clock";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -122,7 +142,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.PowderBlue;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(878, 25);
+            this.button4.Location = new System.Drawing.Point(875, 26);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(25, 31);
             this.button4.TabIndex = 3;
@@ -211,7 +231,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(564, 4);
+            this.label7.Location = new System.Drawing.Point(544, 2);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 5;
@@ -220,7 +240,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(486, 4);
+            this.label6.Location = new System.Drawing.Point(483, 2);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 4;
@@ -229,7 +249,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(391, 3);
+            this.label5.Location = new System.Drawing.Point(384, 2);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 3;
@@ -257,7 +277,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 3);
+            this.label1.Location = new System.Drawing.Point(6, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 0;
@@ -402,7 +422,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(3, 79);
+            this.label12.Location = new System.Drawing.Point(12, 79);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 15);
             this.label12.TabIndex = 3;
@@ -425,6 +445,7 @@
             this.label10.Size = new System.Drawing.Size(59, 13);
             this.label10.TabIndex = 1;
             this.label10.Text = "Total Items";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // groupBox4
             // 
@@ -475,6 +496,7 @@
             this.button8.TabIndex = 3;
             this.button8.Text = "Re-Print";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button5
             // 
@@ -540,26 +562,6 @@
             this.label13.Size = new System.Drawing.Size(83, 18);
             this.label13.TabIndex = 6;
             this.label13.Text = "Login As :";
-            // 
-            // labelClock
-            // 
-            this.labelClock.AutoSize = true;
-            this.labelClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClock.Location = new System.Drawing.Point(741, 20);
-            this.labelClock.Name = "labelClock";
-            this.labelClock.Size = new System.Drawing.Size(53, 20);
-            this.labelClock.TabIndex = 15;
-            this.labelClock.Text = "Clock";
-            // 
-            // labelDate
-            // 
-            this.labelDate.AutoSize = true;
-            this.labelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDate.Location = new System.Drawing.Point(741, 39);
-            this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(48, 20);
-            this.labelDate.TabIndex = 16;
-            this.labelDate.Text = "Date";
             // 
             // POS
             // 

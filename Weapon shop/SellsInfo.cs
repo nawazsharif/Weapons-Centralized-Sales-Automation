@@ -15,6 +15,12 @@ namespace Weapon_shop
         public SellsInfo()
         {
             InitializeComponent();
+            dataGridView1.Hide();
+        }
+
+        private void SellsInfo_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
