@@ -263,12 +263,18 @@ namespace Weapon_shop
 
 
 
-        
+        /*
+        Customer info add button functionality starts here
+        */
         private void button3_Click(object sender, EventArgs e)
         {
            AddCustomerForm cs = new AddCustomerForm(this);
             cs.Show();
         }
+        /*
+        Customer info add button functionality ends here
+
+        */
 
 
 
@@ -326,6 +332,11 @@ namespace Weapon_shop
         New Transaction button functions end here
         */
 
+
+
+        /*
+        Print button functionality starts here
+        */
         private void button7_Click(object sender, EventArgs e)
         {
             if (customernid == null)
@@ -336,16 +347,29 @@ namespace Weapon_shop
             else
             {
                 MessageBox.Show("Successfull");
-                customernid = null;
+                //customernid = null;
             }
         }
+        /*
+         Print button functionality ends here
+        */
 
+
+
+        /*
+        Re-print button functionality starts here
+        */
         private void button8_Click(object sender, EventArgs e)
         {
             Re_Print_Form rf = new Re_Print_Form();
             rf.Show(); 
         }
+        /*
+        Re-print button functionality ends here
+        */
 
+
+        
         private void label10_Click(object sender, EventArgs e)
         {
 

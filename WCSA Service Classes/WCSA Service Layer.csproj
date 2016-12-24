@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\Desktop\itextsharp-develop\itextsharp-develop\src\core\bin\Debug_woDrawing\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
