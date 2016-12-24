@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using WCSA_Service_Classes;
 using WCSA_Entity_Classes;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace Weapon_shop
 {
@@ -18,7 +19,7 @@ namespace Weapon_shop
         Timer t = new Timer();
         public string customernid;
         public uint quantity;
-        Product reference;
+        WCSA_Entity_Classes.Product reference;
         public POS()
         {
             InitializeComponent();
@@ -168,11 +169,11 @@ namespace Weapon_shop
         */
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            WCSA_Entity_Classes.Product tempProduct = new POSPresenter().returnProductDetails(textPCode.Text);
-            if (tempProduct != null)
+            reference = new POSPresenter().returnProductDetails(textPCode.Text);
+            if (reference != null)
             {
-                textPCode.Text = tempProduct.ProductCode;
-                text_P_Name.Text = tempProduct.ProductName;
+                textPCode.Text = reference.ProductCode;
+                text_P_Name.Text = reference.ProductName;
                 text_P_Name.Enabled = false;
 
                 textQuantity.Text = null;
@@ -180,7 +181,7 @@ namespace Weapon_shop
                 //textTotalPrice.Text = tempProduct.Price.ToString();
                 textTotalPrice.Enabled = false;
 
-                textUnitPrice.Text = Convert.ToString(tempProduct.Price);
+                textUnitPrice.Text = Convert.ToString(reference.Price);
 
 
             }
@@ -201,10 +202,10 @@ namespace Weapon_shop
         private void button1_Click(object sender, EventArgs e)
         {
             //new Presenter_Classes.POSPresenter(this).AddToPurchaseList();
-            WCSA_Entity_Classes.Product srcProd = new POSPresenter().returnProductDetails(textPCode.Text);
-            if (srcProd != null)
+            //WCSA_Entity_Classes.Product srcProd = new POSPresenter().returnProductDetails(textPCode.Text);
+            if (reference != null)
             {
-                uint originalQuantity = srcProd.Quantity;
+                uint originalQuantity = reference.Quantity;
                 double VAT;
                 uint quantity;
 
@@ -216,6 +217,8 @@ namespace Weapon_shop
                 Unnecessary code ends here
                 */
 
+                Debug.Assert(reference != null);
+
                 if (double.TryParse(textinvoiceVAT.Text, out VAT))
                 {
                     if (uint.TryParse(textQuantity.Text, out quantity))
@@ -223,9 +226,10 @@ namespace Weapon_shop
                         if (quantity <= originalQuantity)
                         {
                             POSPresenter pp = new POSPresenter();
-                            textBoxInvoiceTotalCost.Text = Convert.ToString(pp.addItemToInvoice(textPCode.Text, Convert.ToDouble(textUnitPrice.Text),
-                               Convert.ToUInt32(textQuantity.Text), Convert.ToDouble(textinvoiceVAT.Text)));
+                            textBoxInvoiceTotalCost.Text = Convert.ToString(pp.addItemToInvoice(reference.ProductCode, Convert.ToDouble(reference.Price),
+                            Convert.ToUInt32(textQuantity.Text), Convert.ToDouble(textinvoiceVAT.Text)));
                             dataGridView1.AutoGenerateColumns = false;
+                            dataGridView1.DataSource = null;
                             dataGridView1.DataSource = pp.getInvoiceItemsList();
                             textBoxInvoiceTotalItems.Text = Convert.ToString(pp.getInvoiceItemsList().Count);
 
@@ -237,6 +241,8 @@ namespace Weapon_shop
                             textPCode.Enabled = true;
                             text_P_Name.Enabled = true;
                             textTotalPrice.Text = null;
+
+                            reference = null;
 
 
                         }
@@ -272,16 +278,15 @@ namespace Weapon_shop
         */
         private void textQuantity_TextChanged(object sender, EventArgs e)
         {
-            
-            if(textPCode.Text != null && text_P_Name!=null)
+            if (textQuantity.Text == null) textQuantity.Text = "0";
+
+
+            if (reference!=null)
             {
+                Debug.Assert(reference != null);
                 /*
                 Unnecessary code starts here
                 */
-                if (textPCode.Text == null) Console.WriteLine("Produt code is null");
-                else Console.WriteLine("Produt code is NOT null :"+ textPCode.Text);
-                if (text_P_Name.Text == null) Console.WriteLine("Produt name is null");
-                else Console.WriteLine("Produt name is NOT null :" + text_P_Name.Text);
                 //string quantity = textQuantity.Text.ToString();
                 //string replacement = Regex.Replace(quantity, @"\t|\n|\r", "");
                 //replacement.Trim();
@@ -307,6 +312,9 @@ namespace Weapon_shop
 
 
 
+        /*
+        New Transaction button functions start here
+        */
         private void button2_Click(object sender, EventArgs e)
         {
             new POSPresenter().newTransaction();
@@ -314,6 +322,9 @@ namespace Weapon_shop
             dataGridView1.DataSource = null;
             textBoxInvoiceTotalItems.Text = Convert.ToString(0);
         }
+        /*
+        New Transaction button functions end here
+        */
 
         private void button7_Click(object sender, EventArgs e)
         {
