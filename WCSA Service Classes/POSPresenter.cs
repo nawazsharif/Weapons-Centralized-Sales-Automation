@@ -42,6 +42,7 @@ namespace WCSA_Service_Classes
         {
             ProductDataSource pds = new ProductDataSource();
             WCSA_Entity_Classes.Product tempP = pds.ReturnAnItem(productCode);
+            pds.ModifyItemInAccordanceWithInvoice(productCode, quantity);
             purchaseList.Add(new Product(productCode, tempP.ProductName, price * quantity, quantity));
 
             //Console.WriteLine("price = {0}  ||  quantity = {1}", price, quantity);

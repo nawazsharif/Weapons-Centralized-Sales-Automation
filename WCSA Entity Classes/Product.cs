@@ -62,7 +62,7 @@ namespace WCSA_Entity_Classes
         {
             set
             {
-                // quantity = value;
+                quantity = value;
             }
             get { return quantity; }
         }

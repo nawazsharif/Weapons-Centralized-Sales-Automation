@@ -47,6 +47,23 @@ namespace WCSA_Data_Source_Layer
 
         }
 
+        public void ModifyItemInAccordanceWithInvoice(string productCode,uint quantity)
+        {
+
+            WCSA_Entity_Classes.Product requiredProduct = list.Find(list => list.ProductCode.Equals(productCode));
+            int index = list.IndexOf(requiredProduct);
+
+            Console.WriteLine("Product name : " + requiredProduct.ProductName);
+            Console.WriteLine("Product Quantity : " + requiredProduct.Quantity);
+            uint newQuantity = requiredProduct.Quantity - quantity;
+            Console.WriteLine("new quantity on hand = " + newQuantity);
+            requiredProduct.Quantity = newQuantity;
+            Console.WriteLine("new product quantity = " + requiredProduct.Quantity);
+            list[index] = requiredProduct;
+            Console.WriteLine("Product quantity in list  = " + list[index].Quantity);
+
+        }
+
         public WCSA_Entity_Classes.Product ReturnAnItem(string code)
         {
             return list.Find(list => list.ProductCode.Equals(code));
