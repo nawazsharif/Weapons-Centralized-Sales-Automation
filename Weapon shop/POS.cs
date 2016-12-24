@@ -95,6 +95,13 @@ namespace Weapon_shop
         {
             this.Close();
         }
+
+
+
+        /*
+        Unnecessary code starts here
+        */
+
         //public string BarCode
         //{
         //    set { }
@@ -114,7 +121,7 @@ namespace Weapon_shop
         //{
         //    set { this.quantity = Convert.ToUInt32(textQuantity.Text); }
         //    get {
-                 
+
         //        return Convert.ToUInt32(textQuantity.Text);
         //    }
         //}
@@ -149,6 +156,16 @@ namespace Weapon_shop
         //    get { return Convert.ToDouble(textBoxInvoiceTotalCost.Text); }
         //}
 
+        /*
+        Unnecessary code ends here
+        */
+
+
+
+
+        /*
+        Product code Text changed function starts here
+        */
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             WCSA_Entity_Classes.Product tempProduct = new POSPresenter().returnProductDetails(textPCode.Text);
@@ -158,7 +175,7 @@ namespace Weapon_shop
                 text_P_Name.Text = tempProduct.ProductName;
                 text_P_Name.Enabled = false;
 
-                textQuantity.Text = "";
+                textQuantity.Text = null;
 
                 //textTotalPrice.Text = tempProduct.Price.ToString();
                 textTotalPrice.Enabled = false;
@@ -167,8 +184,20 @@ namespace Weapon_shop
 
 
             }
+            else
+            {
+                Console.WriteLine("Product not returned");
+            }
         }
+        /*
+        Product code Text changed function ends here
+        */
 
+
+
+        /*
+        Item adition to invoice starts here
+        */
         private void button1_Click(object sender, EventArgs e)
         {
             //new Presenter_Classes.POSPresenter(this).AddToPurchaseList();
@@ -178,6 +207,15 @@ namespace Weapon_shop
                 uint originalQuantity = srcProd.Quantity;
                 double VAT;
                 uint quantity;
+
+                /*
+                Unnecessary code starts here
+                */
+                textinvoiceVAT.Text = "10";
+                /*
+                Unnecessary code ends here
+                */
+
                 if (double.TryParse(textinvoiceVAT.Text, out VAT))
                 {
                     if (uint.TryParse(textQuantity.Text, out quantity))
@@ -191,14 +229,14 @@ namespace Weapon_shop
                             dataGridView1.DataSource = pp.getInvoiceItemsList();
                             textBoxInvoiceTotalItems.Text = Convert.ToString(pp.getInvoiceItemsList().Count);
 
-                            textPCode.Text = "";
-                            textUnitPrice.Text = "0";
-                            text_P_Name.Text = "";
-                            textQuantity.Text = "0";
+                            textPCode.Text = null;
+                            textUnitPrice.Text = null;
+                            text_P_Name.Text = null;
+                            textQuantity.Text = null;
                             textUnitPrice.Enabled = true;
                             textPCode.Enabled = true;
                             text_P_Name.Enabled = true;
-                            textTotalPrice.Text = "0";
+                            textTotalPrice.Text = null;
 
 
                         }
@@ -213,18 +251,37 @@ namespace Weapon_shop
                 MessageBox.Show("Product Not found !");
             }
         }
+        /*
+        Item adition to invoice ends here
+        */
 
+
+
+        
         private void button3_Click(object sender, EventArgs e)
         {
            AddCustomerForm cs = new AddCustomerForm(this);
             cs.Show();
         }
 
+
+
+        /*
+        Quantity text changed function starts here
+        ------->Also calculates total cost
+        */
         private void textQuantity_TextChanged(object sender, EventArgs e)
         {
             
-            if(textPCode.Text != null)
+            if(textPCode.Text != null && text_P_Name!=null)
             {
+                /*
+                Unnecessary code starts here
+                */
+                if (textPCode.Text == null) Console.WriteLine("Produt code is null");
+                else Console.WriteLine("Produt code is NOT null :"+ textPCode.Text);
+                if (text_P_Name.Text == null) Console.WriteLine("Produt name is null");
+                else Console.WriteLine("Produt name is NOT null :" + text_P_Name.Text);
                 //string quantity = textQuantity.Text.ToString();
                 //string replacement = Regex.Replace(quantity, @"\t|\n|\r", "");
                 //replacement.Trim();
@@ -238,14 +295,22 @@ namespace Weapon_shop
                 double unitPrice = Convert.ToDouble(textUnitPrice.Text);
                 double totalPrice = Convert.ToDouble(quantity * unitPrice);
                 textTotalPrice.Text = Convert.ToString(totalPrice);
+                /*
+                Unnecessary code ends here
+                */
             }
-                
+
         }
+        /*
+        Quantity text changed function ends here
+        */
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {
             new POSPresenter().newTransaction();
-            textBoxInvoiceTotalCost.Text = "";
+            textBoxInvoiceTotalCost.Text = null;
             dataGridView1.DataSource = null;
             textBoxInvoiceTotalItems.Text = Convert.ToString(0);
         }
@@ -276,6 +341,7 @@ namespace Weapon_shop
         }
 
 
+
         /*
         Item addition to POS table actions start here
         */
@@ -292,7 +358,9 @@ namespace Weapon_shop
             
         }
         /*
-Item addition to POS table actions ends here
-*/
+        Item addition to POS table actions ends here
+        */
+
+
     }
 }
