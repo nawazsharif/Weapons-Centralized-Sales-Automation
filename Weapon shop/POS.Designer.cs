@@ -587,7 +587,7 @@
             // 
             // TotalPrice
             // 
-            this.TotalPrice.DataPropertyName = "TotalPrice";
+            this.TotalPrice.DataPropertyName = "Price";
             this.TotalPrice.HeaderText = "Total Price";
             this.TotalPrice.Name = "TotalPrice";
             // 
