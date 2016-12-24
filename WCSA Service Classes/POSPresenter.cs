@@ -33,7 +33,10 @@ namespace WCSA_Service_Classes
             return pds.ReturnAnItem(code);
         }
 
-        //Method for adding item to static list
+
+        /*
+        Item addition to static list starts here
+        */
         public double addItemToInvoice(string productCode, double price, uint quantity, double vat)
         {
             ProductDataSource pds = new ProductDataSource();
@@ -48,6 +51,10 @@ namespace WCSA_Service_Classes
 
             return (totalCost + ((totalCost * vat) / 100));
         }
+        /*
+        Item addition to static list ends here
+        */
+
 
         //Method for removing an item from list
         public void removeItemFromInvoice(string pcode)
