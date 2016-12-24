@@ -20,6 +20,7 @@ namespace WCSA_Service_Classes
 
         static List<WCSA_Entity_Classes.Product> purchaseList = new List<WCSA_Entity_Classes.Product>();
         static double totalCost;
+        static uint number=1000000;
 
         public POSPresenter()
         {
@@ -66,6 +67,7 @@ namespace WCSA_Service_Classes
         //Method to be called in case of new transaction
         public void newTransaction()
         {
+            number++;
             purchaseList.Clear();
             totalCost = 0;
         }
@@ -121,6 +123,13 @@ namespace WCSA_Service_Classes
         /*
         PDF generation code ends here
         */
+        public string TransactionNumber()
+        {
+  
+            return number.ToString();
+            
+        }
+
 
     }
 }

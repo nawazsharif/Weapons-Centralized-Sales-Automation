@@ -52,6 +52,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.grouper2 = new CodeVendor.Controls.Grouper();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumberOfItems = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -73,10 +77,6 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.Admin = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.ProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumberOfItems = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grouper1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -308,6 +308,7 @@
             this.label9.Size = new System.Drawing.Size(32, 24);
             this.label9.TabIndex = 1;
             this.label9.Text = "00";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -354,6 +355,30 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(635, 382);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // ProductCode
+            // 
+            this.ProductCode.DataPropertyName = "ProductCode";
+            this.ProductCode.HeaderText = "Product Code";
+            this.ProductCode.Name = "ProductCode";
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "ProductName";
+            this.ProductName.HeaderText = "Product Name";
+            this.ProductName.Name = "ProductName";
+            // 
+            // TotalPrice
+            // 
+            this.TotalPrice.DataPropertyName = "Price";
+            this.TotalPrice.HeaderText = "Total Price";
+            this.TotalPrice.Name = "TotalPrice";
+            // 
+            // NumberOfItems
+            // 
+            this.NumberOfItems.DataPropertyName = "Quantity";
+            this.NumberOfItems.HeaderText = "NumberOfItems";
+            this.NumberOfItems.Name = "NumberOfItems";
             // 
             // groupBox3
             // 
@@ -572,30 +597,6 @@
             this.label13.Size = new System.Drawing.Size(83, 18);
             this.label13.TabIndex = 6;
             this.label13.Text = "Login As :";
-            // 
-            // ProductCode
-            // 
-            this.ProductCode.DataPropertyName = "ProductCode";
-            this.ProductCode.HeaderText = "Product Code";
-            this.ProductCode.Name = "ProductCode";
-            // 
-            // ProductName
-            // 
-            this.ProductName.DataPropertyName = "ProductName";
-            this.ProductName.HeaderText = "Product Name";
-            this.ProductName.Name = "ProductName";
-            // 
-            // TotalPrice
-            // 
-            this.TotalPrice.DataPropertyName = "Price";
-            this.TotalPrice.HeaderText = "Total Price";
-            this.TotalPrice.Name = "TotalPrice";
-            // 
-            // NumberOfItems
-            // 
-            this.NumberOfItems.DataPropertyName = "Quantity";
-            this.NumberOfItems.HeaderText = "NumberOfItems";
-            this.NumberOfItems.Name = "NumberOfItems";
             // 
             // POS
             // 

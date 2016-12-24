@@ -27,6 +27,11 @@ namespace Weapon_shop
             refrence = ps;
         }
 
+
+
+        /*
+        xyz function stats here
+        */
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             Customer cs = new CustomerPresenter().checkcustomerDetails(textBox1.Text);
@@ -44,6 +49,11 @@ namespace Weapon_shop
 
             }
         }
+        /*
+        xyz function ends here
+        */
+
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -63,6 +73,11 @@ namespace Weapon_shop
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void AddCustomerForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

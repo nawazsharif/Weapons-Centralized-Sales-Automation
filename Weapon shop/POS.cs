@@ -29,6 +29,7 @@ namespace Weapon_shop
         {
             InitializeComponent();
             this.ControlBox = false;
+            label9.Text = new POSPresenter().TransactionNumber();
             Admin.Text = mf.UserName;
         }
         private void label4_Click(object sender, EventArgs e)
@@ -46,6 +47,7 @@ namespace Weapon_shop
             //t.Interval = 1000;//In milisecond 
             //t.Tick += new EventHandler(this.t_Tick);
             //t.Start();
+            //new POSPresenter().Invoice();
             labelClock.Text = DateTime.Now.ToLongTimeString();
             labelDate.Text = DateTime.Now.ToShortDateString() ;
         }
@@ -324,9 +326,12 @@ namespace Weapon_shop
         private void button2_Click(object sender, EventArgs e)
         {
             new POSPresenter().newTransaction();
+
             textBoxInvoiceTotalCost.Text = null;
             dataGridView1.DataSource = null;
             textBoxInvoiceTotalItems.Text = Convert.ToString(0);
+            
+            label9.Text = new POSPresenter().TransactionNumber();
         }
         /*
         New Transaction button functions end here
@@ -339,6 +344,8 @@ namespace Weapon_shop
         */
         private void button7_Click(object sender, EventArgs e)
         {
+           
+            
             if (customernid == null)
             {
                 MessageBox.Show("Please Fillup Customer Info"); 
@@ -347,6 +354,8 @@ namespace Weapon_shop
             {
                 MessageBox.Show("Successfull");
                 new POSPresenter().generateInvoice(10, 5);
+                new POSPresenter().newTransaction();
+
                 //customernid = null;
             }
         }
@@ -392,9 +401,14 @@ namespace Weapon_shop
         {
             
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            
+        }
         /*
-        Item addition to POS table actions ends here
-        */
+Item addition to POS table actions ends here
+*/
 
 
     }
