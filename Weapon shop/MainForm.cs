@@ -42,7 +42,7 @@ namespace Weapon_shop
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Product pd = new Product();
+            Product pd = new Product(this);
             pd.Show();
         }
         

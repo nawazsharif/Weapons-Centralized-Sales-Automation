@@ -14,6 +14,7 @@ namespace Weapon_shop
 {
     public partial class Product : Form
     {
+        MainForm rfrence;
         string code;
         string name;
         uint quantity;
@@ -37,6 +38,14 @@ namespace Weapon_shop
             disable_product();
             this.ControlBox = false;
         }
+        public Product(MainForm mf)
+        {
+            InitializeComponent();
+            disable_product();
+            this.ControlBox = false;
+            rfrence = mf;
+        }
+
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -98,20 +107,37 @@ namespace Weapon_shop
                 groupBox2.Show();
                 btn_P_add.Hide();
                 btnOk.Show();
-                WCSA_Entity_Classes.Product srcProd = new ProductPresenter().checkProductDetails(textSearch.Text);
-                if(srcProd != null)
+
+                if (textSearch.Text == "")
                 {
-                    textBoxCode.Text = srcProd.ProductCode;
-                    textBoxName.Text = srcProd.ProductName;
-                    textBoxPrice.Text = Convert.ToString(srcProd.Price);
-                    textBoxQuantity.Text = Convert.ToString(srcProd.Quantity);
+                    disable_product();
+                    groupBox2.Hide();
+                    textSearch.Show();
+                    btn_P_Search.Show();
+                    MessageBox.Show("Please Insert A Valid Product Code");
                 }
                 else
                 {
-                    MessageBox.Show("Product Not found !"); 
-                }
-                
+                    WCSA_Entity_Classes.Product srcProd = new ProductPresenter().checkProductDetails(textSearch.Text);
+                    if (srcProd != null)
+                    {
 
+                        textBoxCode.Text = srcProd.ProductCode;
+                        textBoxName.Text = srcProd.ProductName;
+                        textBoxPrice.Text = Convert.ToString(srcProd.Price);
+                        textBoxQuantity.Text = Convert.ToString(srcProd.Quantity);
+                    }
+                    else
+                    {
+                        disable_product();
+                        groupBox2.Hide();
+                        textSearch.Show();
+                        btn_P_Search.Show();
+                        MessageBox.Show("Not Found");
+
+                    }
+
+                }
             }
         }
 
@@ -120,6 +146,7 @@ namespace Weapon_shop
             disable_product();
             chk = 0;
             groupBox2.Show();
+            btn_P_add.Show();
             btnOk.Hide();
 
         }
@@ -214,16 +241,30 @@ namespace Weapon_shop
         {
             double price;
             uint quantity;
-            if (double.TryParse(textBoxPrice.Text, out price))
-            {
-                if (uint.TryParse(textBoxQuantity.Text, out quantity))
+            if (textBoxName.Text == "") { MessageBox.Show("Please enter Product Name"); }
+            if (textBoxCode.Text == "") { MessageBox.Show("Please enter Product Code"); }
+
+            else {
+                if (double.TryParse(textBoxPrice.Text, out price))
                 {
-                    new ProductPresenter().Add(textBoxCode.Text, textBoxName.Text, price,quantity);
-                    MessageBox.Show("Successfull");
+                    if (uint.TryParse(textBoxQuantity.Text, out quantity))
+                    {
+
+                        if (textBoxName.Text != "" && textBoxCode.Text != null && textBoxQuantity.Text != null && textBoxPrice.Text != null)
+                        {
+                            new ProductPresenter().Add(textBoxCode.Text, textBoxName.Text, price, quantity);
+                            MessageBox.Show("Successfull");
+                        }
+                    else
+                    {
+                        MessageBox.Show("FillUp all Data");
+
+                    }
+                    }
+                    else MessageBox.Show("Please enter quantity");
                 }
-                else MessageBox.Show("Please enter quantity");
+                else MessageBox.Show("Please input price");
             }
-            else MessageBox.Show("Please input price");
         }
 
         private void textPrice_TextChanged(object sender, EventArgs e)
@@ -245,6 +286,17 @@ namespace Weapon_shop
                 else MessageBox.Show("Please enter quantity");
             }
             else MessageBox.Show("Please input price");
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            rfrence.Show();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            groupBox2.Hide();
         }
     }
 }

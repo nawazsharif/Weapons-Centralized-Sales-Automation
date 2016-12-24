@@ -89,7 +89,7 @@ namespace WCSA_Service_Classes
 
                 // step 2:
                 // Now create a writer that listens to this doucment and writes the document to desired Stream.
-                string documentPath = @"C:\\Users\ahmed\\Desktop\\Generated pdfs of WCSA\\";
+                string documentPath = @"C:\\Users\\ahmed\\Desktop\\PDF\\";
                 string filename = invoiceNumber + ".pdf";
                 string documentFullPath = documentPath + filename;
 

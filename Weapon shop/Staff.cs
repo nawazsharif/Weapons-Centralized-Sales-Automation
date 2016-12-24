@@ -68,6 +68,7 @@ namespace Weapon_shop
             disable() ;
             chk = 0;
             groupBox2.Show();
+            btn_staff_add.Show();
             btnOk.Hide();
             refresh();
 
@@ -275,6 +276,7 @@ namespace Weapon_shop
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            this.Hide();
             refrence.Show();
         }
 

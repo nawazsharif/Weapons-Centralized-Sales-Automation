@@ -56,6 +56,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textSearch = new System.Windows.Forms.TextBox();
             this.btn_P_Search = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.grouper1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -123,6 +124,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.groupBox1.Controls.Add(this.btnBack);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnAdd);
@@ -186,7 +188,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(31, 175);
+            this.groupBox2.Location = new System.Drawing.Point(31, 180);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(336, 327);
             this.groupBox2.TabIndex = 6;
@@ -270,6 +272,7 @@
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btn_P_add
             // 
@@ -337,9 +340,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 204);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 210);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(882, 303);
+            this.dataGridView1.Size = new System.Drawing.Size(881, 286);
             this.dataGridView1.TabIndex = 13;
             // 
             // textSearch
@@ -361,6 +364,18 @@
             this.btn_P_Search.Text = "Search";
             this.btn_P_Search.UseVisualStyleBackColor = false;
             this.btn_P_Search.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnBack.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(784, 33);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(90, 28);
+            this.btnBack.TabIndex = 5;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Product
             // 
@@ -417,5 +432,6 @@
         private System.Windows.Forms.Button btn_P_Search;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Button btnBack;
     }
 }
