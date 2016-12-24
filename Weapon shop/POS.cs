@@ -341,12 +341,12 @@ namespace Weapon_shop
         {
             if (customernid == null)
             {
-                MessageBox.Show("Please Fillup Customer Info");
-                
+                MessageBox.Show("Please Fillup Customer Info"); 
             }
             else
             {
                 MessageBox.Show("Successfull");
+                new POSPresenter().generateInvoice(10, 5);
                 //customernid = null;
             }
         }
