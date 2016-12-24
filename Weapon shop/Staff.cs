@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WCSA_Service_Classes;
 using WCSA_Entity_Classes;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace Weapon_shop
 {
     public partial class Staff : Form
     {
+        // string query = "Select * From STAFF";
+        
         public int chk ;
         public string str;
         MainForm refrence;
@@ -167,7 +171,7 @@ namespace Weapon_shop
             textBox_search.Show();
             btnsearch.Show();
             dataGridView1.DataSource = new StaffInfoPresenter().fetchStaffList();
-            refresh();
+            
 
             //groupBox2.Hide();
 
@@ -177,6 +181,8 @@ namespace Weapon_shop
         {
             //List<Utility_Classes.Staff> staffList = new List<Utility_Classes.Staff>() {
             //new Utility_Classes.Staff(StaffName,StaffMail, StaffPhone,StaffAddress, StaffNickname,StaffPassword)};
+            
+
             if (str == "Matched")
             {
                 new StaffInfoPresenter().Add(textBoxName.Text, textBoxMail.Text, textBoxPhone.Text,
