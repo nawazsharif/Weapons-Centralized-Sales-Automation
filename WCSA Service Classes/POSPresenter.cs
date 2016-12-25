@@ -12,6 +12,7 @@ using System.Diagnostics;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 
+
 namespace WCSA_Service_Classes
 {
     public class POSPresenter
@@ -24,7 +25,7 @@ namespace WCSA_Service_Classes
 
         public POSPresenter()
         {
-
+           
         }
 
         //This method is for returning an item to the UI
@@ -68,7 +69,8 @@ namespace WCSA_Service_Classes
         //Method to be called in case of new transaction
         public void newTransaction()
         {
-            number++;
+            ++number;
+            
             purchaseList.Clear();
             totalCost = 0;
         }
@@ -83,7 +85,7 @@ namespace WCSA_Service_Classes
         /*
         PDF generation code starts here
         */
-        public bool generateInvoice(uint invoiceNumber , double vat)
+        public bool generateInvoice(uint invoiceNumber , double vat,string date,string time,string admin)
         {
             Document myDocument = new Document(PageSize.A4.Rotate());
 
@@ -93,7 +95,7 @@ namespace WCSA_Service_Classes
                 // step 2:
                 // Now create a writer that listens to this doucment and writes the document to desired Stream.
                 string documentPath = @"C:\\Users\\ahmed\\Desktop\\PDF\\";
-                string filename = invoiceNumber + ".pdf";
+                string filename = number + ".pdf";
                 string documentFullPath = documentPath + filename;
 
                 PdfWriter.GetInstance(myDocument, new FileStream(documentFullPath, FileMode.Create));
@@ -101,21 +103,34 @@ namespace WCSA_Service_Classes
                 // step 3:  Open the document now using
                 myDocument.Open();
                 // step 4: Now add some contents to the document
+                
+                myDocument.Add(new Paragraph("                           time: "));
                 myDocument.Add(new Paragraph("                Welcome            "));
                 myDocument.Add(new Paragraph("         Wapon Shop Management            "));
                 myDocument.Add(new Paragraph("               Nikunjo-2            "));
                 myDocument.Add(new Paragraph("                Road : 11            "));
                 myDocument.Add(new Paragraph("               House : 2A            "));
-                myDocument.Add(new Paragraph("      Invoice Number = "+invoiceNumber));
+                myDocument.Add(new Paragraph("      Invoice Number = "+number));
+                myDocument.Add(new Paragraph("                           Date:+ Time:"));
                 myDocument.Add(new Paragraph("                   "));
                 myDocument.Add(new Paragraph("VAT percentage = " + vat));
                 myDocument.Add(new Paragraph("Name         Quantity           Price"));
 
                 foreach (Product P in purchaseList)
                 {
-                    string printstr = string.Format("{0}         {1}           {2}\n",P.ProductName,P.Quantity,P.Price);
+                    string printstr = string.Format("{0}            {1}           {2}\n", P.ProductName,P.Quantity,P.Price);
                     myDocument.Add(new Paragraph(printstr));
                 }
+                myDocument.Add(new Paragraph("           total cost :  "  +totalCost) );
+                myDocument.Add(new Paragraph("           Cash Paid :   " ));
+                myDocument.Add(new Paragraph("           cash return : " ));
+
+                myDocument.Add(new Paragraph("Cashair : "));
+
+                myDocument.Add(new Paragraph("            Thank you For Your Visit           "));
+                myDocument.Add(new Paragraph("                  Have A Nice Day              "));
+
+
             }
             catch (DocumentException de)
             {
@@ -137,7 +152,6 @@ namespace WCSA_Service_Classes
         */
         public string TransactionNumber()
         {
-  
             return number.ToString();
             
         }

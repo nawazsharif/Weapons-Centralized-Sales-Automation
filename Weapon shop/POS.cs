@@ -21,6 +21,7 @@ namespace Weapon_shop
         Timer t = new Timer();
         public string customernid;
         public uint quantity;
+        string time, date;
         WCSA_Entity_Classes.Product reference;
         public POS()
         {
@@ -51,7 +52,9 @@ namespace Weapon_shop
             //t.Start();
             //new POSPresenter().Invoice();
             labelClock.Text = DateTime.Now.ToLongTimeString();
+            time = labelClock.Text;
             labelDate.Text = DateTime.Now.ToShortDateString() ;
+            date = labelDate.Text;
         }
         //private void t_Tick(Object sender, EventArgs e)
         //{
@@ -288,31 +291,34 @@ namespace Weapon_shop
         */
         private void textQuantity_TextChanged(object sender, EventArgs e)
         {
-            if (textQuantity.Text == null) textQuantity.Text = "0";
+            if (textQuantity.Text == "") { MessageBox.Show("Encert Quantity"); }
+            else {
+                if (textQuantity.Text == null) textQuantity.Text = "0";
 
 
-            if (reference!=null)
-            {
-                Debug.Assert(reference != null);
-                /*
-                Unnecessary code starts here
-                */
-                //string quantity = textQuantity.Text.ToString();
-                //string replacement = Regex.Replace(quantity, @"\t|\n|\r", "");
-                //replacement.Trim();
-                //string unitPrice = textUnitPrice.Text.ToString();
-                //string replacement2 = Regex.Replace(unitPrice, @"\t|\n|\r", "");
-                //replacement2.Trim();
-                //double totalPrice = Convert.ToDouble(replacement2) * (double)Convert.ToUInt32(replacement);
-                //textTotalPrice.Text = Convert.ToString(totalPrice);
-                //MessageBox.Show(textQuantity.Text);
-                double quantity = Convert.ToDouble(textQuantity.Text);
-                double unitPrice = Convert.ToDouble(textUnitPrice.Text);
-                double totalPrice = Convert.ToDouble(quantity * unitPrice);
-                textTotalPrice.Text = Convert.ToString(totalPrice);
-                /*
-                Unnecessary code ends here
-                */
+                if (reference != null)
+                {
+                    Debug.Assert(reference != null);
+                    /*
+                    Unnecessary code starts here
+                    */
+                    //string quantity = textQuantity.Text.ToString();
+                    //string replacement = Regex.Replace(quantity, @"\t|\n|\r", "");
+                    //replacement.Trim();
+                    //string unitPrice = textUnitPrice.Text.ToString();
+                    //string replacement2 = Regex.Replace(unitPrice, @"\t|\n|\r", "");
+                    //replacement2.Trim();
+                    //double totalPrice = Convert.ToDouble(replacement2) * (double)Convert.ToUInt32(replacement);
+                    //textTotalPrice.Text = Convert.ToString(totalPrice);
+                    //MessageBox.Show(textQuantity.Text);
+                    double quantity = Convert.ToDouble(textQuantity.Text);
+                    double unitPrice = Convert.ToDouble(textUnitPrice.Text);
+                    double totalPrice = Convert.ToDouble(quantity * unitPrice);
+                    textTotalPrice.Text = Convert.ToString(totalPrice);
+                    /*
+                    Unnecessary code ends here
+                    */
+                }
             }
 
         }
@@ -354,7 +360,7 @@ namespace Weapon_shop
             else
             {
                 MessageBox.Show("Successfull");
-                new POSPresenter().generateInvoice(10, 5);
+                new POSPresenter().generateInvoice(10000, 10,date,time,Name);
                 new POSPresenter().newTransaction();
                 
                 //customernid = null;
@@ -406,6 +412,11 @@ namespace Weapon_shop
         private void label9_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void labelDate_Click(object sender, EventArgs e)
+        {
+
         }
         /*
 Item addition to POS table actions ends here

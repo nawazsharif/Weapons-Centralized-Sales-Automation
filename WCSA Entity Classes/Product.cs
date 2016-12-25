@@ -16,7 +16,7 @@ namespace WCSA_Entity_Classes
         double price;
         uint quantity;
 
-        string searchCode;
+       // string searchCode;
 
         public Product(string productCode, string productName, double price, uint quantity)
         {
@@ -66,14 +66,14 @@ namespace WCSA_Entity_Classes
             }
             get { return quantity; }
         }
-        public string SearchCode
-        {
-            set
-            {
-                //searchCode = textSearch.Text;
-            }
-            get { return searchCode; }
-        }
+        //public string SearchCode
+        //{
+        //    set
+        //    {
+        //        //searchCode = textSearch.Text;
+        //    }
+        //    get { return searchCode; }
+        //}
 
     }
 }

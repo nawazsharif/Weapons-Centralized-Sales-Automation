@@ -121,6 +121,7 @@
             this.labelDate.Size = new System.Drawing.Size(48, 20);
             this.labelDate.TabIndex = 16;
             this.labelDate.Text = "Date";
+            this.labelDate.Click += new System.EventHandler(this.labelDate_Click);
             // 
             // labelClock
             // 
