@@ -11,6 +11,8 @@ using WCSA_Service_Classes;
 using WCSA_Entity_Classes;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace Weapon_shop
 {
@@ -344,7 +346,6 @@ namespace Weapon_shop
         */
         private void button7_Click(object sender, EventArgs e)
         {
-           
             
             if (customernid == null)
             {
@@ -355,7 +356,7 @@ namespace Weapon_shop
                 MessageBox.Show("Successfull");
                 new POSPresenter().generateInvoice(10, 5);
                 new POSPresenter().newTransaction();
-
+                
                 //customernid = null;
             }
         }

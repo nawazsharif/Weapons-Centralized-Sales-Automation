@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using WCSA_Data_Source_Layer;
 
+
 namespace WCSA_Service_Classes
 {
     public class StaffInfoPresenter
@@ -12,7 +13,8 @@ namespace WCSA_Service_Classes
         public void Add(string name, string mail, string phone, string address, string nickname, string password)
         {
             StaffDataSource sds = new StaffDataSource();
-            sds.AddToList(new WCSA_Entity_Classes.Staff(name, mail, phone, address, nickname, password));
+            WCSA_Entity_Classes.Staff stf = new WCSA_Entity_Classes.Staff(name, mail, phone, address, nickname, password);
+            sds.AddToList(stf);
         }
 
         public WCSA_Entity_Classes.Staff checkStaffDetails(string name)

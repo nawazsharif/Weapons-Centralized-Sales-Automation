@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-namespace ConnectionData
+namespace DataConnection
 {
     public static class DataAccess
     {

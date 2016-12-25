@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using DataConnection;
 
 namespace WCSA_Data_Source_Layer
 {
@@ -12,13 +13,15 @@ namespace WCSA_Data_Source_Layer
 
         public override void PopulateFromDatabase()
         {
-            WCSA_Entity_Classes.Staff requiredStaff = list.Find(staffList => staffList.Name.Equals("Nawaz"));
+            //WCSA_Entity_Classes.Staff requiredStaff = new WCSA_Entity_Classes.Staff();//list.Find(staffList => staffList.Name.Equals("Nawaz"));
+           // new StaffDataAccess().Add(requiredStaff);
+        WCSA_Entity_Classes.Staff requiredStaff = list.Find(staffList => staffList.Name.Equals("Nawaz"));
             if (requiredStaff == null)
             {
                 list.Add(new WCSA_Entity_Classes.Staff("Nawaz", "kkk@kkk.ckk", "32452623", "NK-2", "Nawaz", "123"));
                 Console.WriteLine("Inserted into list \n");
             }
-            //Execute query and fill up the list here
+    //Execute query and fill up the list here
         }
 
         public void DeleteFromList(string name)
