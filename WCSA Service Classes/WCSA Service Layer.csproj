@@ -50,6 +50,7 @@
     <Compile Include="ProductPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaffInfoPresenter.cs" />
+    <Compile Include="SupplierInfoPresenter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WCSA Data Source Layer\WCSA Data Source Layer.csproj">

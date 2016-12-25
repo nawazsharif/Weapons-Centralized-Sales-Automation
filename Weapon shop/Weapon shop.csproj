@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AboutShopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutShopForm.Designer.cs">
+      <DependentUpon>AboutShopForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +142,18 @@
     <Compile Include="SupplierInfoForm.Designer.cs">
       <DependentUpon>SupplierInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VatForm.Designer.cs">
+      <DependentUpon>VatForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutShopForm.resx">
+      <DependentUpon>AboutShopForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddCustomerForm.resx">
       <DependentUpon>AddCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +202,9 @@
     <EmbeddedResource Include="SupplierInfoForm.resx">
       <DependentUpon>SupplierInfoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VatForm.resx">
+      <DependentUpon>VatForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -193,6 +220,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataConnection\DataConnection.csproj">
+      <Project>{4de9e26f-2c2d-43b8-b619-2dc5b72ed720}</Project>
+      <Name>DataConnection</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Grouper\CodeVendor.Controls.csproj">
       <Project>{d5d88eb0-23b9-46ce-b23c-c6245ecf023c}</Project>
       <Name>CodeVendor.Controls</Name>

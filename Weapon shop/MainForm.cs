@@ -102,5 +102,28 @@ namespace Weapon_shop
             ManagerLogin mlog = new ManagerLogin();
             mlog.Show();
         }
+
+        private void setingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AboutShopForm fm = new AboutShopForm();
+            fm.Show();
+        }
+
+        private void vatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VatForm vf = new VatForm();
+            vf.Show();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm af = new AboutForm();
+            af.Show();
+        }
     }
 }

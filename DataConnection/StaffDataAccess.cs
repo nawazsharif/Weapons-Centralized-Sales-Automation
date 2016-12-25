@@ -12,7 +12,7 @@ namespace DataConnection
     {
         public int Add(WCSA_Entity_Classes.Staff staff)
         {
-            string query = string.Format("INSERT INTO STAFF(Name, Mail, Phone,Address,NickName,Password) VALUES('{0}', '{1}', '{2}','{3}', '{4}','{5}')",staff.Name,staff.Mail,staff.Phone,staff.Address,staff.NickName,staff.Password);
+            string query = string.Format("INSERT INTO STAFF (Name, Mail, Phone, Address, NickName, Password) VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')",staff.Name,staff.Mail,staff.Phone,staff.Address,staff.NickName,staff.Password);
             return DataAccess.ExecuteQuery(query);
         }
 
@@ -30,24 +30,20 @@ namespace DataConnection
 
         public List<WCSA_Entity_Classes.Staff> GetAll()
         {
-            string query = "SELECT Id, Name, Phone FROM STAFF";
+            string query = "SELECT Name, Mail,Phone,Address,NickName,Password FROM STAFF";
             SqlDataReader reader = DataAccess.GetData(query);
 
             WCSA_Entity_Classes.Staff staff = null;
-            List<WCSA_Entity_Classes.Staff> personList = new List<WCSA_Entity_Classes.Staff>();
+            List<WCSA_Entity_Classes.Staff> staffList = new List<WCSA_Entity_Classes.Staff>();
             while (reader.Read())
             {
-                staff = new WCSA_Entity_Classes.Staff();
-                staff.Name = reader["Name"].ToString();
-                staff.Name = reader["Mail"].ToString();
-                staff.Phone = reader["Phone"].ToString();
-                staff.Address = reader["Address"].ToString();
-                staff.NickName = reader["NickName"].ToString();
-                staff.Password = reader["Password"].ToString();
+                staff = new WCSA_Entity_Classes.Staff(reader["Name"].ToString(),reader["Mail"].ToString(),
+                                                    reader["Phone"].ToString(),reader["Address"].ToString(),
+                                                    reader["NickName"].ToString(), reader["Password"].ToString());
 
-                personList.Add(staff);
+                staffList.Add(staff);
             }
-            return personList;
+            return staffList;
         }
 
         public WCSA_Entity_Classes.Staff GetByName(string name)

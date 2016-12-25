@@ -14,7 +14,7 @@ namespace WCSA_Data_Source_Layer
             list.RemoveAll(list => list.ShopName.Equals(sname));
         }
 
-        void ModifyList(WCSA_Entity_Classes.Supplier supplier)
+        public void ModifyList(WCSA_Entity_Classes.Supplier supplier)
         {
 
             WCSA_Entity_Classes.Supplier requiredProduct = list.Find(list => list.ShopName.Equals(supplier.ShopName));
@@ -23,7 +23,7 @@ namespace WCSA_Data_Source_Layer
 
         }
 
-        WCSA_Entity_Classes.Supplier ReturnAnItem(string sname)
+        public WCSA_Entity_Classes.Supplier ReturnAnItem(string sname)
         {
             return list.Find(list => list.ShopName.Equals(sname));
         }

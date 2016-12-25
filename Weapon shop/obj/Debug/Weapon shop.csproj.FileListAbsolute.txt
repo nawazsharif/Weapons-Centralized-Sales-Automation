@@ -99,3 +99,8 @@ C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.AddCustomerForm.resources
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.Re_Print_Form.resources
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\itextsharp.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\DataConnection.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\DataConnection.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.AboutShopForm.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.VatForm.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.AboutForm.resources

@@ -11,6 +11,7 @@ using WCSA_Service_Classes;
 using WCSA_Entity_Classes;
 using System.Data.SqlClient;
 using System.Data.Sql;
+using DataConnection;
 
 namespace Weapon_shop
 {
@@ -105,6 +106,7 @@ namespace Weapon_shop
             }
             else if (chk == 0)// add button
             {
+                textBoxName.Enabled = true;
                 textBox_search.Hide();
                 btnsearch.Hide();
                 groupBox2.Show();
@@ -187,7 +189,8 @@ namespace Weapon_shop
             {
                 new StaffInfoPresenter().Add(textBoxName.Text, textBoxMail.Text, textBoxPhone.Text,
                                         textBoxAddress.Text, textBoxNickName.Text, textBoxPassword.Text);
-                MessageBox.Show("Successfull");
+                
+                    MessageBox.Show("Successfull");
                 groupBox2.Hide();
             }
 

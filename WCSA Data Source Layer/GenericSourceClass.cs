@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataConnection;
 
 namespace WCSA_Data_Source_Layer
 {
@@ -20,9 +21,10 @@ namespace WCSA_Data_Source_Layer
         public virtual void PopulateFromDatabase() { }
 
 
-        public void AddToList(T entity)
+        public virtual void AddToList(T entity)
         {
             list.Add(entity);
+            //new StaffDataAccess(list);
         }
 
         public void returnEntireList(List<T> tempList)
