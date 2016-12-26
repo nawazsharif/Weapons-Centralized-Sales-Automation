@@ -28,8 +28,6 @@ namespace Weapon_shop
             btnsearch.Hide();
             groupBox2.Hide();
             dataGridView1.Hide();
-            
-
         }
         public void refresh()
         {
@@ -330,6 +328,12 @@ namespace Weapon_shop
         private void textBoxMail_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            disable();
+            
         }
     }
 }

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WCSA_Service_Classes;
 using WCSA_Entity_Classes;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace Weapon_shop
 {
@@ -29,6 +31,7 @@ namespace Weapon_shop
             textSearch.Hide();
             btn_P_Search.Hide();
             btnOk.Hide();
+            groupBox3.Hide();
            
 
         }
@@ -297,6 +300,49 @@ namespace Weapon_shop
         private void btnCancel_Click(object sender, EventArgs e)
         {
             groupBox2.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            disable_product();
+            groupBox3.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+            pictureBox3.Image = barcode.Draw(textBarcode.Text,50);
+
+            //string barcode = textBarcode.Text;
+            //Bitmap bit = new Bitmap(barcode.Length * 40, 150);
+            //using (Graphics graphice = Graphics.FromImage(bit))
+            //{
+
+            //    Font bfont = new System.Drawing.Font("IDAutomationHC39M", 20);
+            //    PointF point = new PointF(2f, 2f);
+            //    SolidBrush black = new SolidBrush(Color.Black);
+            //    SolidBrush white = new SolidBrush(Color.White);
+            //    graphice.FillRectangle(white, 0, 0, bit.Width, bit.Height);
+            //    graphice.DrawString("*" + barcode + "*", bfont, black, point);
+            //    using (MemoryStream memo = new MemoryStream())
+            //    {
+            //        bit.Save(memo, ImageFormat.Png);
+            //        pictureBox2.Image = bit;
+            //        pictureBox2.Height = bit.Height;
+            //        pictureBox2.Width = bit.Width;
+            //    }
+            //}
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Zen.Barcode.CodeQrBarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodeQr;
+            pictureBox3.Image = qrcode.Draw(textBarcode.Text,50);
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
