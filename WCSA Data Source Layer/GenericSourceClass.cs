@@ -19,8 +19,7 @@ namespace WCSA_Data_Source_Layer
                 constructor = this;
                 PopulateFromDatabase();
             }
-            //Populating the list everytime ?? Really ???
-           
+            
         }
 
         public virtual void PopulateFromDatabase() { }
