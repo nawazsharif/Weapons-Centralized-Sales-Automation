@@ -104,12 +104,14 @@ namespace WCSA_Service_Classes
                 myDocument.Open();
                 // step 4: Now add some contents to the document
                 
-                myDocument.Add(new Paragraph("                           time: "));
+                //myDocument.Add(new Paragraph("                           time: "));
                 myDocument.Add(new Paragraph("                Welcome            "));
                 myDocument.Add(new Paragraph("         Wapon Shop Management            "));
                 myDocument.Add(new Paragraph("               Nikunjo-2           "));
                 myDocument.Add(new Paragraph("                Road : 11            "));
                 myDocument.Add(new Paragraph("               House : 2A            "));
+                myDocument.Add(new Paragraph("               Contact Number : "+"012863772"+"            "));
+
                 myDocument.Add(new Paragraph("      Invoice Number = "+number));
                 myDocument.Add(new Paragraph("                          "+ date + " " + time));
                 myDocument.Add(new Paragraph("                   "));
@@ -125,10 +127,10 @@ namespace WCSA_Service_Classes
                 myDocument.Add(new Paragraph("           Cash Paid :   " ));
                 myDocument.Add(new Paragraph("           cash return : " ));
 
-                myDocument.Add(new Paragraph("Cashair : "));
+                myDocument.Add(new Paragraph("Cashair : "+admin+""));
 
                 myDocument.Add(new Paragraph("            Thank you For Your Visit           "));
-                myDocument.Add(new Paragraph("                  Have A Nice Day              "));
+                myDocument.Add(new Paragraph("                 Have A Nice Day              "));
 
 
             }
