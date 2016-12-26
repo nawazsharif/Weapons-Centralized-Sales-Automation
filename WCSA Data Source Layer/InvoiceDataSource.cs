@@ -33,9 +33,9 @@ namespace WCSA_Data_Source_Layer
 
         }
 
-        public Invoice returnInvoiceNumber(string invNumber)
+        public Invoice returnInvoiceNumber(uint invNumber)
         {
-            return list.Find(list => list.InvoiceNumber.Equals(invNumber));
+            return list.Find(list => list.InvoiceNumber==invNumber);
         }
 
         public List<Invoice> returnInvoiceList()
