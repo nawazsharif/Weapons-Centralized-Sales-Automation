@@ -38,7 +38,7 @@ namespace WCSA_Entity_Classes
         {
             set
             {
-
+                productCode = value;
             }
             get { return productCode; }
         }
@@ -46,7 +46,7 @@ namespace WCSA_Entity_Classes
         {
             set
             {
-                //name = value;
+                productName = value;
             }
             get { return productName; }
         }
@@ -54,7 +54,7 @@ namespace WCSA_Entity_Classes
         {
             set
             {
-                //price = value;
+                price = value;
             }
             get { return price; }
         }
@@ -64,7 +64,10 @@ namespace WCSA_Entity_Classes
             {
                 quantity = value;
             }
-            get { return quantity; }
+            get
+            {
+                return quantity;
+            }
         }
         //public string SearchCode
         //{

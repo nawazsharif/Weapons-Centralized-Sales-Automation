@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -58,12 +59,11 @@
             this.textSearch = new System.Windows.Forms.TextBox();
             this.btn_P_Search = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.textBarcode = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.grouper1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -145,6 +145,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Action";
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.PowderBlue;
+            this.button7.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(331, 19);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(90, 57);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Barcode Generator";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.PowderBlue;
@@ -210,7 +222,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(31, 180);
+            this.groupBox2.Location = new System.Drawing.Point(31, 190);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(336, 327);
             this.groupBox2.TabIndex = 6;
@@ -401,6 +413,18 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.PowderBlue;
+            this.button8.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(203, 40);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 33);
+            this.button8.TabIndex = 15;
+            this.button8.Text = "Qrcode";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.PowderBlue;
@@ -438,30 +462,6 @@
             this.textBarcode.Name = "textBarcode";
             this.textBarcode.Size = new System.Drawing.Size(341, 20);
             this.textBarcode.TabIndex = 8;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.PowderBlue;
-            this.button7.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(331, 19);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(90, 57);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Barcode Generator";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.PowderBlue;
-            this.button8.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(203, 40);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 33);
-            this.button8.TabIndex = 15;
-            this.button8.Text = "Qrcode";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Product
             // 

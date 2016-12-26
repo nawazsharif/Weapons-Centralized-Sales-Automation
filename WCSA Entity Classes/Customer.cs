@@ -14,7 +14,7 @@ namespace WCSA_Entity_Classes
         {
             set
             {
-                //nickName = value;
+                nid = value;
             }
             get
             {
@@ -24,7 +24,10 @@ namespace WCSA_Entity_Classes
 
         public string License
         {
-            set { }
+            set
+            {
+                license = value;
+            }
             get
             {
                 return license;
