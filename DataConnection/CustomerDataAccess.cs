@@ -39,8 +39,8 @@ namespace DataConnection
                 customer = new WCSA_Entity_Classes.Customer();
                 customer.Name = reader["Name"].ToString();
                 customer.Mail = reader["Mail"].ToString();
-                customer.Phone = reader["Phone"].ToString();
                 customer.Address = reader["Address"].ToString();
+                customer.Phone = reader["Phone"].ToString();
                 customer.NID = reader["Nid"].ToString();
                 customer.License = reader["License"].ToString();
 
