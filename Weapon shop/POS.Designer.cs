@@ -48,7 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.LabelInvoice = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.grouper2 = new CodeVendor.Controls.Grouper();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -293,7 +293,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.PowderBlue;
-            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.LabelInvoice);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(673, 150);
             this.groupBox2.Name = "groupBox2";
@@ -301,16 +301,16 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
-            // label9
+            // LabelInvoice
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(116, 11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(32, 24);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "00";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.LabelInvoice.AutoSize = true;
+            this.LabelInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelInvoice.Location = new System.Drawing.Point(116, 11);
+            this.LabelInvoice.Name = "LabelInvoice";
+            this.LabelInvoice.Size = new System.Drawing.Size(32, 24);
+            this.LabelInvoice.TabIndex = 1;
+            this.LabelInvoice.Text = "00";
+            this.LabelInvoice.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -651,7 +651,7 @@
         private System.Windows.Forms.TextBox textPCode;
         private System.Windows.Forms.TextBox textBarCode;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label LabelInvoice;
         private System.Windows.Forms.Label label8;
         private CodeVendor.Controls.Grouper grouper2;
         private System.Windows.Forms.GroupBox groupBox3;

@@ -16,5 +16,13 @@ namespace Weapon_shop
         {
             InitializeComponent();
         }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            AboutForm.name = Name.Text;
+            AboutForm.mail = Mail.Text;
+            AboutForm.phone = Phone.Text;
+            AboutForm.address = Address.Text;
+        }
     }
 }

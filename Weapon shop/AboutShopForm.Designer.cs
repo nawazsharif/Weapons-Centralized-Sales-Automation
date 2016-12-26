@@ -32,10 +32,10 @@
             this.labelComent = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBoxPhone = new System.Windows.Forms.TextBox();
-            this.textBoxAddress = new System.Windows.Forms.TextBox();
-            this.textBoxMail = new System.Windows.Forms.TextBox();
-            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.Phone = new System.Windows.Forms.TextBox();
+            this.Address = new System.Windows.Forms.TextBox();
+            this.Mail = new System.Windows.Forms.TextBox();
+            this.Name = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,10 +49,10 @@
             this.groupBox2.Controls.Add(this.labelComent);
             this.groupBox2.Controls.Add(this.btnOk);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.textBoxPhone);
-            this.groupBox2.Controls.Add(this.textBoxAddress);
-            this.groupBox2.Controls.Add(this.textBoxMail);
-            this.groupBox2.Controls.Add(this.textBoxName);
+            this.groupBox2.Controls.Add(this.Phone);
+            this.groupBox2.Controls.Add(this.Address);
+            this.groupBox2.Controls.Add(this.Mail);
+            this.groupBox2.Controls.Add(this.Name);
             this.groupBox2.Controls.Add(this.btnCancel);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
@@ -84,6 +84,7 @@
             this.btnOk.TabIndex = 17;
             this.btnOk.Text = "Save";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // label8
             // 
@@ -93,34 +94,35 @@
             this.label8.Size = new System.Drawing.Size(0, 13);
             this.label8.TabIndex = 16;
             // 
-            // textBoxPhone
+            // Phone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(138, 92);
-            this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(139, 20);
-            this.textBoxPhone.TabIndex = 9;
+            this.Phone.Location = new System.Drawing.Point(138, 92);
+            this.Phone.Name = "Phone";
+            this.Phone.Size = new System.Drawing.Size(139, 20);
+            this.Phone.TabIndex = 9;
             // 
-            // textBoxAddress
+            // Address
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(138, 130);
-            this.textBoxAddress.Multiline = true;
-            this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(246, 51);
-            this.textBoxAddress.TabIndex = 9;
+            this.Address.Location = new System.Drawing.Point(138, 130);
+            this.Address.Multiline = true;
+            this.Address.Name = "Address";
+            this.Address.Size = new System.Drawing.Size(246, 51);
+            this.Address.TabIndex = 9;
             // 
-            // textBoxMail
+            // Mail
             // 
-            this.textBoxMail.Location = new System.Drawing.Point(138, 58);
-            this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(246, 20);
-            this.textBoxMail.TabIndex = 8;
+            this.Mail.Location = new System.Drawing.Point(138, 58);
+            this.Mail.Name = "Mail";
+            this.Mail.Size = new System.Drawing.Size(246, 20);
+            this.Mail.TabIndex = 8;
             // 
-            // textBoxName
+            // Name
             // 
-            this.textBoxName.Location = new System.Drawing.Point(138, 27);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(246, 20);
-            this.textBoxName.TabIndex = 7;
+            this.Name.Location = new System.Drawing.Point(138, 27);
+            this.Name.Name = "Name";
+            this.Name.Size = new System.Drawing.Size(246, 20);
+            this.Name.TabIndex = 7;
+            this.Name.Text = "Name";
             // 
             // btnCancel
             // 
@@ -193,10 +195,10 @@
         private System.Windows.Forms.Label labelComent;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBoxPhone;
-        private System.Windows.Forms.TextBox textBoxAddress;
-        private System.Windows.Forms.TextBox textBoxMail;
-        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox Phone;
+        private System.Windows.Forms.TextBox Address;
+        private System.Windows.Forms.TextBox Mail;
+        private System.Windows.Forms.TextBox Name;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

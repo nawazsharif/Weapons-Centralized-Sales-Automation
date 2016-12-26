@@ -30,6 +30,8 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.InvNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateColoumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,15 +41,31 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.PaleTurquoise;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.InvNumber,
+            this.DateColoumn});
             this.dataGridView1.Location = new System.Drawing.Point(8, 39);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(269, 277);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // InvNumber
+            // 
+            this.InvNumber.DataPropertyName = "InvoiceNumber";
+            this.InvNumber.HeaderText = "Invoice Number";
+            this.InvNumber.Name = "InvNumber";
+            // 
+            // DateColoumn
+            // 
+            this.DateColoumn.DataPropertyName = "Date";
+            this.DateColoumn.HeaderText = "Date";
+            this.DateColoumn.Name = "DateColoumn";
             // 
             // Re_Print_Form
             // 
@@ -68,5 +86,7 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateColoumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InvNumber;
     }
 }

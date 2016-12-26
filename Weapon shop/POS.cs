@@ -34,10 +34,11 @@ namespace Weapon_shop
         {
             InitializeComponent();
             this.ControlBox = false;
-            label9.Text = new POSPresenter().TransactionNumber();
+            LabelInvoice.Text = new POSPresenter().TransactionNumber().ToString();
             Admin.Text = mf.UserName;
             mainFormReference = mf;
             textinvoiceVAT.Text = VatForm.vat.ToString();
+            LabelInvoice.Text = new POSPresenter().getCurrentInvoiceNumber().ToString();
         }
         private void label4_Click(object sender, EventArgs e)
         {
@@ -341,8 +342,7 @@ namespace Weapon_shop
             textBoxInvoiceTotalCost.Text = null;
             dataGridView1.DataSource = null;
             textBoxInvoiceTotalItems.Text = Convert.ToString(0);
-            
-            label9.Text = new POSPresenter().TransactionNumber();
+            LabelInvoice.Text = new POSPresenter().TransactionNumber().ToString();
         }
         /*
         New Transaction button functions end here
@@ -363,7 +363,8 @@ namespace Weapon_shop
             else
             {
                 MessageBox.Show("Successfull");
-                new POSPresenter().generateInvoice(10000, 10,date,time,Admin.Text);
+                
+                new POSPresenter().generateInvoice( 10,date,time,Admin.Text);
                 new POSPresenter().newTransaction();
                 
                 //customernid = null;
