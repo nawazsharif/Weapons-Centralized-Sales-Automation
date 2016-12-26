@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using WCSA_Entity_Classes;
+using DataConnection;
 namespace WCSA_Data_Source_Layer
 {
     public class ProductDataSource : GenericSourceClass<WCSA_Entity_Classes.Product>
@@ -11,25 +12,37 @@ namespace WCSA_Data_Source_Layer
 
         public override void PopulateFromDatabase()
         {
-            WCSA_Entity_Classes.Product requiredStaff = list.Find(list => list.ProductCode.Equals("1"));
-            if (requiredStaff == null)
-            {
-                list.Add(new WCSA_Entity_Classes.Product("1", "Glock 17", 5000, 10));
-                Console.WriteLine("Inserted Glock 17 into product list \n");
-            }
-            requiredStaff = list.Find(list => list.ProductCode.Equals("2"));
-            if (requiredStaff == null)
-            {
-                list.Add(new WCSA_Entity_Classes.Product("2", "ak_47", 10000, 10));
-                Console.WriteLine("Inserted Ak 47 into product list \n");
-            }
-            requiredStaff = list.Find(list => list.ProductCode.Equals("3"));
-            if (requiredStaff == null)
-            {
-                list.Add(new WCSA_Entity_Classes.Product("3", "Rifel", 100, 12));
-                Console.WriteLine("Inserted Rifle into product list \n");
-            }
+            //WCSA_Entity_Classes.Product requiredStaff = list.Find(list => list.ProductCode.Equals("1"));
+            //if (requiredStaff == null)
+            //{
+            //    list.Add(new WCSA_Entity_Classes.Product("1", "Glock 17", 5000, 10));
+            //    Console.WriteLine("Inserted Glock 17 into product list \n");
+            //}
+            //requiredStaff = list.Find(list => list.ProductCode.Equals("2"));
+            //if (requiredStaff == null)
+            //{
+            //    list.Add(new WCSA_Entity_Classes.Product("2", "ak_47", 10000, 10));
+            //    Console.WriteLine("Inserted Ak 47 into product list \n");
+            //}
+            //requiredStaff = list.Find(list => list.ProductCode.Equals("3"));
+            //if (requiredStaff == null)
+            //{
+            //    list.Add(new WCSA_Entity_Classes.Product("3", "Rifel", 100, 12));
+            //    Console.WriteLine("Inserted Rifle into product list \n");
+            //}
             //Execute query and fill up the list here
+            List<Product> productList = new ProductDataAccess().GetAll();
+            foreach (Product pds in productList)
+            {
+                list.Add(pds);
+            }
+        }
+        public override void AddToList(WCSA_Entity_Classes.Product entity)
+        {
+            list.Add(entity);
+            //WCSA_Entity_Classes.Staff requiredStaff = new WCSA_Entity_Classes.Staff();
+            //new StaffDataAccess().Add(requiredStaff);
+            new ProductDataAccess().Add(entity);
         }
 
 
@@ -44,6 +57,7 @@ namespace WCSA_Data_Source_Layer
             WCSA_Entity_Classes.Product requiredProduct = list.Find(list => list.ProductCode.Equals(product.ProductCode));
             int index = list.IndexOf(requiredProduct);
             list[index] = product;
+            new ProductDataAccess().Edit(product);
 
         }
 

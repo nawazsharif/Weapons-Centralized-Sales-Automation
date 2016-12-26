@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WCSA_Entity_Classes;
+using DataConnection;
 
 namespace WCSA_Data_Source_Layer
 {
@@ -12,14 +13,19 @@ namespace WCSA_Data_Source_Layer
 
         public override void PopulateFromDatabase()
         {
-            Customer cst = list.Find(list => list.NID.Equals("1"));
-            if(cst == null)
-            list.Add(new WCSA_Entity_Classes.Customer("nahid", "fgh@fdkvb", "017","djfhjkh","1", "10"));
-            cst = list.Find(list => list.NID.Equals("2"));
-            if(cst== null)
-            list.Add(new WCSA_Entity_Classes.Customer("sawon", "fgh@fdkvb", "017", "djfhjkh", "2", "10"));
+            //Customer cst = list.Find(list => list.NID.Equals("1"));
+            //if(cst == null)
+            //list.Add(new WCSA_Entity_Classes.Customer("nahid", "fgh@fdkvb", "017","djfhjkh","1", "10"));
+            //cst = list.Find(list => list.NID.Equals("2"));
+            //if(cst== null)
+            //list.Add(new WCSA_Entity_Classes.Customer("sawon", "fgh@fdkvb", "017", "djfhjkh", "2", "10"));
 
             //Execute query and fill up the list here
+            List<Customer> customerList = new CustomerDataAccess().GetAll();
+            foreach (Customer stf in customerList)
+            {
+                list.Add(stf);
+            }
         }
 
         public void DeleteFromList(string nid)
@@ -33,6 +39,7 @@ namespace WCSA_Data_Source_Layer
             WCSA_Entity_Classes.Customer requiredCustomer = list.Find(list => list.NID.Equals(customer.NID));
             int index = list.IndexOf(requiredCustomer);
             list[index] = customer;
+            new CustomerDataAccess().Edit(customer);
 
         }
 
