@@ -36,6 +36,7 @@ namespace WCSA_Service_Classes
             List<WCSA_Entity_Classes.Staff> staffList = new List<WCSA_Entity_Classes.Staff>();
             StaffDataSource sds = new StaffDataSource();
             sds.returnEntireList(staffList);
+
             return staffList;
         }
     }

@@ -10,12 +10,17 @@ namespace WCSA_Data_Source_Layer
     public abstract class GenericSourceClass<T>
     {
         protected static List<T> list = new List<T>();
+        static GenericSourceClass<T> constructor;
 
         public GenericSourceClass()
         {
-
+            if(constructor == null)
+            {
+                constructor = this;
+                PopulateFromDatabase();
+            }
             //Populating the list everytime ?? Really ???
-            PopulateFromDatabase();
+           
         }
 
         public virtual void PopulateFromDatabase() { }
@@ -24,7 +29,7 @@ namespace WCSA_Data_Source_Layer
         public virtual void AddToList(T entity)
         {
             list.Add(entity);
-            //new StaffDataAccess(list);
+            //new StaffDataAccess().Add()
         }
 
         public void returnEntireList(List<T> tempList)
@@ -34,6 +39,7 @@ namespace WCSA_Data_Source_Layer
                 tempList.Add(entity);
             }
         }
+        
 
 
         public void UpdateDatabase(T entity)

@@ -14,7 +14,7 @@ namespace WCSA_Entity_Classes
         {
             set
             {
-                //nickName = value;
+                nickName = value;
             }
             get
             {
@@ -25,7 +25,7 @@ namespace WCSA_Entity_Classes
         {
             set
             {
-                //nickName = value;
+                password = value;
             }
             get
             {

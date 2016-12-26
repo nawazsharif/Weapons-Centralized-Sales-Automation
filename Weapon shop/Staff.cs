@@ -92,16 +92,30 @@ namespace Weapon_shop
             disable();
             // MessageBox.Show(Convert.ToString(chk));
 
+
+            /*
+            Code of search button for the tab "Show All" starts here
+            */
             if (chk == 1)
             {
                 disable();
                 textBox_search.Show();
                 btnsearch.Show();
                 groupBox2.Hide();
+                dataGridView1.DataSource = null;
+                List<WCSA_Entity_Classes.Staff> stflist = new List<WCSA_Entity_Classes.Staff>();
+                stflist.Add(new StaffInfoPresenter().checkStaffDetails(textBox_search.Text));
+                foreach(WCSA_Entity_Classes.Staff st in stflist)
+                {
+                    Console.WriteLine("Staff name : " + st.Name);
+                }
+                dataGridView1.DataSource = stflist;
                 dataGridView1.Show();
-
-
             }
+            /*
+            Code of search button for the tab "Show All" ends here
+            */
+
             else if (chk == 0)// add button
             {
                 textBoxName.Enabled = true;
