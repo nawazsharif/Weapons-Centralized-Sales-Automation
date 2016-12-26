@@ -181,7 +181,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(457, 315);
             this.Controls.Add(this.groupBox2);
-            this.Name = "AboutShopForm";
+            //this.Name = "AboutShopForm";
             this.Text = "AboutShopForm";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
