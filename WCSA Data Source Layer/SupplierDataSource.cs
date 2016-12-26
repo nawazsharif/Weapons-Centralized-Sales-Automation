@@ -10,6 +10,7 @@ namespace WCSA_Data_Source_Layer
 {
     public class SupplierDatasource : GenericSourceClass<WCSA_Entity_Classes.Supplier>
     {
+        // List update from database 
         public override void PopulateFromDatabase()
         {
             List<Supplier> supplierList = new SupplierDataAccess().GetAll();
@@ -19,6 +20,8 @@ namespace WCSA_Data_Source_Layer
             }
         }
 
+
+        // add mathood override from generic class 
         public override void AddToList(WCSA_Entity_Classes.Supplier entity)
         {
             list.Add(entity);
@@ -31,6 +34,7 @@ namespace WCSA_Data_Source_Layer
             list.RemoveAll(list => list.ShopName.Equals(sname));
         }
 
+        //List modify from Database
         public void ModifyList(WCSA_Entity_Classes.Supplier supplier)
         {
 
@@ -40,6 +44,8 @@ namespace WCSA_Data_Source_Layer
             new SupplierDataAccess().Edit(supplier);
         }
 
+        //search shop name from List 
+         
         public WCSA_Entity_Classes.Supplier ReturnAnItem(string sname)
         {
             return list.Find(list => list.ShopName.Equals(sname));

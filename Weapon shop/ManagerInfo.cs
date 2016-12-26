@@ -24,5 +24,11 @@ namespace Weapon_shop
             sinfo.Show();
             
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            BankAccountForm bf = new BankAccountForm(this);
+            bf.Show();
+        }
     }
 }

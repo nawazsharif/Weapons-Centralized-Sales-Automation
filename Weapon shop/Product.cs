@@ -290,7 +290,7 @@ namespace Weapon_shop
             }
             else MessageBox.Show("Please input price");
         }
-
+        public Image dorkar;
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -307,16 +307,17 @@ namespace Weapon_shop
             disable_product();
             groupBox3.Show();
         }
-
+        
         private void button6_Click(object sender, EventArgs e)
         {
             Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
-            pictureBox3.Image = barcode.Draw(textBarcode.Text,50);
+            pictureBox3.Image = barcode.Draw(textBarcode.Text, 50);
+           
 
-            //string barcode = textBarcode.Text;
-            //Bitmap bit = new Bitmap(barcode.Length * 40, 150);
-            //using (Graphics graphice = Graphics.FromImage(bit))
-            //{
+        //string barcode = textBarcode.Text;
+        //Bitmap bit = new Bitmap(barcode.Length * 40, 150);
+        //using (Graphics graphice = Graphics.FromImage(bit))
+        //{
 
             //    Font bfont = new System.Drawing.Font("IDAutomationHC39M", 20);
             //    PointF point = new PointF(2f, 2f);
@@ -343,6 +344,11 @@ namespace Weapon_shop
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

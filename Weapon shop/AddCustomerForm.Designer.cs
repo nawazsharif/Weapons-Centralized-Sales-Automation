@@ -77,7 +77,7 @@
             // 
             this.btnOk.BackColor = System.Drawing.Color.PowderBlue;
             this.btnOk.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.Location = new System.Drawing.Point(45, 211);
+            this.btnOk.Location = new System.Drawing.Point(104, 230);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(90, 57);
             this.btnOk.TabIndex = 14;

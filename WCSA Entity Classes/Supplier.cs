@@ -17,7 +17,7 @@ namespace WCSA_Entity_Classes
         {
             set
             {
-                //nickName = value;
+                shopName = value;
             }
             get
             {

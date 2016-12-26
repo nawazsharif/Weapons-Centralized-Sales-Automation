@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerInfo));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnShow = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -37,8 +39,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grouper1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,6 +58,28 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Action";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.PowderBlue;
+            this.button3.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(444, 14);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(103, 57);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Extra";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.PowderBlue;
+            this.button2.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(335, 14);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 57);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Staff Payment";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // btnShow
             // 
@@ -80,6 +102,7 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Bank Account";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -147,28 +170,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.PowderBlue;
-            this.button2.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(335, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 57);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Staff Payment";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.PowderBlue;
-            this.button3.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(444, 14);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 57);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Extra";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // ManagerInfo
             // 

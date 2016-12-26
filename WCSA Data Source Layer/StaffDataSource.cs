@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using DataConnection;
+using WCSA_Entity_Classes;
 
 namespace WCSA_Data_Source_Layer
 {
@@ -22,7 +23,14 @@ namespace WCSA_Data_Source_Layer
             //    Console.WriteLine("Inserted into list \n");
             //}
             //Execute query and fill up the list here
+            List<Staff> staffList = new StaffDataAccess().GetAll();
+            foreach (Staff stf in staffList)
+            {
+                list.Add(stf);
+            }
         }
+        // add database 
+        //add mathood override from generic 
 
         public override void AddToList(WCSA_Entity_Classes.Staff entity)
         {
@@ -34,7 +42,7 @@ namespace WCSA_Data_Source_Layer
         {
             list.RemoveAll(list => list.Name.Equals(name));
         }
-
+        // Modifyy database 
         public void ModifyList(WCSA_Entity_Classes.Staff staff)
         {
 
@@ -50,7 +58,7 @@ namespace WCSA_Data_Source_Layer
             return list.Find(list => list.Name.Equals(name));
         }
 
-
+       
         public bool checkIfUserPassCombinationCorrect(string name, string pass)
         {
             WCSA_Entity_Classes.Staff requiredStaff = list.Find(staffList => staffList.Name.Equals(name));
