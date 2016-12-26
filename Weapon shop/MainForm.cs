@@ -15,6 +15,7 @@ namespace Weapon_shop
     
     public partial class MainForm : Form
     {
+        static double vat;
         Form_Login referwnce;
         private CodeVendor.Controls.Grouper Grouper1;
         
@@ -33,6 +34,18 @@ namespace Weapon_shop
             this.ControlBox = false;
             label3.Text = lgfm.UserName;
             referwnce = lgfm;
+        }
+
+        public double VAT
+        {
+            set
+            {
+                vat = value;
+            }
+            get
+            {
+                return vat;
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -116,7 +129,7 @@ namespace Weapon_shop
 
         private void vatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            VatForm vf = new VatForm();
+            VatForm vf = new VatForm(this);
             vf.Show();
         }
 

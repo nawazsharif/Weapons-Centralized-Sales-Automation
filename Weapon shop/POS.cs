@@ -23,6 +23,8 @@ namespace Weapon_shop
         public uint quantity;
         string time, date;
         WCSA_Entity_Classes.Product reference;
+        MainForm mainFormReference;
+
         public POS()
         {
             InitializeComponent();
@@ -34,6 +36,8 @@ namespace Weapon_shop
             this.ControlBox = false;
             label9.Text = new POSPresenter().TransactionNumber();
             Admin.Text = mf.UserName;
+            mainFormReference = mf;
+            textinvoiceVAT.Text = VatForm.vat.ToString();
         }
         private void label4_Click(object sender, EventArgs e)
         {
@@ -219,7 +223,7 @@ namespace Weapon_shop
                 /*
                 Unnecessary code starts here
                 */
-                textinvoiceVAT.Text = "10";
+                textinvoiceVAT.Text = mainFormReference.VAT.ToString();
                 /*
                 Unnecessary code ends here
                 */
@@ -280,7 +284,6 @@ namespace Weapon_shop
         }
         /*
         Customer info add button functionality ends here
-
         */
 
 
@@ -291,7 +294,7 @@ namespace Weapon_shop
         */
         private void textQuantity_TextChanged(object sender, EventArgs e)
         {
-            if (textQuantity.Text == "") { MessageBox.Show("Encert Quantity"); }
+            if (textQuantity.Text == "") { MessageBox.Show("Enter Quantity"); }
             else {
                 if (textQuantity.Text == null) textQuantity.Text = "0";
 
@@ -415,7 +418,8 @@ namespace Weapon_shop
                 /*
                 Unnecessary code starts here
                 */
-                textinvoiceVAT.Text = "10";
+                Console.WriteLine("Vat : " + mainFormReference.VAT.ToString());
+                textinvoiceVAT.Text = VatForm.vat.ToString();
                 /*
                 Unnecessary code ends here
                 */

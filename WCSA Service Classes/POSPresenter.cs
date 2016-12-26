@@ -107,11 +107,11 @@ namespace WCSA_Service_Classes
                 myDocument.Add(new Paragraph("                           time: "));
                 myDocument.Add(new Paragraph("                Welcome            "));
                 myDocument.Add(new Paragraph("         Wapon Shop Management            "));
-                myDocument.Add(new Paragraph("               Nikunjo-2            "));
+                myDocument.Add(new Paragraph("               Nikunjo-2           "));
                 myDocument.Add(new Paragraph("                Road : 11            "));
                 myDocument.Add(new Paragraph("               House : 2A            "));
                 myDocument.Add(new Paragraph("      Invoice Number = "+number));
-                myDocument.Add(new Paragraph("                           Date:+ Time:"));
+                myDocument.Add(new Paragraph("                          "+ date + " " + time));
                 myDocument.Add(new Paragraph("                   "));
                 myDocument.Add(new Paragraph("VAT percentage = " + vat));
                 myDocument.Add(new Paragraph("Name         Quantity           Price"));

@@ -12,9 +12,30 @@ namespace Weapon_shop
 {
     public partial class VatForm : Form
     {
-        public VatForm()
+        static public double vat=0;
+
+        public double VAT
+        {
+            set
+            {
+                vat = value;
+            }
+            get
+            {
+                return vat;
+            }
+        }
+
+        public VatForm(MainForm mf)
         {
             InitializeComponent();
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            vat = Convert.ToDouble(textBox1.Text);
+            this.Close();
         }
     }
 }
