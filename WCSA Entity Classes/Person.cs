@@ -17,7 +17,7 @@ namespace WCSA_Entity_Classes
         {
             set
             {
-                //name = value;
+                name = value;
             }
             get { return name; }
         }

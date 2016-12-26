@@ -24,7 +24,7 @@ namespace DataConnection
 
         public int Edit(WCSA_Entity_Classes.Staff staff)
         {
-            string query = "UPDATE STAFF SET Name='" + staff.Name + "', Mail='" + staff.Mail + "' WHERE Phone='" + staff.Phone + "' WHERE Address='"+ staff.Address + "' WHERE NickName='" + staff.NickName+"'WHERE Password='"+staff.Password;
+            string query = "UPDATE STAFF SET Mail='" + staff.Mail + "', Address='" + staff.Address + "',Phone='" + staff.Phone + "', NickName='" + staff.NickName + "', Password='" + staff.Password +"' WHERE Name='" + staff.Name +"'";
             return DataAccess.ExecuteQuery(query);
         }
 
@@ -37,9 +37,13 @@ namespace DataConnection
             List<WCSA_Entity_Classes.Staff> staffList = new List<WCSA_Entity_Classes.Staff>();
             while (reader.Read())
             {
-                staff = new WCSA_Entity_Classes.Staff(reader["Name"].ToString(),reader["Mail"].ToString(),
-                                                    reader["Phone"].ToString(),reader["Address"].ToString(),
-                                                    reader["NickName"].ToString(), reader["Password"].ToString());
+                staff = new WCSA_Entity_Classes.Staff();
+                staff.Name = reader["Name"].ToString();
+                staff.Mail = reader["Mail"].ToString();
+                staff.Phone = reader["Phone"].ToString();
+                staff.Address = reader["Address"].ToString();
+                staff.NickName = reader["NickName"].ToString();
+                staff.Password = reader["Password"].ToString();
 
                 staffList.Add(staff);
             }
@@ -62,7 +66,6 @@ namespace DataConnection
                 staff.Address = reader["Address"].ToString();
                 staff.NickName = reader["NickName"].ToString();
                 staff.Password= reader["Password"].ToString();
-
             }
             return staff;
         }
