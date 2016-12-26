@@ -406,12 +406,72 @@ namespace Weapon_shop
         }
         private void textQuantity_EnterKeyPressed(object sender , EventArgs e)
         {
-            
+            if (reference != null)
+            {
+                uint originalQuantity = reference.Quantity;
+                double VAT;
+                uint quantity;
+
+                /*
+                Unnecessary code starts here
+                */
+                textinvoiceVAT.Text = "10";
+                /*
+                Unnecessary code ends here
+                */
+
+                Debug.Assert(reference != null);
+
+                if (double.TryParse(textinvoiceVAT.Text, out VAT))
+                {
+                    if (uint.TryParse(textQuantity.Text, out quantity))
+                    {
+                        if (quantity <= originalQuantity)
+                        {
+                            POSPresenter pp = new POSPresenter();
+                            textBoxInvoiceTotalCost.Text = Convert.ToString(pp.addItemToInvoice(reference.ProductCode, Convert.ToDouble(reference.Price),
+                            Convert.ToUInt32(textQuantity.Text), Convert.ToDouble(textinvoiceVAT.Text)));
+                            dataGridView1.AutoGenerateColumns = false;
+                            dataGridView1.DataSource = null;
+                            dataGridView1.DataSource = pp.getInvoiceItemsList();
+                            textBoxInvoiceTotalItems.Text = Convert.ToString(pp.getInvoiceItemsList().Count);
+
+                            textPCode.Text = null;
+                            textUnitPrice.Text = null;
+                            text_P_Name.Text = null;
+                            textQuantity.Text = null;
+                            textUnitPrice.Enabled = true;
+                            textPCode.Enabled = true;
+                            text_P_Name.Enabled = true;
+                            textTotalPrice.Text = null;
+
+                            reference = null;
+
+
+                        }
+                        else MessageBox.Show("Not enough items in stock");
+                    }
+                    else MessageBox.Show("Please enter quantity");
+                }
+                else MessageBox.Show("Please input VAT");
+            }
+            else
+            {
+                MessageBox.Show("Product Not found !");
+            }
         }
+        /*
+        Item addition to POS table actions end here
+        */
 
         private void label9_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void textBarCode_TextChanged(object sender, EventArgs e)
+        {
+            textPCode.Text = textBarCode.Text;
         }
 
         private void labelDate_Click(object sender, EventArgs e)
