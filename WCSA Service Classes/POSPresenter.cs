@@ -12,6 +12,8 @@ using System.Diagnostics;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 
+using WCSA_Factory_Layer;
+
 
 namespace WCSA_Service_Classes
 {
@@ -85,9 +87,12 @@ namespace WCSA_Service_Classes
         /*
         PDF generation code starts here
         */
-        public bool generateInvoice(uint invoiceNumber , double vat,string date,string time,string admin)
+        public bool generateInvoice( double vat,string date,string time,string admin)
         {
             Document myDocument = new Document(PageSize.A4.Rotate());
+
+            InvoiceFactory ifc = new InvoiceFactory();
+            
 
             try
             {
@@ -112,7 +117,7 @@ namespace WCSA_Service_Classes
                 myDocument.Add(new Paragraph("               House : 2A            "));
                 myDocument.Add(new Paragraph("               Contact Number : "+"012863772"+"            "));
 
-                myDocument.Add(new Paragraph("      Invoice Number = "+number));
+                myDocument.Add(new Paragraph("      Invoice Number = "+ ifc.makeNewTransactionNumber()));
                 myDocument.Add(new Paragraph("                          "+ date + " " + time));
                 myDocument.Add(new Paragraph("                   "));
                 myDocument.Add(new Paragraph("VAT percentage = " + vat));
@@ -152,10 +157,15 @@ namespace WCSA_Service_Classes
         /*
         PDF generation code ends here
         */
-        public string TransactionNumber()
+        public uint TransactionNumber()
         {
-            return number.ToString();
+            return new InvoiceFactory().getCurrentTransactionNumber();
             
+        }
+
+        public uint getCurrentInvoiceNumber()
+        {
+            return new InvoiceFactory().getCurrentTransactionNumber();
         }
 
 

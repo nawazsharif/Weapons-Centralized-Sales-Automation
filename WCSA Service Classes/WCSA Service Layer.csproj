@@ -61,6 +61,10 @@
       <Project>{227cdd07-1c1a-4179-a53e-658297f5dc04}</Project>
       <Name>WCSA Entity Layer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WCSA Factory Layer\WCSA Factory Layer.csproj">
+      <Project>{e30b190c-825f-4f08-8a0f-be2caa5a1e25}</Project>
+      <Name>WCSA Factory Layer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
