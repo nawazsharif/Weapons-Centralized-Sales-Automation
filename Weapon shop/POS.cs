@@ -34,7 +34,7 @@ namespace Weapon_shop
         {
             InitializeComponent();
             this.ControlBox = false;
-            LabelInvoice.Text = new POSPresenter().TransactionNumber();
+            LabelInvoice.Text = new POSPresenter().TransactionNumber().ToString();
             Admin.Text = mf.UserName;
             mainFormReference = mf;
             textinvoiceVAT.Text = VatForm.vat.ToString();
