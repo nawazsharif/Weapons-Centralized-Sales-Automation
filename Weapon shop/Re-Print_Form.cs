@@ -24,18 +24,25 @@ namespace Weapon_shop
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            Invoice inv = new RePrintPresenter().getAnInvoice(Convert.ToUInt32(textBox1.Text));
-            if (inv != null)
+            if(textBox1.Text!=null)
             {
-                List<Invoice> tempList = new List<Invoice>();
+                if(textBox1.Text != "")
+                {
+                    Invoice inv = new RePrintPresenter().getAnInvoice(Convert.ToUInt32(textBox1.Text));
+                    if (inv != null)
+                    {
+                        List<Invoice> tempList = new List<Invoice>();
 
-                tempList.Add(inv);
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = tempList;
-                dataGridView1.Show();
+                        tempList.Add(inv);
+                        dataGridView1.DataSource = null;
+                        dataGridView1.DataSource = tempList;
+                        dataGridView1.Show();
+                    }
+                    else
+                        Console.WriteLine("Invoice not found");
+                }
             }
-            else
-                Console.WriteLine("Invoice not found");
+            
             
 
         }

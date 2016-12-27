@@ -41,5 +41,10 @@ namespace Weapon_shop
             BankAccountForm bf = new BankAccountForm(this);
             bf.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

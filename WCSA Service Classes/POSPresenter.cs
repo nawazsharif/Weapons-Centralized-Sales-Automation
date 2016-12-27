@@ -23,11 +23,16 @@ namespace WCSA_Service_Classes
 
         static List<WCSA_Entity_Classes.Product> purchaseList = new List<WCSA_Entity_Classes.Product>();
         static double totalCost;
-        static uint number=1000000;
+        //static uint number=1000000;
 
         public POSPresenter()
         {
            
+        }
+
+        public double totalshopingAmount
+        {
+            get { return totalCost; }
         }
 
         //This method is for returning an item to the UI
@@ -71,7 +76,7 @@ namespace WCSA_Service_Classes
         //Method to be called in case of new transaction
         public void newTransaction()
         {
-            ++number;
+            //++number;
             
             purchaseList.Clear();
             totalCost = 0;
@@ -87,14 +92,15 @@ namespace WCSA_Service_Classes
         /*
         PDF generation code starts here
         */
-        public bool generateInvoice( double vat,double totalprice , string date,string time,string admin)
+        public uint generateInvoice( double vat,double totalprice , string date,string time,string admin)
         {
             Document myDocument = new Document(PageSize.A4.Rotate());
 
             InvoiceFactory ifc = new InvoiceFactory();
             uint invNumber = ifc.makeNewTransactionNumber();
+            Invoice inv = new Invoice();
 
-            
+
 
             try
             {
@@ -102,13 +108,17 @@ namespace WCSA_Service_Classes
                 // step 2:
                 // Now create a writer that listens to this doucment and writes the document to desired Stream.
                 string documentPath = @"C:\\Users\\ahmed\\Desktop\\PDF\\";
-                string filename = number + ".pdf";
+                string filename = invNumber + ".pdf";
                 string documentFullPath = documentPath + filename;
 
 
                 string invPath = "C:\\Users\\ahmed\\Desktop\\PDF\\";
                 string path = invPath + invNumber + ".pdf";
-                Invoice inv = new Invoice(invNumber, date, totalprice,  admin, invPath);
+                inv.InvoiceNumber = invNumber;
+                inv.Date = date;
+                inv.SalesAmount = totalprice;
+                inv.Admin = admin;
+                inv.Path=invPath;
 
 
                 PdfWriter.GetInstance(myDocument, new FileStream(documentFullPath, FileMode.Create));
@@ -160,7 +170,9 @@ namespace WCSA_Service_Classes
 
             myDocument.Close();
 
-            return true;
+            InvoiceDataSource ids = new InvoiceDataSource();
+            ids.AddInvoiceNumber(inv);
+            return invNumber;
         }
         /*
         PDF generation code ends here

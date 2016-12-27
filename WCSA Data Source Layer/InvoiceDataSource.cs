@@ -35,6 +35,7 @@ namespace WCSA_Data_Source_Layer
         public void AddInvoiceNumber(Invoice inv)
         {
             list.Add(inv);
+            Console.WriteLine("Invoice number in data source : "+inv.InvoiceNumber);
             new InvoiceDataAccess().Add(inv);
         }
 

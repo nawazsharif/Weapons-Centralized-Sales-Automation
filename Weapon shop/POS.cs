@@ -363,8 +363,9 @@ namespace Weapon_shop
             else
             {
                 MessageBox.Show("Successfull");
-                
-                new POSPresenter().generateInvoice( 10,TotalPrice,date,time,Admin.Text);
+
+                uint num = new POSPresenter().generateInvoice(VatForm.vat   ,   new POSPresenter().totalshopingAmount  ,  date  ,  time   ,  Admin.Text);
+                LabelInvoice.Text = num.ToString();
                 new POSPresenter().newTransaction();
                 
                 //customernid = null;

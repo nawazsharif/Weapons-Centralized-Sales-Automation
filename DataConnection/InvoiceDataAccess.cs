@@ -12,6 +12,8 @@ namespace DataConnection
         public int Add(WCSA_Entity_Classes.Invoice invoice)
         {
             string query = string.Format("INSERT INTO INVOICE (InvoiceNumber,Date,SellsAmount,Admin,Path) VALUES('{0}', '{1}', '{2}', '{3}','{4}')", invoice.InvoiceNumber,invoice.Date,invoice.SalesAmount,invoice.Admin,invoice.Path);
+            Console.WriteLine("Inv DB query = " + query);
+            Console.WriteLine("Invoice number in data access : " + invoice.InvoiceNumber);
             return DataAccess.ExecuteQuery(query);
         }
 

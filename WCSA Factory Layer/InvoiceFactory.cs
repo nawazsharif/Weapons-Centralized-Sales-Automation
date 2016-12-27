@@ -11,7 +11,7 @@ namespace WCSA_Factory_Layer
 {
     public class InvoiceFactory
     {
-        uint largestInvoicNumber = 1000;
+        static uint largestInvoicNumber = 1000;
 
         public InvoiceFactory()
         {

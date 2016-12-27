@@ -37,10 +37,26 @@ namespace Weapon_shop
             this.Close();
         }
 
+
+        /*
+        Search button functionality starts here
+        */
         private void button3_Click(object sender, EventArgs e)
         {
             
+            WCSA_Entity_Classes.Customer customer = new CustomerPresenter().checkcustomerDetails(textSearch.Text);
+            if(customer != null)
+            {
+                dataGridView1.DataSource = null;
+                List<Customer> customerList = new List<Customer>();
+                customerList.Add(customer);
+                dataGridView1.DataSource = customer;
+
+            }
         }
+        /*
+        Search button functionality ends here
+        */
 
         private void button2_Click(object sender, EventArgs e)
         {

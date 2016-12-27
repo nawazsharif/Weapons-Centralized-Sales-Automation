@@ -28,6 +28,7 @@ namespace Weapon_shop
         public SupplierInfoForm(ManagerInfo minfo)
         {
             InitializeComponent();
+            disable();
             reference = minfo;
 
         }
@@ -171,6 +172,11 @@ namespace Weapon_shop
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close() ;
         }
     }
 
