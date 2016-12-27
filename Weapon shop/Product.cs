@@ -84,7 +84,19 @@ namespace Weapon_shop
                 textSearch.Show();
                 btn_P_Search.Show();
                 groupBox2.Hide();
-                dataGridView1.Show();
+                dataGridView1.DataSource = null;
+                List<WCSA_Entity_Classes.Product> stflist = new List<WCSA_Entity_Classes.Product>();
+                stflist.Add(new ProductPresenter().checkProductDetails(textSearch.Text));
+                //foreach (WCSA_Entity_Classes.Product st in stflist)
+                //{
+                //    Console.WriteLine("Staff name : " + st.ProductName);
+                //}
+                if(stflist.Count != 0)
+                {
+                    dataGridView1.DataSource = stflist;
+                    dataGridView1.Show();
+                }
+                
                 //dataGridView1.DataSource = new ProductPresenter().fetchProductList() ;
 
             }
@@ -257,6 +269,7 @@ namespace Weapon_shop
                         {
                             new ProductPresenter().Add(textBoxCode.Text, textBoxName.Text, price, quantity);
                             MessageBox.Show("Successfull");
+                            groupBox2.Hide();
                         }
                     else
                     {
