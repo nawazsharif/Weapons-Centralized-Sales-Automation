@@ -19,9 +19,13 @@ namespace Weapon_shop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide() ;
-            ManagerInfo minfo = new ManagerInfo();
-            minfo.Show();
+            if(textBox1.Text.Equals(new ManagerInfo().ManagerPassword))
+            {
+                this.Hide();
+                ManagerInfo minfo = new ManagerInfo();
+                minfo.Show();
+            }
+            
         }
     }
 }
