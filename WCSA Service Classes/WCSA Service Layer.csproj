@@ -51,6 +51,7 @@
     <Compile Include="ProductPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RePrintPresenter.cs" />
+    <Compile Include="SellsInfoPresenter.cs" />
     <Compile Include="StaffInfoPresenter.cs" />
     <Compile Include="SupplierInfoPresenter.cs" />
   </ItemGroup>

@@ -12,9 +12,20 @@ namespace Weapon_shop
 {
     public partial class ManagerInfo : Form
     {
+
+        static string managerPassword = "Admin";
+
         public ManagerInfo()
         {
             InitializeComponent();
+        }
+
+        public string ManagerPassword
+        {
+            get
+            {
+                return managerPassword;
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
