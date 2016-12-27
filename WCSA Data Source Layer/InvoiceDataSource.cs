@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WCSA_Entity_Classes;
+using DataConnection;
 
 namespace WCSA_Data_Source_Layer
 {
@@ -20,17 +21,21 @@ namespace WCSA_Data_Source_Layer
             if(selfReference == null)
             {
                 //Execute query to fetch data from database
-                /*
-                Database query code goes in here
-                */
+                List<Invoice> staffList = new InvoiceDataAccess().GetAll();
+                foreach (Invoice stf in staffList)
+                {
+                    list.Add(stf);
+                }
+                list = staffList;
 
                 selfReference = this;
             }
         }
 
-        public void AddInvoiceNumber()
+        public void AddInvoiceNumber(Invoice inv)
         {
-
+            list.Add(inv);
+            new InvoiceDataAccess().Add(inv);
         }
 
         public Invoice returnInvoiceNumber(uint invNumber)

@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BankAccountPresenter.cs" />
     <Compile Include="CustomerPresenter.cs" />
     <Compile Include="LoginPagePresenter.cs" />
     <Compile Include="POSPresenter.cs" />

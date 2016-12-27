@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BankAccountDatasource.cs" />
     <Compile Include="CustomerDataSource.cs" />
     <Compile Include="GenericSourceClass.cs" />
     <Compile Include="InvoiceDataSource.cs" />

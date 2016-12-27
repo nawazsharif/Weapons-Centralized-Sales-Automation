@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WCSA_Service_Classes;
+using WCSA_Entity_Classes;
 
 namespace Weapon_shop
 {
@@ -53,13 +55,13 @@ namespace Weapon_shop
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
             disable();
         }
 
         private void btnShow_Click(object sender, EventArgs e)
         {
             disable();
+            dataGridView1.DataSource = new BankAccountPresenter().fetchBankList();
             dataGridView1.Show();
 
         }
@@ -72,6 +74,7 @@ namespace Weapon_shop
 
         private void btn_staff_add_Click(object sender, EventArgs e)
         {
+            new BankAccountPresenter().Add(textBox1.Text, textBox2.Text, textBox3.Text);
             MessageBox.Show("Successfull");
         }
     }

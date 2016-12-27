@@ -87,11 +87,13 @@ namespace WCSA_Service_Classes
         /*
         PDF generation code starts here
         */
-        public bool generateInvoice( double vat,string date,string time,string admin)
+        public bool generateInvoice( double vat,double totalprice , string date,string time,string admin)
         {
             Document myDocument = new Document(PageSize.A4.Rotate());
 
             InvoiceFactory ifc = new InvoiceFactory();
+            uint invNumber = ifc.makeNewTransactionNumber();
+
             
 
             try
@@ -102,6 +104,12 @@ namespace WCSA_Service_Classes
                 string documentPath = @"C:\\Users\\ahmed\\Desktop\\PDF\\";
                 string filename = number + ".pdf";
                 string documentFullPath = documentPath + filename;
+
+
+                string invPath = "C:\\Users\\ahmed\\Desktop\\PDF\\";
+                string path = invPath + invNumber + ".pdf";
+                Invoice inv = new Invoice(invNumber, date, totalprice,  admin, invPath);
+
 
                 PdfWriter.GetInstance(myDocument, new FileStream(documentFullPath, FileMode.Create));
 
@@ -117,7 +125,7 @@ namespace WCSA_Service_Classes
                 myDocument.Add(new Paragraph("               House : 2A            "));
                 myDocument.Add(new Paragraph("               Contact Number : "+"012863772"+"            "));
 
-                myDocument.Add(new Paragraph("      Invoice Number = "+ ifc.makeNewTransactionNumber()));
+                myDocument.Add(new Paragraph("      Invoice Number = "+ invNumber));
                 myDocument.Add(new Paragraph("                          "+ date + " " + time));
                 myDocument.Add(new Paragraph("                   "));
                 myDocument.Add(new Paragraph("VAT percentage = " + vat));

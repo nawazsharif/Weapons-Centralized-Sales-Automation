@@ -24,5 +24,10 @@ namespace Weapon_shop
             AboutForm.phone = Phone.Text;
             AboutForm.address = Address.Text;
         }
+
+        private void Name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

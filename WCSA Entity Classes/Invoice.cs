@@ -10,15 +10,16 @@ namespace WCSA_Entity_Classes
     {
         uint invoiceNumber;
         string date;
-        uint salesAmount;
+        double salesAmount;
         string admin;
-
-        public Invoice(uint invoiceNumber,string date, uint salesAmount , string admin)
+        string path;
+        public Invoice(uint invoiceNumber,string date, double salesAmount , string admin,string path)
         {
             this.invoiceNumber = invoiceNumber;
             this.date = date;
             this.salesAmount = salesAmount;
             this.admin = admin;
+            this.path = path;
         }
 
         public Invoice()
@@ -27,6 +28,7 @@ namespace WCSA_Entity_Classes
             this.date = "";
             this.salesAmount = 0;
             this.admin = "";
+            this.path = "";
         }
 
         public uint InvoiceNumber
@@ -55,7 +57,7 @@ namespace WCSA_Entity_Classes
             }
         }
 
-        public uint SalesAmount
+        public double SalesAmount
         {
             set
             {
@@ -78,6 +80,18 @@ namespace WCSA_Entity_Classes
             get
             {
                 return admin;
+            }
+        }
+        public string Path
+        {
+            set
+            {
+                path = value;
+
+            }
+            get
+            {
+                return path;
             }
         }
     }

@@ -364,7 +364,7 @@ namespace Weapon_shop
             {
                 MessageBox.Show("Successfull");
                 
-                new POSPresenter().generateInvoice( 10,date,time,Admin.Text);
+                new POSPresenter().generateInvoice( 10,TotalPrice,date,time,Admin.Text);
                 new POSPresenter().newTransaction();
                 
                 //customernid = null;
