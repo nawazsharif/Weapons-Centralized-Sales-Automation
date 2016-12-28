@@ -138,5 +138,25 @@ namespace Weapon_shop
             AboutForm af = new AboutForm();
             af.Show();
         }
+
+        private void staffInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Staff().Show();
+        }
+
+        private void productInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Product().Show();
+        }
+
+        private void customerInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new CustomerForm().Show();
+        }
+
+        private void sellsInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new SellsInfo().Show();
+        }
     }
 }

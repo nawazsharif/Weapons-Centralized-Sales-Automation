@@ -51,10 +51,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.grouper2 = new CodeVendor.Controls.Grouper();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumberOfItems = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -76,6 +72,11 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.Admin = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.ProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumberOfItems = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remove = new System.Windows.Forms.DataGridViewButtonColumn();
             this.grouper1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -338,35 +339,13 @@
             this.ProductCode,
             this.ProductName,
             this.TotalPrice,
-            this.NumberOfItems});
+            this.NumberOfItems,
+            this.Remove});
             this.dataGridView1.Location = new System.Drawing.Point(5, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(635, 382);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // ProductCode
-            // 
-            this.ProductCode.DataPropertyName = "ProductCode";
-            this.ProductCode.HeaderText = "Product Code";
-            this.ProductCode.Name = "ProductCode";
-            // 
-            // ProductName
-            // 
-            this.ProductName.DataPropertyName = "ProductName";
-            this.ProductName.HeaderText = "Product Name";
-            this.ProductName.Name = "ProductName";
-            // 
-            // TotalPrice
-            // 
-            this.TotalPrice.DataPropertyName = "Price";
-            this.TotalPrice.HeaderText = "Total Price";
-            this.TotalPrice.Name = "TotalPrice";
-            // 
-            // NumberOfItems
-            // 
-            this.NumberOfItems.DataPropertyName = "Quantity";
-            this.NumberOfItems.HeaderText = "NumberOfItems";
-            this.NumberOfItems.Name = "NumberOfItems";
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox3
             // 
@@ -410,6 +389,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(119, 20);
             this.textBox1.TabIndex = 13;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label14
             // 
@@ -586,6 +566,37 @@
             this.label13.TabIndex = 6;
             this.label13.Text = "Login As :";
             // 
+            // ProductCode
+            // 
+            this.ProductCode.DataPropertyName = "ProductCode";
+            this.ProductCode.HeaderText = "Product Code";
+            this.ProductCode.Name = "ProductCode";
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "ProductName";
+            this.ProductName.HeaderText = "Product Name";
+            this.ProductName.Name = "ProductName";
+            // 
+            // TotalPrice
+            // 
+            this.TotalPrice.DataPropertyName = "Price";
+            this.TotalPrice.HeaderText = "Total Price";
+            this.TotalPrice.Name = "TotalPrice";
+            // 
+            // NumberOfItems
+            // 
+            this.NumberOfItems.DataPropertyName = "Quantity";
+            this.NumberOfItems.HeaderText = "NumberOfItems";
+            this.NumberOfItems.Name = "NumberOfItems";
+            // 
+            // Remove
+            // 
+            this.Remove.HeaderText = "Remove";
+            this.Remove.Name = "Remove";
+            this.Remove.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Remove.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // POS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -663,6 +674,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label labelClock;
         private System.Windows.Forms.Label labelDate;
+        private System.Windows.Forms.DataGridViewButtonColumn Remove;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumberOfItems;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;

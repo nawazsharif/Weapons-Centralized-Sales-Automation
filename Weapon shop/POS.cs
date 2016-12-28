@@ -364,7 +364,7 @@ namespace Weapon_shop
             {
                 MessageBox.Show("Successfull");
 
-                uint num = new POSPresenter().generateInvoice(VatForm.vat   ,   new POSPresenter().totalshopingAmount  ,  date  ,  time   ,  Admin.Text);
+                uint num = new POSPresenter().generateInvoice(VatForm.vat   ,   new POSPresenter().totalshopingAmount  ,  date  ,  time   ,  Admin.Text,textBox1.Text,textBox2.Text);
                 LabelInvoice.Text = num.ToString();
                 new POSPresenter().newTransaction();
                 
@@ -478,6 +478,36 @@ namespace Weapon_shop
         private void textBarCode_TextChanged(object sender, EventArgs e)
         {
             textPCode.Text = textBarCode.Text;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text != null)
+            {
+                if(textBox1.Text != "")
+                {
+                    double paidAmount = Convert.ToDouble(textBox1.Text);
+                    double totalCost = Convert.ToDouble(textBoxInvoiceTotalCost.Text);
+                    double balance = paidAmount - totalCost;
+                    textBox2.Text = balance.ToString();
+                }
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int coloumnIndex = e.ColumnIndex;
+
+            string productCode= dataGridView1.Rows[rowIndex].Cells[0].Value.ToString();
+
+            WCSA_Entity_Classes.Product prd = new ProductPresenter().ReturnItemDetail(productCode);
+            uint quantity =Convert.ToUInt32( dataGridView1.Rows[rowIndex].Cells[3].Value.ToString());
+            prd.Quantity += quantity;
+            new ProductPresenter().modifyItem(prd.ProductCode,prd.ProductName,prd.Price,prd.Quantity);
+
+            dataGridView1.Rows.RemoveAt(this.dataGridView1.SelectedRows[rowIndex].Index);
+            
         }
 
         private void labelDate_Click(object sender, EventArgs e)

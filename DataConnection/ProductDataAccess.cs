@@ -23,7 +23,7 @@ namespace DataConnection
 
         public int Edit(WCSA_Entity_Classes.Product product)
         {
-            string query = "UPDATE STAFF SET ProductName='" + product.ProductName+ "',Quantity='" + product.Quantity + "', Price='" + product.Price + "' WHERE ProductCode='" + product.ProductCode + "'";
+            string query = "UPDATE PRODUCT SET ProductName='" + product.ProductName+ "',Quantity='" + product.Quantity + "', Price='" + product.Price + "' WHERE ProductCode='" + product.ProductCode + "'";
             return DataAccess.ExecuteQuery(query);
         }
 
@@ -44,24 +44,6 @@ namespace DataConnection
                 productList.Add(product);
             }
             return productList;
-        }
-
-        public WCSA_Entity_Classes.Product GetByName(string code)
-        {
-            string query = "SELECT Name, Mail Phone,Address,NickName,Password FROM STAFF WHERE Name=" + code;
-            SqlDataReader reader = DataAccess.GetData(query);
-            reader.Read();
-
-            WCSA_Entity_Classes.Product product = null;
-            if (reader.HasRows)
-            {
-                product = new WCSA_Entity_Classes.Product();
-                product.ProductName = reader["ProductName"].ToString();
-                product.ProductCode = reader["ProductCode"].ToString();
-                product.Price = Convert.ToDouble(reader["Price"].ToString());
-
-            }
-            return product;
         }
     }
 }

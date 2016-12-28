@@ -92,7 +92,7 @@ namespace WCSA_Service_Classes
         /*
         PDF generation code starts here
         */
-        public uint generateInvoice( double vat,double totalprice , string date,string time,string admin)
+        public uint generateInvoice( double vat,double totalprice , string date,string time,string admin,string paid,string moneyreturn)
         {
             Document myDocument = new Document(PageSize.A4.Rotate());
 
@@ -147,8 +147,8 @@ namespace WCSA_Service_Classes
                     myDocument.Add(new Paragraph(printstr));
                 }
                 myDocument.Add(new Paragraph("           total cost :  "  +totalCost) );
-                myDocument.Add(new Paragraph("           Cash Paid :   " ));
-                myDocument.Add(new Paragraph("           cash return : " ));
+                myDocument.Add(new Paragraph("           Cash Paid :"+paid ));
+                myDocument.Add(new Paragraph("           cash return : "+moneyreturn ));
 
                 myDocument.Add(new Paragraph("Cashair : "+admin+""));
 
