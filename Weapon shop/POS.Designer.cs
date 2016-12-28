@@ -77,8 +77,8 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.Admin = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deletRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.grouper1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -595,19 +595,19 @@
             this.label13.TabIndex = 6;
             this.label13.Text = "Login As :";
             // 
+            // deletRowToolStripMenuItem
+            // 
+            this.deletRowToolStripMenuItem.Name = "deletRowToolStripMenuItem";
+            this.deletRowToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.deletRowToolStripMenuItem.Text = "DeletRow";
+            this.deletRowToolStripMenuItem.Click += new System.EventHandler(this.deletRowToolStripMenuItem_Click);
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deletRowToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(125, 26);
-            // 
-            // deletRowToolStripMenuItem
-            // 
-            this.deletRowToolStripMenuItem.Name = "deletRowToolStripMenuItem";
-            this.deletRowToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.deletRowToolStripMenuItem.Text = "DeletRow";
-            this.deletRowToolStripMenuItem.Click += new System.EventHandler(this.deletRowToolStripMenuItem_Click);
             // 
             // POS
             // 
