@@ -18,6 +18,8 @@ namespace Weapon_shop
 {
     public partial class POS : Form
     {
+       
+        private int rowIndex = 0;
         Timer t = new Timer();
         public string customernid;
         public uint quantity;
@@ -29,6 +31,7 @@ namespace Weapon_shop
         {
             InitializeComponent();
             this.ControlBox = false;
+           // dataGridView1.MouseClick += new MouseEventHandler(dataGridView1_CellMouseClick);
         }
         public POS(MainForm mf )
         {
@@ -60,6 +63,12 @@ namespace Weapon_shop
             time = labelClock.Text;
             labelDate.Text = DateTime.Now.ToShortDateString() ;
             date = labelDate.Text;
+            this.dataGridView1.RowsDefaultCellStyle.BackColor = Color.Bisque;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
+            // dataGridView1.MouseClick += new MouseEventHandler(dataGridView1_MouseClick);
+            //this.Size = new Size();
+            //dataGridView1.Size = new Size(450, 450);
+            //string[] row_text= System.IO.File.ReadAllLines
         }
         //private void t_Tick(Object sender, EventArgs e)
         //{
@@ -112,71 +121,6 @@ namespace Weapon_shop
 
 
         /*
-        Unnecessary code starts here
-        */
-
-        //public string BarCode
-        //{
-        //    set { }
-        //    get { return textBarCode.Text; }
-        //}
-        //public string ProductCode
-        //{
-        //    set { }
-        //    get { return textPCode.Text; }
-        //}
-        //public string newProductName
-        //{
-        //    set { }
-        //    get { return text_P_Name.Text; }
-        //}
-        //public uint Quantity
-        //{
-        //    set { this.quantity = Convert.ToUInt32(textQuantity.Text); }
-        //    get {
-
-        //        return Convert.ToUInt32(textQuantity.Text);
-        //    }
-        //}
-
-        //public double UnitPrice
-        //{
-        //    set {  }
-        //    get {
-        //         return Convert.ToDouble(textUnitPrice.Text);
-        //    }
-        //}
-        //public double TotalPrice
-        //{
-        //    set { }
-        //    get {
-        //        return Convert.ToDouble( textTotalPrice.Text);
-        //    }
-        //}
-        //public uint InvoiceTotalItems
-        //{
-        //    set { }
-        //    get { return Convert.ToUInt32(textBoxInvoiceTotalItems.Text); }
-        //}
-        //public double InvoiceTotalVAT
-        //{
-        //    set { }
-        //    get { return Convert.ToDouble(textinvoiceVAT.Text); }
-        //}
-        //public double InvoiceTotalPrice
-        //{
-        //    set { }
-        //    get { return Convert.ToDouble(textBoxInvoiceTotalCost.Text); }
-        //}
-
-        /*
-        Unnecessary code ends here
-        */
-
-
-
-
-        /*
         Product code Text changed function starts here
         */
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -213,61 +157,7 @@ namespace Weapon_shop
         */
         private void button1_Click(object sender, EventArgs e)
         {
-            ////new Presenter_Classes.POSPresenter(this).AddToPurchaseList();
-            ////WCSA_Entity_Classes.Product srcProd = new POSPresenter().returnProductDetails(textPCode.Text);
-            //if (reference != null)
-            //{
-            //    uint originalQuantity = reference.Quantity;
-            //    double VAT;
-            //    uint quantity;
 
-            //    /*
-            //    Unnecessary code starts here
-            //    */
-            //    textinvoiceVAT.Text = mainFormReference.VAT.ToString();
-            //    /*
-            //    Unnecessary code ends here
-            //    */
-
-            //    Debug.Assert(reference != null);
-
-            //    if (double.TryParse(textinvoiceVAT.Text, out VAT))
-            //    {
-            //        if (uint.TryParse(textQuantity.Text, out quantity))
-            //        {
-            //            if (quantity <= originalQuantity)
-            //            {
-            //                POSPresenter pp = new POSPresenter();
-            //                textBoxInvoiceTotalCost.Text = Convert.ToString(pp.addItemToInvoice(reference.ProductCode, Convert.ToDouble(reference.Price),
-            //                Convert.ToUInt32(textQuantity.Text), Convert.ToDouble(textinvoiceVAT.Text)));
-            //                dataGridView1.AutoGenerateColumns = false;
-            //                dataGridView1.DataSource = null;
-            //                dataGridView1.DataSource = pp.getInvoiceItemsList();
-            //                textBoxInvoiceTotalItems.Text = Convert.ToString(pp.getInvoiceItemsList().Count);
-
-            //                textPCode.Text = null;
-            //                textUnitPrice.Text = null;
-            //                text_P_Name.Text = null;
-            //                textQuantity.Text = null;
-            //                textUnitPrice.Enabled = true;
-            //                textPCode.Enabled = true;
-            //                text_P_Name.Enabled = true;
-            //                textTotalPrice.Text = null;
-
-            //                reference = null;
-
-
-            //            }
-            //            else MessageBox.Show("Not enough items in stock");
-            //        }
-            //        else MessageBox.Show("Please enter quantity");
-            //    }
-            //    else MessageBox.Show("Please input VAT");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Product Not found !");
-            //}
         }
         /*
         Item adition to invoice ends here
@@ -303,25 +193,12 @@ namespace Weapon_shop
                 if (reference != null)
                 {
                     Debug.Assert(reference != null);
-                    /*
-                    Unnecessary code starts here
-                    */
-                    //string quantity = textQuantity.Text.ToString();
-                    //string replacement = Regex.Replace(quantity, @"\t|\n|\r", "");
-                    //replacement.Trim();
-                    //string unitPrice = textUnitPrice.Text.ToString();
-                    //string replacement2 = Regex.Replace(unitPrice, @"\t|\n|\r", "");
-                    //replacement2.Trim();
-                    //double totalPrice = Convert.ToDouble(replacement2) * (double)Convert.ToUInt32(replacement);
-                    //textTotalPrice.Text = Convert.ToString(totalPrice);
-                    //MessageBox.Show(textQuantity.Text);
+
                     double quantity = Convert.ToDouble(textQuantity.Text);
                     double unitPrice = Convert.ToDouble(textUnitPrice.Text);
                     double totalPrice = Convert.ToDouble(quantity * unitPrice);
                     textTotalPrice.Text = Convert.ToString(totalPrice);
-                    /*
-                    Unnecessary code ends here
-                    */
+
                 }
             }
 
@@ -355,20 +232,24 @@ namespace Weapon_shop
         */
         private void button7_Click(object sender, EventArgs e)
         {
-            
+
             if (customernid == null)
             {
-                MessageBox.Show("Please Fillup Customer Info"); 
+                MessageBox.Show("Please Fillup Customer Info");
             }
             else
             {
                 MessageBox.Show("Successfull");
 
-                uint num = new POSPresenter().generateInvoice(VatForm.vat   ,   new POSPresenter().totalshopingAmount  ,  date  ,  time   ,  Admin.Text,textBox1.Text,textBox2.Text);
+                uint num = new POSPresenter().generateInvoice(VatForm.vat, new POSPresenter().totalshopingAmount, date, time, Admin.Text, textBox1.Text, textBox2.Text);
                 LabelInvoice.Text = num.ToString();
                 new POSPresenter().newTransaction();
-                
-                //customernid = null;
+
+                textBoxInvoiceTotalCost.Text = null;
+                dataGridView1.DataSource = null;
+                textBoxInvoiceTotalItems.Text = Convert.ToString(0);
+
+                customernid = null;
             }
         }
         /*
@@ -439,7 +320,8 @@ namespace Weapon_shop
                             Convert.ToUInt32(textQuantity.Text), Convert.ToDouble(textinvoiceVAT.Text)));
                             dataGridView1.AutoGenerateColumns = false;
                             dataGridView1.DataSource = null;
-                            dataGridView1.DataSource = pp.getInvoiceItemsList();
+                            var list = new BindingList<WCSA_Entity_Classes.Product>(pp.getInvoiceItemsList());
+                            dataGridView1.DataSource = list;
                             textBoxInvoiceTotalItems.Text = Convert.ToString(pp.getInvoiceItemsList().Count);
 
                             textPCode.Text = null;
@@ -450,8 +332,10 @@ namespace Weapon_shop
                             textPCode.Enabled = true;
                             text_P_Name.Enabled = true;
                             textTotalPrice.Text = null;
+                            textBarCode.Text = null;
 
                             reference = null;
+                           
 
 
                         }
@@ -465,6 +349,7 @@ namespace Weapon_shop
             {
                 MessageBox.Show("Product Not found !");
             }
+            
         }
         /*
         Item addition to POS table actions end here
@@ -496,24 +381,84 @@ namespace Weapon_shop
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int rowIndex = e.RowIndex;
-            int coloumnIndex = e.ColumnIndex;
+            //int rowIndex = dataGridView1.CurrentCell.RowIndex;
+            //dataGridView1.Rows.RemoveAt(rowIndex);
 
-            string productCode= dataGridView1.Rows[rowIndex].Cells[0].Value.ToString();
-
-            WCSA_Entity_Classes.Product prd = new ProductPresenter().ReturnItemDetail(productCode);
-            uint quantity =Convert.ToUInt32( dataGridView1.Rows[rowIndex].Cells[3].Value.ToString());
-            prd.Quantity += quantity;
-            new ProductPresenter().modifyItem(prd.ProductCode,prd.ProductName,prd.Price,prd.Quantity);
-
-            dataGridView1.Rows.RemoveAt(this.dataGridView1.SelectedRows[rowIndex].Index);
-            
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        { 
+           
+        }
+
+        private void dataGridView1_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                this.dataGridView1.Rows[e.RowIndex].Selected = true;
+                this.rowIndex = e.RowIndex;
+                this.dataGridView1.CurrentCell = this.dataGridView1.Rows[e.RowIndex].Cells[1];
+                this.contextMenuStrip1.Show(this.dataGridView1, e.Location);
+                contextMenuStrip1.Show(Cursor.Position);
+            }
+        }
+
+        private void deletRowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!this.dataGridView1.Rows[this.rowIndex].IsNewRow)
+            {
+                this.dataGridView1.Rows.RemoveAt(this.rowIndex);
+            }
+        }
+
+        private void textBoxInvoiceTotalCost_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //void dataGridView1_MouseClick(object sender, MouseEventArgs e)
+        //{
+        //    if (e.Button == MouseButtons.Left)
+        //    {
+        //        MessageBox.Show("Left");
+        //    }
+        //    else
+        //    {
+
+        //        ContextMenuStrip my_menu = new System.Windows.Forms.ContextMenuStrip();
+        //        //MessageBox.Show("Right");
+        //        int position_xy_mouse_row = dataGridView1.HitTest(e.X, e.Y).RowIndex;
+        //        //MessageBox.Show(position_xy_mouse_row.ToString());
+        //        if (position_xy_mouse_row >= 0)
+        //        {
+        //            my_menu.Items.Add("Delete").Name = "Delete";
+        //            my_menu.Items.Add("Edit").Name = "Edit";
+        //            my_menu.Show(dataGridView1, new Point(e.X, e.Y));
+        //            my_menu.ItemClicked += new ToolStripItemClickedEventHandler(my_menu_ItemClicked);
+        //        }
+        //    }
+
+        //}
+        //private void my_menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        //{
+        //    MessageBox.Show(e.ClickedItem.Name.ToString());
+        //    switch (e.ClickedItem.Name.ToString())
+        //    {
+        //        case "Delete":
+        //            break;
+        //        case "Edit":
+        //            break;
+        //    }
+        //}
 
         private void labelDate_Click(object sender, EventArgs e)
         {
 
         }
+       
+
+        
+
         /*
 Item addition to POS table actions ends here
 */

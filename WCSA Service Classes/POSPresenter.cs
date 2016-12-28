@@ -8,6 +8,7 @@ using WCSA_Service_Classes;
 using WCSA_Entity_Classes;
 using System.IO;
 using System.Diagnostics;
+using WCSA_Service_Classes;
 
 using iTextSharp.text;
 using iTextSharp.text.pdf;
@@ -50,7 +51,7 @@ namespace WCSA_Service_Classes
         {
             ProductDataSource pds = new ProductDataSource();
             WCSA_Entity_Classes.Product tempP = pds.ReturnAnItem(productCode);
-            pds.ModifyItemInAccordanceWithInvoice(productCode, quantity);
+            /////////////////***************************pds.ModifyItemInAccordanceWithInvoice(productCode, quantity);
             purchaseList.Add(new Product(productCode, tempP.ProductName, price * quantity, quantity));
 
             //Console.WriteLine("price = {0}  ||  quantity = {1}", price, quantity);
@@ -77,7 +78,7 @@ namespace WCSA_Service_Classes
         public void newTransaction()
         {
             //++number;
-            
+
             purchaseList.Clear();
             totalCost = 0;
         }
