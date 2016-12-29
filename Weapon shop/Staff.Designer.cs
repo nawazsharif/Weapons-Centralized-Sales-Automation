@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staff));
             this.grouper1 = new CodeVendor.Controls.Grouper();
             this.button1 = new System.Windows.Forms.Button();
@@ -61,11 +62,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_search = new System.Windows.Forms.TextBox();
             this.btnsearch = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adderss = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NickName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grouper1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grouper1
@@ -81,7 +91,7 @@
             this.grouper1.CustomGroupBoxColor = System.Drawing.Color.PowderBlue;
             this.grouper1.GroupImage = null;
             this.grouper1.GroupTitle = "";
-            this.grouper1.Location = new System.Drawing.Point(2, -4);
+            this.grouper1.Location = new System.Drawing.Point(3, -4);
             this.grouper1.Name = "grouper1";
             this.grouper1.Padding = new System.Windows.Forms.Padding(20);
             this.grouper1.PaintGroupBox = false;
@@ -91,6 +101,7 @@
             this.grouper1.ShadowThickness = 3;
             this.grouper1.Size = new System.Drawing.Size(909, 66);
             this.grouper1.TabIndex = 0;
+            this.grouper1.Load += new System.EventHandler(this.grouper1_Load);
             // 
             // button1
             // 
@@ -191,11 +202,19 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Name,
+            this.Mail,
+            this.Phone,
+            this.Adderss,
+            this.NickName,
+            this.Password});
             this.dataGridView1.Location = new System.Drawing.Point(4, 188);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(904, 284);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseUp_1);
             // 
             // groupBox2
             // 
@@ -426,6 +445,63 @@
             this.btnsearch.UseVisualStyleBackColor = false;
             this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteRowToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(134, 26);
+            // 
+            // deleteRowToolStripMenuItem
+            // 
+            this.deleteRowToolStripMenuItem.Name = "deleteRowToolStripMenuItem";
+            this.deleteRowToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteRowToolStripMenuItem.Text = "Delete Row";
+            this.deleteRowToolStripMenuItem.Click += new System.EventHandler(this.deleteRowToolStripMenuItem_Click);
+            // 
+            // Name
+            // 
+            this.Name.DataPropertyName = "Name";
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            // 
+            // Mail
+            // 
+            this.Mail.DataPropertyName = "Mail";
+            this.Mail.HeaderText = "Mail";
+            this.Mail.Name = "Mail";
+            this.Mail.ReadOnly = true;
+            // 
+            // Phone
+            // 
+            this.Phone.DataPropertyName = "Phone";
+            this.Phone.HeaderText = "Phone";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            // 
+            // Adderss
+            // 
+            this.Adderss.DataPropertyName = "Address";
+            this.Adderss.HeaderText = "Address";
+            this.Adderss.Name = "Adderss";
+            this.Adderss.ReadOnly = true;
+            // 
+            // NickName
+            // 
+            this.NickName.DataPropertyName = "NickName";
+            this.NickName.HeaderText = "NickName";
+            this.NickName.Name = "NickName";
+            this.NickName.ReadOnly = true;
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "Password";
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
+            this.Password.Visible = false;
+            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,9 +511,9 @@
             this.Controls.Add(this.textBox_search);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grouper1);
-            this.Name = "Staff";
+            this.Controls.Add(this.groupBox1);
+            //this.Name = "Staff";
             this.Load += new System.EventHandler(this.Staff_Load);
             this.grouper1.ResumeLayout(false);
             this.grouper1.PerformLayout();
@@ -446,6 +522,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -485,5 +562,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label labelComent;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem deleteRowToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Adderss;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NickName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
     }
 }

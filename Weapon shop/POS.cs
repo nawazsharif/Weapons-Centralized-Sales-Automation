@@ -32,7 +32,7 @@ namespace Weapon_shop
             InitializeComponent();
             this.ControlBox = false;
             timer1.Start();
-           // dataGridView1.MouseClick += new MouseEventHandler(dataGridView1_CellMouseClick);
+           
         }
         public POS(MainForm mf )
         {
@@ -67,48 +67,9 @@ namespace Weapon_shop
             date = DateTime.Now.ToShortDateString() ;
             this.dataGridView1.RowsDefaultCellStyle.BackColor = Color.Bisque;
             this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
-            // dataGridView1.MouseClick += new MouseEventHandler(dataGridView1_MouseClick);
-            //this.Size = new Size();
-            //dataGridView1.Size = new Size(450, 450);
-            //string[] row_text= System.IO.File.ReadAllLines
+            
         }
-        //private void t_Tick(Object sender, EventArgs e)
-        //{
-        //    int hh = DateTime.Now.Hour;
-        //    int mm = DateTime.Now.Minute;
-        //    int ss = DateTime.Now.Second;
-
-        //    string time = "";
-        //    if (hh < 10)
-        //    {
-        //        time += "0" + hh;
-        //    }
-        //    else
-        //    {
-        //        time += hh;
-        //    }
-        //    time += ":";
-        //    if (mm < 10)
-        //    {
-        //        time += "0" + mm;
-        //    }
-        //    else
-        //    {
-        //        time += mm;
-        //    }
-        //    time += ":";
-
-        //    if (ss < 10)
-        //    {
-        //        time += "0" + ss;
-        //    }
-        //    else
-        //    {
-        //        time += ss;
-        //    }
-        //    labelClock.Text = time;
-
-        //}
+     
 
         private void button4_Click(object sender, EventArgs e)
         {

@@ -52,5 +52,10 @@ namespace WCSA_Entity_Classes
             this.nickName = null;
             this.password = null;
         }
+        public Staff(String name)
+        {
+            this.name = name;
+            
+        }
     }
 }

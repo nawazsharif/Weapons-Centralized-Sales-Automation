@@ -18,7 +18,7 @@ namespace DataConnection
 
         public int Remove(string name)
         {
-            string query = "DELETE FROM STAFF WHERE Name=" + name;
+            string query = "DELETE FROM STAFF WHERE Name='"+name+"'";
             return DataAccess.ExecuteQuery(query);
         }
 

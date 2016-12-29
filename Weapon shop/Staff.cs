@@ -17,6 +17,7 @@ namespace Weapon_shop
 {
     public partial class Staff : Form
     {
+        int rowIndex = 0;
         // string query = "Select * From STAFF";
         
         public int chk ;
@@ -352,6 +353,38 @@ namespace Weapon_shop
         {
             disable();
             
+        }
+        
+
+       
+
+        private void grouper1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellMouseUp_1(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                this.dataGridView1.Rows[e.RowIndex].Selected = true;
+                this.rowIndex = e.RowIndex;
+                this.dataGridView1.CurrentCell = this.dataGridView1.Rows[e.RowIndex].Cells[2];
+                this.contextMenuStrip1.Show(this.dataGridView1, e.Location);
+                contextMenuStrip1.Show(Cursor.Position);
+            }
+        }
+
+        private void deleteRowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!this.dataGridView1.Rows[this.rowIndex].IsNewRow)
+            {
+                Staff pp = new Staff();
+                // this.dataGridView1.Rows.RemoveAt(this.rowIndex);
+                MessageBox.Show(dataGridView1.CurrentCell.Value.ToString());
+                new StaffInfoPresenter().DeleteStaff(dataGridView1.CurrentCell.Value.ToString());
+                dataGridView1.DataSource= new StaffInfoPresenter().fetchStaffList();
+            }
         }
     }
 }

@@ -34,7 +34,11 @@ namespace WCSA_Service_Classes
             StaffDataSource sds = new StaffDataSource();
             sds.ModifyList(new WCSA_Entity_Classes.Staff(name, mail, phone, address, nickname, password));
         }
-
+        public void DeleteStaff(string name)
+        {
+            StaffDataSource sds = new StaffDataSource();
+            sds.DeleteFromList(name);
+        }
 
         public List<WCSA_Entity_Classes.Staff> fetchStaffList()
         {
