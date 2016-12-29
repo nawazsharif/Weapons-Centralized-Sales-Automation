@@ -89,88 +89,92 @@ namespace Weapon_shop
 
         private void btnsearch_Click(object sender, EventArgs e)
         {
-            disable();
-            // MessageBox.Show(Convert.ToString(chk));
-
-
-            /*
-            Code of search button for the tab "Show All" starts here
-            */
-            if (chk == 1)
+            if (textBox_search.Text == "") { }
+            else
             {
                 disable();
-                textBox_search.Show();
-                btnsearch.Show();
-                groupBox2.Hide();
-                dataGridView1.DataSource = null;
-                List<WCSA_Entity_Classes.Staff> stflist = new List<WCSA_Entity_Classes.Staff>();
-                stflist.Add(new StaffInfoPresenter().checkStaffDetails(textBox_search.Text));
-                foreach(WCSA_Entity_Classes.Staff st in stflist)
-                {
-                    Console.WriteLine("Staff name : " + st.Name);
-                }
-                dataGridView1.DataSource = stflist;
-                dataGridView1.Show();
-            }
-            /*
-            Code of search button for the tab "Show All" ends here
-            */
+                // MessageBox.Show(Convert.ToString(chk));
 
-            else if (chk == 0)// add button
-            {
-                textBoxName.Enabled = true;
-                textBox_search.Hide();
-                btnsearch.Hide();
-                groupBox2.Show();
-                //btnOk.Hide();
-                //WCSA_Entity_Classes.Staff srcStaf = new StaffInfoPresenter().checkStaffDetails(textBox_search.Text);
-                //textBoxName.Text = srcStaf.Name;
-                //textBoxName.Enabled = false;
-                //textBoxMail.Text = srcStaf.Mail;
-                //textBoxAddress.Text = srcStaf.Phone;
-                //textBoxPhone.Text = srcStaf.Address;
-                //textBoxNickName.Text = srcStaf.NickName;
-                //textBoxPassword.Text = srcStaf.Password;
 
-            }
-            else//update button
-            {
-                textBox_search.Hide();
-                btnsearch.Hide();
-                groupBox2.Show();
-                btn_staff_add.Hide();
-                btnOk.Show();
-                if (textBox_search.Text == "")
+                /*
+                Code of search button for the tab "Show All" starts here
+                */
+                if (chk == 1)
                 {
                     disable();
-                    groupBox2.Hide();
                     textBox_search.Show();
                     btnsearch.Show();
-                    MessageBox.Show("Please Insert A Valid Staff Name");
+                    groupBox2.Hide();
+                    dataGridView1.DataSource = null;
+                    //List<WCSA_Entity_Classes.Staff> stflist = new List<WCSA_Entity_Classes.Staff>();
+                    //stflist.Add(new StaffInfoPresenter().checkStaffDetails(textBox_search.Text));
+                    //foreach (WCSA_Entity_Classes.Staff st in stflist)
+                    //{
+                    //    Console.WriteLine("Staff name : " + st.Name);
+                    //}
+                    dataGridView1.DataSource = new StaffInfoPresenter().returnMatchingStaffList(textBox_search.Text);
+                    dataGridView1.Show();
                 }
-                else
-                {
+                /*
+                Code of search button for the tab "Show All" ends here
+                */
 
-                    WCSA_Entity_Classes.Staff srcStaf = new StaffInfoPresenter().checkStaffDetails(textBox_search.Text);
-                    if (srcStaf != null)
-                    {
-                        textBoxName.Text = srcStaf.Name;
-                        textBoxName.Enabled = false;
-                        textBoxMail.Text = srcStaf.Mail;
-                        textBoxAddress.Text = srcStaf.Phone;
-                        textBoxPhone.Text = srcStaf.Address;
-                        textBoxNickName.Text = srcStaf.NickName;
-                        textBoxPassword.Text = srcStaf.Password;
-                        srcStaf = null;
-                    }
-                    else if (srcStaf == null)
+                else if (chk == 0)// add button
+                {
+                    textBoxName.Enabled = true;
+                    textBox_search.Hide();
+                    btnsearch.Hide();
+                    groupBox2.Show();
+                    //btnOk.Hide();
+                    //WCSA_Entity_Classes.Staff srcStaf = new StaffInfoPresenter().checkStaffDetails(textBox_search.Text);
+                    //textBoxName.Text = srcStaf.Name;
+                    //textBoxName.Enabled = false;
+                    //textBoxMail.Text = srcStaf.Mail;
+                    //textBoxAddress.Text = srcStaf.Phone;
+                    //textBoxPhone.Text = srcStaf.Address;
+                    //textBoxNickName.Text = srcStaf.NickName;
+                    //textBoxPassword.Text = srcStaf.Password;
+
+                }
+                else//update button
+                {
+                    textBox_search.Hide();
+                    btnsearch.Hide();
+                    groupBox2.Show();
+                    btn_staff_add.Hide();
+                    btnOk.Show();
+                    if (textBox_search.Text == "")
                     {
                         disable();
                         groupBox2.Hide();
                         textBox_search.Show();
                         btnsearch.Show();
-                        MessageBox.Show("Not Found");
+                        MessageBox.Show("Please Insert A Valid Staff Name");
+                    }
+                    else
+                    {
 
+                        WCSA_Entity_Classes.Staff srcStaf = new StaffInfoPresenter().checkStaffDetails(textBox_search.Text);
+                        if (srcStaf != null)
+                        {
+                            textBoxName.Text = srcStaf.Name;
+                            textBoxName.Enabled = false;
+                            textBoxMail.Text = srcStaf.Mail;
+                            textBoxAddress.Text = srcStaf.Phone;
+                            textBoxPhone.Text = srcStaf.Address;
+                            textBoxNickName.Text = srcStaf.NickName;
+                            textBoxPassword.Text = srcStaf.Password;
+                            srcStaf = null;
+                        }
+                        else if (srcStaf == null)
+                        {
+                            disable();
+                            groupBox2.Hide();
+                            textBox_search.Show();
+                            btnsearch.Show();
+                            MessageBox.Show("Not Found");
+
+                        }
                     }
                 }
             }

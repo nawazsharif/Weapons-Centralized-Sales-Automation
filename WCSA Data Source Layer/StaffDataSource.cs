@@ -66,5 +66,18 @@ namespace WCSA_Data_Source_Layer
             else if (requiredStaff.Password.Equals(pass)) return true;
             else return false;
         }
+
+        public List<WCSA_Entity_Classes.Staff> returnMatchingStaffList(string nameSubstring)
+        {
+            List<Staff> tempList = new List<Staff>();
+            foreach(Staff st in list)
+            {
+                if (st.Name.Contains(nameSubstring))
+                {
+                    tempList.Add(st);
+                }
+            }
+            return tempList;
+        }
     }
 }

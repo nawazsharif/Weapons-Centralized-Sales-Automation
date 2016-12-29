@@ -24,6 +24,11 @@ namespace WCSA_Service_Classes
 
         }
 
+        public List<WCSA_Entity_Classes.Staff> returnMatchingStaffList(string name)
+        {
+            return new StaffDataSource().returnMatchingStaffList(name);
+        }
+
         public void modifyStaffDetails(string name, string mail, string phone, string address, string nickname, string password)
         {
             StaffDataSource sds = new StaffDataSource();
