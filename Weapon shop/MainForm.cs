@@ -158,5 +158,10 @@ namespace Weapon_shop
         {
             new SellsInfo().Show();
         }
+
+        private void grouper2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

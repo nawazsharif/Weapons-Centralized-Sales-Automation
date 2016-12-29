@@ -77,5 +77,10 @@ namespace Weapon_shop
             new BankAccountPresenter().Add(textBox1.Text, textBox2.Text, textBox3.Text);
             MessageBox.Show("Successfull");
         }
+
+        private void grouper1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

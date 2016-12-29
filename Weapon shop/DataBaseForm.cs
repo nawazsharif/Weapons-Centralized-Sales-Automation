@@ -17,6 +17,8 @@ namespace Weapon_shop
         {
             InitializeComponent();
             dataGridView1.Hide();
+            //this.ControlBox = false;
+            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -53,5 +55,21 @@ namespace Weapon_shop
         {
             this.Close();
         }
+
+        private void DataBaseForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
+
+        
+
+        
     }
 }
