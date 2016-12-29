@@ -80,5 +80,18 @@ namespace WCSA_Data_Source_Layer
             }
             return tempList;
         }
+
+        public int returnMatching(string name)
+        {
+            WCSA_Entity_Classes.Staff requiredStaff = list.Find(staffList => staffList.Name.Equals(name));
+            if (requiredStaff != null)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }

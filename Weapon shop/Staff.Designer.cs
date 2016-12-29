@@ -40,7 +40,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adderss = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NickName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelchk = new System.Windows.Forms.Label();
             this.labelComent = new System.Windows.Forms.Label();
             this.textBoxConfirmPassword = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -64,12 +71,6 @@
             this.btnsearch = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adderss = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NickName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grouper1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -216,8 +217,52 @@
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseUp_1);
             // 
+            // Name
+            // 
+            this.Name.DataPropertyName = "Name";
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            // 
+            // Mail
+            // 
+            this.Mail.DataPropertyName = "Mail";
+            this.Mail.HeaderText = "Mail";
+            this.Mail.Name = "Mail";
+            this.Mail.ReadOnly = true;
+            // 
+            // Phone
+            // 
+            this.Phone.DataPropertyName = "Phone";
+            this.Phone.HeaderText = "Phone";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            // 
+            // Adderss
+            // 
+            this.Adderss.DataPropertyName = "Address";
+            this.Adderss.HeaderText = "Address";
+            this.Adderss.Name = "Adderss";
+            this.Adderss.ReadOnly = true;
+            // 
+            // NickName
+            // 
+            this.NickName.DataPropertyName = "NickName";
+            this.NickName.HeaderText = "NickName";
+            this.NickName.Name = "NickName";
+            this.NickName.ReadOnly = true;
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "Password";
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
+            this.Password.Visible = false;
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.labelchk);
             this.groupBox2.Controls.Add(this.labelComent);
             this.groupBox2.Controls.Add(this.textBoxConfirmPassword);
             this.groupBox2.Controls.Add(this.label9);
@@ -237,26 +282,36 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 157);
+            this.groupBox2.Location = new System.Drawing.Point(12, 159);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(437, 296);
+            this.groupBox2.Size = new System.Drawing.Size(437, 313);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add new staff";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // labelchk
+            // 
+            this.labelchk.AutoSize = true;
+            this.labelchk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelchk.Location = new System.Drawing.Point(141, 34);
+            this.labelchk.Name = "labelchk";
+            this.labelchk.Size = new System.Drawing.Size(0, 15);
+            this.labelchk.TabIndex = 23;
+            // 
             // labelComent
             // 
             this.labelComent.AutoSize = true;
             this.labelComent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelComent.Location = new System.Drawing.Point(135, 214);
+            this.labelComent.Location = new System.Drawing.Point(135, 227);
             this.labelComent.Name = "labelComent";
-            this.labelComent.Size = new System.Drawing.Size(0, 15);
+            this.labelComent.Size = new System.Drawing.Size(24, 15);
             this.labelComent.TabIndex = 22;
+           // this.labelComent.Text = "bal";
             // 
             // textBoxConfirmPassword
             // 
-            this.textBoxConfirmPassword.Location = new System.Drawing.Point(138, 194);
+            this.textBoxConfirmPassword.Location = new System.Drawing.Point(138, 206);
             this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
             this.textBoxConfirmPassword.Size = new System.Drawing.Size(171, 20);
             this.textBoxConfirmPassword.TabIndex = 21;
@@ -266,7 +321,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(7, 199);
+            this.label9.Location = new System.Drawing.Point(7, 211);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(107, 15);
             this.label9.TabIndex = 20;
@@ -274,7 +329,7 @@
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(138, 172);
+            this.textBoxPassword.Location = new System.Drawing.Point(138, 184);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(139, 20);
             this.textBoxPassword.TabIndex = 19;
@@ -284,7 +339,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 173);
+            this.label7.Location = new System.Drawing.Point(7, 185);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 15);
             this.label7.TabIndex = 18;
@@ -294,7 +349,7 @@
             // 
             this.btnOk.BackColor = System.Drawing.Color.PowderBlue;
             this.btnOk.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.Location = new System.Drawing.Point(145, 231);
+            this.btnOk.Location = new System.Drawing.Point(145, 245);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(115, 57);
             this.btnOk.TabIndex = 17;
@@ -312,7 +367,7 @@
             // 
             // textBoxNickName
             // 
-            this.textBoxNickName.Location = new System.Drawing.Point(138, 144);
+            this.textBoxNickName.Location = new System.Drawing.Point(138, 156);
             this.textBoxNickName.Name = "textBoxNickName";
             this.textBoxNickName.Size = new System.Drawing.Size(139, 20);
             this.textBoxNickName.TabIndex = 10;
@@ -320,7 +375,7 @@
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(138, 65);
+            this.textBoxPhone.Location = new System.Drawing.Point(138, 77);
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(139, 20);
             this.textBoxPhone.TabIndex = 9;
@@ -328,7 +383,7 @@
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(138, 90);
+            this.textBoxAddress.Location = new System.Drawing.Point(138, 102);
             this.textBoxAddress.Multiline = true;
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(246, 51);
@@ -337,7 +392,7 @@
             // 
             // textBoxMail
             // 
-            this.textBoxMail.Location = new System.Drawing.Point(138, 40);
+            this.textBoxMail.Location = new System.Drawing.Point(138, 52);
             this.textBoxMail.Name = "textBoxMail";
             this.textBoxMail.Size = new System.Drawing.Size(246, 20);
             this.textBoxMail.TabIndex = 8;
@@ -355,7 +410,7 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.PowderBlue;
             this.btnCancel.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(275, 232);
+            this.btnCancel.Location = new System.Drawing.Point(275, 246);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 57);
             this.btnCancel.TabIndex = 6;
@@ -367,7 +422,7 @@
             // 
             this.btn_staff_add.BackColor = System.Drawing.Color.PowderBlue;
             this.btn_staff_add.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_staff_add.Location = new System.Drawing.Point(133, 231);
+            this.btn_staff_add.Location = new System.Drawing.Point(133, 245);
             this.btn_staff_add.Name = "btn_staff_add";
             this.btn_staff_add.Size = new System.Drawing.Size(115, 57);
             this.btn_staff_add.TabIndex = 5;
@@ -379,7 +434,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(7, 147);
+            this.label6.Location = new System.Drawing.Point(7, 159);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 15);
             this.label6.TabIndex = 4;
@@ -389,7 +444,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 91);
+            this.label5.Location = new System.Drawing.Point(15, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 15);
             this.label5.TabIndex = 3;
@@ -399,7 +454,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 66);
+            this.label4.Location = new System.Drawing.Point(15, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 15);
             this.label4.TabIndex = 2;
@@ -409,7 +464,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 41);
+            this.label3.Location = new System.Drawing.Point(15, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 15);
             this.label3.TabIndex = 1;
@@ -455,52 +510,9 @@
             // deleteRowToolStripMenuItem
             // 
             this.deleteRowToolStripMenuItem.Name = "deleteRowToolStripMenuItem";
-            this.deleteRowToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteRowToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.deleteRowToolStripMenuItem.Text = "Delete Row";
             this.deleteRowToolStripMenuItem.Click += new System.EventHandler(this.deleteRowToolStripMenuItem_Click);
-            // 
-            // Name
-            // 
-            this.Name.DataPropertyName = "Name";
-            this.Name.HeaderText = "Name";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            // 
-            // Mail
-            // 
-            this.Mail.DataPropertyName = "Mail";
-            this.Mail.HeaderText = "Mail";
-            this.Mail.Name = "Mail";
-            this.Mail.ReadOnly = true;
-            // 
-            // Phone
-            // 
-            this.Phone.DataPropertyName = "Phone";
-            this.Phone.HeaderText = "Phone";
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
-            // 
-            // Adderss
-            // 
-            this.Adderss.DataPropertyName = "Address";
-            this.Adderss.HeaderText = "Address";
-            this.Adderss.Name = "Adderss";
-            this.Adderss.ReadOnly = true;
-            // 
-            // NickName
-            // 
-            this.NickName.DataPropertyName = "NickName";
-            this.NickName.HeaderText = "NickName";
-            this.NickName.Name = "NickName";
-            this.NickName.ReadOnly = true;
-            // 
-            // Password
-            // 
-            this.Password.DataPropertyName = "Password";
-            this.Password.HeaderText = "Password";
-            this.Password.Name = "Password";
-            this.Password.ReadOnly = true;
-            this.Password.Visible = false;
             // 
             // Staff
             // 
@@ -513,7 +525,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.grouper1);
             this.Controls.Add(this.groupBox1);
-            //this.Name = "Staff";
+           // this.Name = "Staff";
             this.Load += new System.EventHandler(this.Staff_Load);
             this.grouper1.ResumeLayout(false);
             this.grouper1.PerformLayout();
@@ -570,5 +582,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Adderss;
         private System.Windows.Forms.DataGridViewTextBoxColumn NickName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.Label labelchk;
     }
 }

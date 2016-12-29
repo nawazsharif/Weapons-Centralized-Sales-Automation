@@ -28,6 +28,10 @@ namespace WCSA_Service_Classes
         {
             return new StaffDataSource().returnMatchingStaffList(name);
         }
+        public int returnMatching(string name)
+        {
+            return new StaffDataSource().returnMatching(name);
+        }
 
         public void modifyStaffDetails(string name, string mail, string phone, string address, string nickname, string password)
         {

@@ -32,6 +32,7 @@ namespace Weapon_shop
         }
         public void refresh()
         {
+            labelchk.Text = null;
             textBox_search.Text = "";
             textBoxName.Text = "";
             textBoxMail.Text = "";
@@ -75,6 +76,7 @@ namespace Weapon_shop
             btn_staff_add.Show();
             btnOk.Hide();
             refresh();
+            labelchk.Text = "";
 
 
         }
@@ -143,6 +145,8 @@ namespace Weapon_shop
                     btnsearch.Hide();
                     groupBox2.Show();
                     btn_staff_add.Hide();
+                    textBoxConfirmPassword.Hide();
+                    label9.Hide();
                     btnOk.Show();
                     if (textBox_search.Text == "")
                     {
@@ -200,21 +204,27 @@ namespace Weapon_shop
         {
             //List<Utility_Classes.Staff> staffList = new List<Utility_Classes.Staff>() {
             //new Utility_Classes.Staff(StaffName,StaffMail, StaffPhone,StaffAddress, StaffNickname,StaffPassword)};
-            
+            if (textBoxAddress.Text == "" || textBoxMail.Text == "" || textBoxName.Text == "" || textBoxNickName.Text == "" || textBoxPhone.Text == "" || textBoxConfirmPassword.Text == "" || textBoxPassword.Text == "")
+            { MessageBox.Show("Fill up all Field"); }
+            else {
+                if (new StaffInfoPresenter().returnMatching(textBoxName.Text) == 1) { labelchk.Text = "already exist"; }
+                else
+                {
+                    if (str == "Matched")
+                    {
+                        new StaffInfoPresenter().Add(textBoxName.Text, textBoxMail.Text, textBoxPhone.Text,
+                                                textBoxAddress.Text, textBoxNickName.Text, textBoxPassword.Text);
 
-            if (str == "Matched")
-            {
-                new StaffInfoPresenter().Add(textBoxName.Text, textBoxMail.Text, textBoxPhone.Text,
-                                        textBoxAddress.Text, textBoxNickName.Text, textBoxPassword.Text);
-                
-                    MessageBox.Show("Successfull");
-                groupBox2.Hide();
-            }
+                        MessageBox.Show("Successfull");
+                        groupBox2.Hide();
+                    }
 
-            else
-            {
-                MessageBox.Show("Error");
-                groupBox2.Show();
+                    else
+                    {
+                        MessageBox.Show("Error");
+                        groupBox2.Show();
+                    }
+                }
             }
             
             
@@ -232,7 +242,8 @@ namespace Weapon_shop
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            //if (new StaffInfoPresenter().returnMatching(textBoxName.Text) == 1) { labelchk.Text = "already exist"; }
+            if (textBoxName.Text == "") { labelchk.Text = ""; }
         }
         public string StaffName
         {
@@ -294,10 +305,16 @@ namespace Weapon_shop
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            new StaffInfoPresenter().modifyStaffDetails(textBoxName.Text, textBoxMail.Text, textBoxPhone.Text,
-                                        textBoxAddress.Text, textBoxNickName.Text, textBoxPassword.Text);
-            MessageBox.Show("Edit Successfull");
-            groupBox2.Hide();
+            if (textBoxAddress.Text == "" || textBoxMail.Text == "" || textBoxName.Text == "" || textBoxNickName.Text == "" || textBoxPhone.Text == "" || textBoxPassword.Text == "")
+            { MessageBox.Show("Fill up all Field"); }
+            else
+            {
+
+                new StaffInfoPresenter().modifyStaffDetails(textBoxName.Text, textBoxMail.Text, textBoxPhone.Text,
+                                            textBoxAddress.Text, textBoxNickName.Text, textBoxPassword.Text);
+                MessageBox.Show("Edit Successfull");
+                groupBox2.Hide();
+            }
         }
 
         private void button2_Click_1(object sender, EventArgs e)
