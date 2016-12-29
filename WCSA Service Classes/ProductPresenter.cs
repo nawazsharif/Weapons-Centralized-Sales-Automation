@@ -63,7 +63,11 @@ namespace WCSA_Service_Classes
 
             return productList;
         }
-
+        public void DeleteProduct(string code)
+        {
+            ProductDataSource sds = new ProductDataSource();
+            sds.DeleteFromList(code);
+        }
 
         //public bool generatebarcode (Image image)
         //{

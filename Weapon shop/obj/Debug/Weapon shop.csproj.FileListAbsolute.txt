@@ -112,3 +112,4 @@ C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Interop.AcroPDFLib.dll
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon shop.csproj.ResolveComReference.cache
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.DataBaseForm.resources

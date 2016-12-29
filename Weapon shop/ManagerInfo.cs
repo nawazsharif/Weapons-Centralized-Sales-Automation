@@ -46,5 +46,21 @@ namespace Weapon_shop
         {
             this.Close();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            DataBaseForm db = new DataBaseForm();
+            db.Show();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grouper1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

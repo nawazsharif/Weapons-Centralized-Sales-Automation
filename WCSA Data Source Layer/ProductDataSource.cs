@@ -82,6 +82,19 @@ namespace WCSA_Data_Source_Layer
         {
             return list.Find(list => list.ProductCode.Equals(code));
         }
+        public int returnMatching(string code)
+        {
+            WCSA_Entity_Classes.Product requiredProduct = list.Find(productList => productList.ProductCode.Equals(code));
+            if (requiredProduct != null)
+            {
+                return 1;
+                new ProductDataAccess().Remove(code);
+            }
+            else
+            {
+                return 0;
+            }
+        }
 
     }
 }

@@ -16,6 +16,7 @@ namespace Weapon_shop
 {
     public partial class Product : Form
     {
+        int rowIndex = 0;
         MainForm rfrence;
         string code;
         string name;
@@ -369,6 +370,30 @@ namespace Weapon_shop
         private void button5_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                this.dataGridView1.Rows[e.RowIndex].Selected = true;
+                this.rowIndex = e.RowIndex;
+                this.dataGridView1.CurrentCell = this.dataGridView1.Rows[e.RowIndex].Cells[0];
+                this.contextMenuStrip1.Show(this.dataGridView1, e.Location);
+                contextMenuStrip1.Show(Cursor.Position);
+            }
+        }
+
+        private void deleteRowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!this.dataGridView1.Rows[this.rowIndex].IsNewRow)
+            {
+                Staff pp = new Staff();
+                // this.dataGridView1.Rows.RemoveAt(this.rowIndex);
+                MessageBox.Show(dataGridView1.CurrentCell.Value.ToString());
+                new ProductPresenter().DeleteProduct(dataGridView1.CurrentCell.Value.ToString());
+                dataGridView1.DataSource = new ProductPresenter().fetchProductList();
+            }
         }
     }
 }

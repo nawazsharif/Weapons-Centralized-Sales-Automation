@@ -17,7 +17,7 @@ namespace DataConnection
 
         public int Remove(string code)
         {
-            string query = "DELETE FROM PRODUCT WHERE Name=" + code;
+            string query = "DELETE FROM PRODUCT WHERE ProductCode=" +code;
             return DataAccess.ExecuteQuery(query);
         }
 
