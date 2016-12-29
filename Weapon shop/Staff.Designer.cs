@@ -81,7 +81,9 @@
             // 
             // grouper1
             // 
-            this.grouper1.BackgroundColor = System.Drawing.Color.Brown;
+            this.grouper1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grouper1.BackgroundColor = System.Drawing.Color.PowderBlue;
             this.grouper1.BackgroundGradientColor = System.Drawing.Color.White;
             this.grouper1.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
             this.grouper1.BorderColor = System.Drawing.Color.Black;
@@ -100,15 +102,16 @@
             this.grouper1.ShadowColor = System.Drawing.Color.DarkGray;
             this.grouper1.ShadowControl = false;
             this.grouper1.ShadowThickness = 3;
-            this.grouper1.Size = new System.Drawing.Size(909, 66);
+            this.grouper1.Size = new System.Drawing.Size(909, 86);
             this.grouper1.TabIndex = 0;
             this.grouper1.Load += new System.EventHandler(this.grouper1_Load);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.PowderBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(880, 22);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.AliceBlue;
+            this.button1.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(875, 30);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 31);
             this.button1.TabIndex = 2;
@@ -120,7 +123,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 26);
+            this.label1.Location = new System.Drawing.Point(57, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 27);
             this.label1.TabIndex = 1;
@@ -130,7 +133,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 22);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(43, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -139,11 +142,11 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnAdd.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnAdd.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(8, 14);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(103, 57);
+            this.btnAdd.Size = new System.Drawing.Size(103, 86);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -151,11 +154,11 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnUpdate.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnUpdate.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(117, 14);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(103, 57);
+            this.btnUpdate.Size = new System.Drawing.Size(103, 86);
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -163,11 +166,11 @@
             // 
             // btnShow
             // 
-            this.btnShow.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnShow.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShow.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnShow.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShow.Location = new System.Drawing.Point(226, 14);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(103, 57);
+            this.btnShow.Size = new System.Drawing.Size(103, 86);
             this.btnShow.TabIndex = 2;
             this.btnShow.Text = "Show All";
             this.btnShow.UseVisualStyleBackColor = false;
@@ -175,22 +178,25 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.btnShow);
             this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.btnAdd);
-            this.groupBox1.Location = new System.Drawing.Point(4, 72);
+            this.groupBox1.Location = new System.Drawing.Point(5, 88);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(907, 79);
+            this.groupBox1.Size = new System.Drawing.Size(907, 105);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Action";
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.PowderBlue;
-            this.button2.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.AliceBlue;
+            this.button2.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(824, 26);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 33);
@@ -202,6 +208,10 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Name,
@@ -210,7 +220,7 @@
             this.Adderss,
             this.NickName,
             this.Password});
-            this.dataGridView1.Location = new System.Drawing.Point(4, 188);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 236);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(904, 284);
@@ -262,6 +272,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.Controls.Add(this.labelchk);
             this.groupBox2.Controls.Add(this.labelComent);
             this.groupBox2.Controls.Add(this.textBoxConfirmPassword);
@@ -282,12 +294,13 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 159);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(11, 209);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(437, 313);
+            this.groupBox2.Size = new System.Drawing.Size(402, 313);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Add new staff";
+            this.groupBox2.Text = "Add New Staff";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // labelchk
@@ -305,15 +318,14 @@
             this.labelComent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelComent.Location = new System.Drawing.Point(135, 227);
             this.labelComent.Name = "labelComent";
-            this.labelComent.Size = new System.Drawing.Size(24, 15);
+            this.labelComent.Size = new System.Drawing.Size(0, 15);
             this.labelComent.TabIndex = 22;
-           // this.labelComent.Text = "bal";
             // 
             // textBoxConfirmPassword
             // 
             this.textBoxConfirmPassword.Location = new System.Drawing.Point(138, 206);
             this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
-            this.textBoxConfirmPassword.Size = new System.Drawing.Size(171, 20);
+            this.textBoxConfirmPassword.Size = new System.Drawing.Size(171, 22);
             this.textBoxConfirmPassword.TabIndex = 21;
             this.textBoxConfirmPassword.TextChanged += new System.EventHandler(this.textBoxConfirmPassword_TextChanged);
             // 
@@ -323,15 +335,15 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(7, 211);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 15);
+            this.label9.Size = new System.Drawing.Size(113, 15);
             this.label9.TabIndex = 20;
-            this.label9.Text = "Confirm Password";
+            this.label9.Text = "Confirm Password :";
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(138, 184);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(139, 20);
+            this.textBoxPassword.Size = new System.Drawing.Size(139, 22);
             this.textBoxPassword.TabIndex = 19;
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             // 
@@ -339,16 +351,16 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 185);
+            this.label7.Location = new System.Drawing.Point(51, 185);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 15);
+            this.label7.Size = new System.Drawing.Size(67, 15);
             this.label7.TabIndex = 18;
-            this.label7.Text = "Password";
+            this.label7.Text = "Password :";
             // 
             // btnOk
             // 
-            this.btnOk.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnOk.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOk.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnOk.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.Location = new System.Drawing.Point(145, 245);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(115, 57);
@@ -362,14 +374,14 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(83, 216);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 13);
+            this.label8.Size = new System.Drawing.Size(0, 16);
             this.label8.TabIndex = 16;
             // 
             // textBoxNickName
             // 
             this.textBoxNickName.Location = new System.Drawing.Point(138, 156);
             this.textBoxNickName.Name = "textBoxNickName";
-            this.textBoxNickName.Size = new System.Drawing.Size(139, 20);
+            this.textBoxNickName.Size = new System.Drawing.Size(139, 22);
             this.textBoxNickName.TabIndex = 10;
             this.textBoxNickName.TextChanged += new System.EventHandler(this.textBoxNickName_TextChanged);
             // 
@@ -377,7 +389,7 @@
             // 
             this.textBoxPhone.Location = new System.Drawing.Point(138, 77);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(139, 20);
+            this.textBoxPhone.Size = new System.Drawing.Size(139, 22);
             this.textBoxPhone.TabIndex = 9;
             this.textBoxPhone.TextChanged += new System.EventHandler(this.textBoxPhone_TextChanged);
             // 
@@ -394,7 +406,7 @@
             // 
             this.textBoxMail.Location = new System.Drawing.Point(138, 52);
             this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(246, 20);
+            this.textBoxMail.Size = new System.Drawing.Size(246, 22);
             this.textBoxMail.TabIndex = 8;
             this.textBoxMail.TextChanged += new System.EventHandler(this.textBoxMail_TextChanged);
             // 
@@ -402,14 +414,14 @@
             // 
             this.textBoxName.Location = new System.Drawing.Point(138, 16);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(246, 20);
+            this.textBoxName.Size = new System.Drawing.Size(246, 22);
             this.textBoxName.TabIndex = 7;
             this.textBoxName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnCancel.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnCancel.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(275, 246);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 57);
@@ -420,8 +432,8 @@
             // 
             // btn_staff_add
             // 
-            this.btn_staff_add.BackColor = System.Drawing.Color.PowderBlue;
-            this.btn_staff_add.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_staff_add.BackColor = System.Drawing.Color.AliceBlue;
+            this.btn_staff_add.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_staff_add.Location = new System.Drawing.Point(133, 245);
             this.btn_staff_add.Name = "btn_staff_add";
             this.btn_staff_add.Size = new System.Drawing.Size(115, 57);
@@ -434,7 +446,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(7, 159);
+            this.label6.Location = new System.Drawing.Point(44, 157);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 15);
             this.label6.TabIndex = 4;
@@ -444,45 +456,46 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 103);
+            this.label5.Location = new System.Drawing.Point(61, 103);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 15);
+            this.label5.Size = new System.Drawing.Size(57, 15);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Adderss    :";
+            this.label5.Text = "Adderss :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 78);
+            this.label4.Location = new System.Drawing.Point(69, 77);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 15);
+            this.label4.Size = new System.Drawing.Size(49, 15);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Phone      :";
+            this.label4.Text = "Phone :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 53);
+            this.label3.Location = new System.Drawing.Point(81, 53);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 15);
+            this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Mail          :";
+            this.label3.Text = "Mail :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 17);
+            this.label2.Location = new System.Drawing.Point(73, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 15);
+            this.label2.Size = new System.Drawing.Size(47, 15);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Name";
+            this.label2.Text = "Name :";
             // 
             // textBox_search
             // 
-            this.textBox_search.Location = new System.Drawing.Point(642, 156);
+            this.textBox_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_search.Location = new System.Drawing.Point(652, 207);
             this.textBox_search.Name = "textBox_search";
             this.textBox_search.Size = new System.Drawing.Size(175, 20);
             this.textBox_search.TabIndex = 11;
@@ -490,9 +503,10 @@
             // 
             // btnsearch
             // 
-            this.btnsearch.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnsearch.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsearch.Location = new System.Drawing.Point(833, 149);
+            this.btnsearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnsearch.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnsearch.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsearch.Location = new System.Drawing.Point(833, 200);
             this.btnsearch.Name = "btnsearch";
             this.btnsearch.Size = new System.Drawing.Size(75, 33);
             this.btnsearch.TabIndex = 11;
@@ -518,14 +532,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 484);
+            this.ClientSize = new System.Drawing.Size(915, 547);
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.textBox_search);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.grouper1);
             this.Controls.Add(this.groupBox1);
-           // this.Name = "Staff";
             this.Load += new System.EventHandler(this.Staff_Load);
             this.grouper1.ResumeLayout(false);
             this.grouper1.PerformLayout();

@@ -43,14 +43,17 @@
             // 
             // textSearch
             // 
-            this.textSearch.Location = new System.Drawing.Point(585, 87);
+            this.textSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textSearch.Location = new System.Drawing.Point(606, 99);
             this.textSearch.Name = "textSearch";
             this.textSearch.Size = new System.Drawing.Size(200, 20);
             this.textSearch.TabIndex = 0;
             // 
             // grouper1
             // 
-            this.grouper1.BackgroundColor = System.Drawing.Color.Brown;
+            this.grouper1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grouper1.BackgroundColor = System.Drawing.Color.PowderBlue;
             this.grouper1.BackgroundGradientColor = System.Drawing.Color.White;
             this.grouper1.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
             this.grouper1.BorderColor = System.Drawing.Color.Black;
@@ -69,12 +72,13 @@
             this.grouper1.ShadowColor = System.Drawing.Color.DarkGray;
             this.grouper1.ShadowControl = false;
             this.grouper1.ShadowThickness = 3;
-            this.grouper1.Size = new System.Drawing.Size(909, 77);
+            this.grouper1.Size = new System.Drawing.Size(909, 86);
             this.grouper1.TabIndex = 1;
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.PowderBlue;
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackColor = System.Drawing.Color.AliceBlue;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(880, 29);
             this.button4.Name = "button4";
@@ -88,7 +92,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 33);
+            this.label1.Location = new System.Drawing.Point(62, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(163, 27);
             this.label1.TabIndex = 1;
@@ -97,7 +101,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,10 +110,11 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnSearch.Location = new System.Drawing.Point(804, 84);
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnSearch.Location = new System.Drawing.Point(825, 91);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(73, 25);
+            this.btnSearch.Size = new System.Drawing.Size(76, 34);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -119,12 +124,15 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.PowderBlue;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 116);
+            this.dataGridView1.Location = new System.Drawing.Point(5, 138);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(900, 384);
+            this.dataGridView1.Size = new System.Drawing.Size(900, 362);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

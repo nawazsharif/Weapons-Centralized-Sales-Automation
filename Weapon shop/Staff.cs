@@ -45,7 +45,7 @@ namespace Weapon_shop
         public Staff()
         {
             InitializeComponent();
-            this.ControlBox = false;
+            //this.ControlBox = false;
             disable();
             refresh();
         }

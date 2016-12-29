@@ -40,13 +40,13 @@ namespace Weapon_shop
         {
             InitializeComponent();
             disable_product();
-            this.ControlBox = false;
+           // this.ControlBox = false;
         }
         public Product(MainForm mf)
         {
             InitializeComponent();
             disable_product();
-            this.ControlBox = false;
+           // this.ControlBox = false;
             rfrence = mf;
         }
 

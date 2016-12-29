@@ -15,6 +15,7 @@ namespace Weapon_shop
         public ManagerLogin()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,6 +27,11 @@ namespace Weapon_shop
                 minfo.Show();
             }
             
+        }
+
+        private void ManagerLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

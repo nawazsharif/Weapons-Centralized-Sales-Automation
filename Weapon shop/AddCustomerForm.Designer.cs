@@ -75,7 +75,7 @@
             // 
             // btnOk
             // 
-            this.btnOk.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnOk.BackColor = System.Drawing.Color.AliceBlue;
             this.btnOk.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.Location = new System.Drawing.Point(104, 230);
             this.btnOk.Name = "btnOk";
@@ -149,7 +149,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnCancel.BackColor = System.Drawing.Color.AliceBlue;
             this.btnCancel.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(203, 230);
             this.btnCancel.Name = "btnCancel";
@@ -161,7 +161,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnAdd.BackColor = System.Drawing.Color.AliceBlue;
             this.btnAdd.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(96, 230);
             this.btnAdd.Name = "btnAdd";
@@ -233,6 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(379, 391);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox1);

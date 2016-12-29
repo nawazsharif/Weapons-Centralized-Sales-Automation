@@ -13,3 +13,4 @@ C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Grouper\obj\Debu
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Grouper\obj\Debug\CodeVendor.Controls.csproj.GenerateResource.Cache
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Grouper\obj\Debug\CodeVendor.Controls.dll
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Grouper\obj\Debug\CodeVendor.Controls.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Grouper\obj\Debug\CodeVendor.Controls.csprojResolveAssemblyReference.cache

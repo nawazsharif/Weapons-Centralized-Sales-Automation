@@ -29,10 +29,22 @@ namespace Weapon_shop
         public VatForm(MainForm mf)
         {
             InitializeComponent();
+            this.ControlBox = false;
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void VatForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             vat = Convert.ToDouble(textBox1.Text);
             this.Close();
