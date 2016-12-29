@@ -323,9 +323,12 @@ namespace Weapon_shop
         
         private void button6_Click(object sender, EventArgs e)
         {
-            Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
-            pictureBox3.Image = barcode.Draw(textBarcode.Text, 50);
-           
+            if (textBarcode.Text == "") { }
+            else
+            {
+                Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+                pictureBox3.Image = barcode.Draw(textBarcode.Text, 50);
+            }
 
         //string barcode = textBarcode.Text;
         //Bitmap bit = new Bitmap(barcode.Length * 40, 150);
@@ -350,8 +353,12 @@ namespace Weapon_shop
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Zen.Barcode.CodeQrBarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodeQr;
-            pictureBox3.Image = qrcode.Draw(textBarcode.Text,50);
+            if (textBarcode.Text == "") { }
+            else
+            {
+                Zen.Barcode.CodeQrBarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodeQr;
+                pictureBox3.Image = qrcode.Draw(textBarcode.Text, 50);
+            }
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)

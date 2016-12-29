@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.grouper1 = new CodeVendor.Controls.Grouper();
-            this.labelDate = new System.Windows.Forms.Label();
             this.labelClock = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -79,6 +78,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.deletRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.grouper1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -97,7 +97,6 @@
             this.grouper1.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
             this.grouper1.BorderColor = System.Drawing.Color.Black;
             this.grouper1.BorderThickness = 1F;
-            this.grouper1.Controls.Add(this.labelDate);
             this.grouper1.Controls.Add(this.labelClock);
             this.grouper1.Controls.Add(this.label2);
             this.grouper1.Controls.Add(this.button4);
@@ -115,22 +114,11 @@
             this.grouper1.Size = new System.Drawing.Size(906, 79);
             this.grouper1.TabIndex = 2;
             // 
-            // labelDate
-            // 
-            this.labelDate.AutoSize = true;
-            this.labelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDate.Location = new System.Drawing.Point(741, 39);
-            this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(48, 20);
-            this.labelDate.TabIndex = 16;
-            this.labelDate.Text = "Date";
-            this.labelDate.Click += new System.EventHandler(this.labelDate_Click);
-            // 
             // labelClock
             // 
             this.labelClock.AutoSize = true;
             this.labelClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClock.Location = new System.Drawing.Point(741, 20);
+            this.labelClock.Location = new System.Drawing.Point(675, 19);
             this.labelClock.Name = "labelClock";
             this.labelClock.Size = new System.Drawing.Size(53, 20);
             this.labelClock.TabIndex = 15;
@@ -336,6 +324,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.PowderBlue;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -343,8 +332,9 @@
             this.ProductName,
             this.TotalPrice,
             this.NumberOfItems});
-            this.dataGridView1.Location = new System.Drawing.Point(5, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(5, 14);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(635, 382);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -609,6 +599,10 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(125, 26);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // POS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -686,12 +680,12 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label labelClock;
-        private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumberOfItems;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductCode;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem deletRowToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
     }
 }

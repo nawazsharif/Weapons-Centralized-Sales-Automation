@@ -31,6 +31,7 @@ namespace Weapon_shop
         {
             InitializeComponent();
             this.ControlBox = false;
+            timer1.Start();
            // dataGridView1.MouseClick += new MouseEventHandler(dataGridView1_CellMouseClick);
         }
         public POS(MainForm mf )
@@ -42,6 +43,8 @@ namespace Weapon_shop
             mainFormReference = mf;
             textinvoiceVAT.Text = VatForm.vat.ToString();
             LabelInvoice.Text = new POSPresenter().getCurrentInvoiceNumber().ToString();
+            timer1.Start();
+
         }
         private void label4_Click(object sender, EventArgs e)
         {
@@ -61,8 +64,7 @@ namespace Weapon_shop
             //new POSPresenter().Invoice();
             labelClock.Text = DateTime.Now.ToLongTimeString();
             time = labelClock.Text;
-            labelDate.Text = DateTime.Now.ToShortDateString() ;
-            date = labelDate.Text;
+            date = DateTime.Now.ToShortDateString() ;
             this.dataGridView1.RowsDefaultCellStyle.BackColor = Color.Bisque;
             this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
             // dataGridView1.MouseClick += new MouseEventHandler(dataGridView1_MouseClick);
@@ -414,6 +416,12 @@ namespace Weapon_shop
         private void textBoxInvoiceTotalCost_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime datetime = DateTime.Now;
+            this.labelClock.Text = datetime.ToString();
         }
 
         //void dataGridView1_MouseClick(object sender, MouseEventArgs e)

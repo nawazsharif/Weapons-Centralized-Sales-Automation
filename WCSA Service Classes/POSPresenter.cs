@@ -77,7 +77,12 @@ namespace WCSA_Service_Classes
         //Method to be called in case of new transaction
         public void newTransaction()
         {
+            ProductDataSource pds = new ProductDataSource();
             //++number;
+            foreach(WCSA_Entity_Classes.Product prd in purchaseList)
+            {
+                pds.ModifyItemInAccordanceWithInvoice(prd.ProductCode, prd.Quantity);
+            }
 
             purchaseList.Clear();
             totalCost = 0;

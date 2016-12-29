@@ -14,6 +14,7 @@ namespace Weapon_shop
 {
     public partial class Re_Print_Form : Form
     {
+
         public string str;
         public void disable()
         {
@@ -27,9 +28,11 @@ namespace Weapon_shop
             
             InitializeComponent();
             dataGridView1.DataSource = null;
+            dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = new RePrintPresenter().returnInvoiceList();
             dataGridView1.Show();
             disable();
+            
         }
        
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -45,13 +48,29 @@ namespace Weapon_shop
 
                         tempList.Add(inv);
                         dataGridView1.DataSource = null;
+                        dataGridView1.AutoGenerateColumns = false;
                         dataGridView1.DataSource = tempList;
                         dataGridView1.Show();
                     }
                     else
                         Console.WriteLine("Invoice not found");
                 }
+                else
+                {
+                    dataGridView1.DataSource = null;
+                    dataGridView1.AutoGenerateColumns = false;
+                    dataGridView1.DataSource = new RePrintPresenter().returnInvoiceList();
+                    dataGridView1.Show();
+                    Console.WriteLine("Textbox is \"\"");
+                }
+
+
             }
+            else
+            {
+                Console.WriteLine("Textbox is null");
+            }
+
 
 
 
@@ -99,6 +118,7 @@ namespace Weapon_shop
         {
             disable();
             dataGridView1.Show();
+            textBox1.Show();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
