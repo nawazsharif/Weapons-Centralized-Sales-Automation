@@ -23,7 +23,7 @@ namespace Weapon_shop
         {
             this.Grouper1 = new CodeVendor.Controls.Grouper();
             InitializeComponent();
-            this.ControlBox = false;
+           // this.ControlBox = false;
             //label3.Text = str;
             //MessageBox.Show(str);
             this.WindowState = FormWindowState.Maximized;
@@ -32,7 +32,7 @@ namespace Weapon_shop
         {
             this.Grouper1 = new CodeVendor.Controls.Grouper();
             InitializeComponent();
-            this.ControlBox = false;
+            //this.ControlBox = false;
             label3.Text = lgfm.UserName;
             referwnce = lgfm;
         }
@@ -51,6 +51,7 @@ namespace Weapon_shop
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            labelClock.Text = DateTime.Now.ToLongTimeString();
             
         }
 
