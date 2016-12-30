@@ -204,6 +204,33 @@ namespace Weapon_shop
                 }
                 else
                 {
+                    //Document doc = new Document(PageSize.A4.Rotate());
+                    //string documentPath = @"C:\\Users\\ahmed\\Desktop\\PDF\\";
+                    //string filename = 100000 + ".pdf";
+                    //string documentFullPath = documentPath + filename;
+
+
+                    //string invPath = "C:\\Users\\ahmed\\Desktop\\PDF\\";
+                    //string path = invPath + 100000 + ".pdf";
+                    //doc.Open();
+                    //PdfPTable table = new PdfPTable(dataGridView1.Columns.Count);
+                    //for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                    //{
+                    //    table.AddCell(new Phrase(dataGridView1.Columns[j].HeaderText));
+                    //}
+                    //table.HeaderRows = 1;
+                    //for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                    //{
+                    //    for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                    //    {
+                    //        if (dataGridView1[j, i].Value != null)
+                    //        {
+                    //            table.AddCell(new Phrase(dataGridView1[j, i].Value.ToString()));
+                    //        }
+                    //    }
+                    //}
+                    //doc.Add(table);
+                    //doc.Close();
 
                     uint num = new POSPresenter().generateInvoice(VatForm.vat, new POSPresenter().totalshopingAmount, date, time, Admin.Text, textBox1.Text, textBox2.Text);
                     LabelInvoice.Text = num.ToString();

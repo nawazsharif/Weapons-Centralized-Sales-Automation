@@ -134,27 +134,27 @@ namespace WCSA_Service_Classes
                 // step 4: Now add some contents to the document
                 
                 //myDocument.Add(new Paragraph("                           time: "));
-                myDocument.Add(new Paragraph("                Welcome            "));
-                myDocument.Add(new Paragraph("         Wapon Shop Management            "));
-                myDocument.Add(new Paragraph("               Nikunjo-2           "));
-                myDocument.Add(new Paragraph("                Road : 11            "));
-                myDocument.Add(new Paragraph("               House : 2A            "));
-                myDocument.Add(new Paragraph("               Contact Number : "+"012863772"+"            "));
+                //myDocument.Add(new Paragraph("                Welcome            "));
+                myDocument.Add(new Paragraph("        Weapon Centralized Sales Automation        "));
+                myDocument.Add(new Paragraph("                    Nikunjo-2                      "));
+                myDocument.Add(new Paragraph("                    Road : 11                      "));
+                myDocument.Add(new Paragraph("                   House : 2A                      "));
+                myDocument.Add(new Paragraph("          Contact Number : "+"012863772"+"         "));
 
-                myDocument.Add(new Paragraph("      Invoice Number = "+ invNumber));
-                myDocument.Add(new Paragraph("                          "+ date + " " + time));
-                myDocument.Add(new Paragraph("                   "));
-                myDocument.Add(new Paragraph("VAT percentage = " + vat));
-                myDocument.Add(new Paragraph("Name         Quantity           Price"));
-
+                myDocument.Add(new Paragraph("Invoice Number = "+ invNumber                    ));
+                myDocument.Add(new Paragraph("                          "+ date + " " + time      ));
+               // myDocument.Add(new Paragraph("                   "));
+                myDocument.Add(new Paragraph("           VAT percentage = " + vat));
+                string str= String.Format("{0,-12}{1,8}{2,12}\n", "Name", "Quantity", "Price");
+                myDocument.Add(new Paragraph(str));
                 foreach (Product P in purchaseList)
                 {
-                    string printstr = string.Format("{0}            {1}           {2}\n", P.ProductName,P.Quantity,P.Price);
+                    string printstr = string.Format("{0,-12}{1,8:NO}{2,12:C}", P.ProductName,P.Quantity,P.Price);
                     myDocument.Add(new Paragraph(printstr));
                 }
-                myDocument.Add(new Paragraph("           total cost :  "  +totalCost) );
-                myDocument.Add(new Paragraph("           Cash Paid :"+paid ));
-                myDocument.Add(new Paragraph("           cash return : "+moneyreturn ));
+                myDocument.Add(new Paragraph("                          total cost :  "  +totalCost) );
+                myDocument.Add(new Paragraph("                          Cash Paid :"+paid ));
+                myDocument.Add(new Paragraph("                          cash return : "+moneyreturn ));
 
                 myDocument.Add(new Paragraph("Cashair : "+admin+""));
 
