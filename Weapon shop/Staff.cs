@@ -77,6 +77,7 @@ namespace Weapon_shop
             btnOk.Hide();
             refresh();
             labelchk.Text = "";
+            textBoxName.Enabled = true;
 
 
         }

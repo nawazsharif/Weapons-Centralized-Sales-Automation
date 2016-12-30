@@ -33,5 +33,10 @@ namespace Weapon_shop
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

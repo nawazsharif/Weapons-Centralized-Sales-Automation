@@ -41,6 +41,7 @@ namespace WCSA_Data_Source_Layer
         public void DeleteFromList(string name)
         {
             list.RemoveAll(list => list.Name.Equals(name));
+            new StaffDataAccess().Remove(name);
         }
         // Modifyy database 
         public void ModifyList(WCSA_Entity_Classes.Staff staff)

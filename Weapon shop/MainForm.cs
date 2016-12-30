@@ -26,6 +26,7 @@ namespace Weapon_shop
             this.ControlBox = false;
             //label3.Text = str;
             //MessageBox.Show(str);
+            this.WindowState = FormWindowState.Maximized;
         }
         public MainForm(Form_Login lgfm)
         {
@@ -89,11 +90,10 @@ namespace Weapon_shop
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Close();
             referwnce.Show();
-           
+            this.Close();
         }
-
+        
         public void label3_Click(object sender, EventArgs e)
         {
             

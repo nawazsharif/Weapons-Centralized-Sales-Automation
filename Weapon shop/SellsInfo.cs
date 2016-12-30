@@ -23,6 +23,8 @@ namespace Weapon_shop
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = tempList;
             dataGridView1.Show();
+
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void SellsInfo_Load(object sender, EventArgs e)
