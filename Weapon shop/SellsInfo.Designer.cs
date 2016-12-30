@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellsInfo));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.grouper1 = new CodeVendor.Controls.Grouper();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,10 +42,12 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.chartSalesInfo = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.grouper1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSalesInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // grouper1
@@ -66,7 +71,7 @@
             this.grouper1.ShadowColor = System.Drawing.Color.DarkGray;
             this.grouper1.ShadowControl = false;
             this.grouper1.ShadowThickness = 3;
-            this.grouper1.Size = new System.Drawing.Size(458, 77);
+            this.grouper1.Size = new System.Drawing.Size(921, 77);
             this.grouper1.TabIndex = 3;
             // 
             // button4
@@ -166,11 +171,29 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 0;
             // 
+            // chartSalesInfo
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartSalesInfo.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartSalesInfo.Legends.Add(legend1);
+            this.chartSalesInfo.Location = new System.Drawing.Point(466, 96);
+            this.chartSalesInfo.Name = "chartSalesInfo";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartSalesInfo.Series.Add(series1);
+            this.chartSalesInfo.Size = new System.Drawing.Size(459, 260);
+            this.chartSalesInfo.TabIndex = 5;
+            this.chartSalesInfo.Text = "chart1";
+            this.chartSalesInfo.Click += new System.EventHandler(this.chart1_Click);
+            // 
             // SellsInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 358);
+            this.ClientSize = new System.Drawing.Size(929, 362);
+            this.Controls.Add(this.chartSalesInfo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grouper1);
             this.Name = "SellsInfo";
@@ -182,6 +205,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSalesInfo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,5 +221,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartSalesInfo;
     }
 }
