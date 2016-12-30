@@ -97,5 +97,24 @@ namespace WCSA_Data_Source_Layer
             }
         }
 
+        public List<Product> returnProductsWithMatchingName(string name)
+        {
+            List<Product> tempList = new List<Product>();
+            string original = name;
+            string upper = name.ToUpper();
+            string lower = name.ToLower();
+
+            foreach(Product p in list)
+            {
+                if (p.ProductName.Contains(original)  ||  p.ProductName.Contains(upper) || p.ProductName.Contains(lower)  ||
+                    p.ProductName.Equals(name,StringComparison.OrdinalIgnoreCase))
+                {
+                    tempList.Add(p);
+                }
+            }
+
+            return tempList;
+        }
+
     }
 }
