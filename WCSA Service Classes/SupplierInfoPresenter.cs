@@ -43,7 +43,7 @@ namespace WCSA_Service_Classes
         }
         public int returnMatching(string name)
         {
-            return new StaffDataSource().returnMatching(name);
+            return new SupplierDatasource().returnMatching(name);
         }
     }
 }

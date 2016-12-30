@@ -30,14 +30,14 @@ namespace Weapon_shop
         public POS()
         {
             InitializeComponent();
-            this.ControlBox = false;
+            //this.ControlBox = false;
             timer1.Start();
            
         }
         public POS(MainForm mf )
         {
             InitializeComponent();
-            this.ControlBox = false;
+            //this.ControlBox = false;
             LabelInvoice.Text = new POSPresenter().TransactionNumber().ToString();
             Admin.Text = mf.UserName;
             mainFormReference = mf;
@@ -195,24 +195,27 @@ namespace Weapon_shop
         */
         private void button7_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text == "")
+            { MessageBox.Show("Fill Paid"); }
+            else {
+                if (customernid == null)
+                {
+                    MessageBox.Show("Please Fillup Customer Info");
+                }
+                else
+                {
 
-            if (customernid == null)
-            {
-                MessageBox.Show("Please Fillup Customer Info");
-            }
-            else
-            {
-                MessageBox.Show("Successfull");
+                    uint num = new POSPresenter().generateInvoice(VatForm.vat, new POSPresenter().totalshopingAmount, date, time, Admin.Text, textBox1.Text, textBox2.Text);
+                    LabelInvoice.Text = num.ToString();
+                    new POSPresenter().newTransaction();
 
-                uint num = new POSPresenter().generateInvoice(VatForm.vat, new POSPresenter().totalshopingAmount, date, time, Admin.Text, textBox1.Text, textBox2.Text);
-                LabelInvoice.Text = num.ToString();
-                new POSPresenter().newTransaction();
+                    textBoxInvoiceTotalCost.Text = null;
+                    dataGridView1.DataSource = null;
+                    textBoxInvoiceTotalItems.Text = Convert.ToString(0);
 
-                textBoxInvoiceTotalCost.Text = null;
-                dataGridView1.DataSource = null;
-                textBoxInvoiceTotalItems.Text = Convert.ToString(0);
-
-                customernid = null;
+                    customernid = null;
+                    MessageBox.Show("Successfull");
+                }
             }
         }
         /*

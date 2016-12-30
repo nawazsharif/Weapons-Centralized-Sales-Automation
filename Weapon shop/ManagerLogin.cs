@@ -20,12 +20,7 @@ namespace Weapon_shop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text.Equals(new ManagerInfo().ManagerPassword))
-            {
-                this.Hide();
-                ManagerInfo minfo = new ManagerInfo();
-                minfo.Show();
-            }
+           
             
         }
 
@@ -37,6 +32,21 @@ namespace Weapon_shop
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            textBox1_EnterKeyPressed(this, new EventArgs());
+        }
+
+        private void textBox1_EnterKeyPressed(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Equals(new ManagerInfo().ManagerPassword))
+            {
+                this.Hide();
+                ManagerInfo minfo = new ManagerInfo();
+                minfo.Show();
+            }
         }
     }
 }
