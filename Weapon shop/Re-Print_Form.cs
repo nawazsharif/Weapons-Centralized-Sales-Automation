@@ -125,5 +125,17 @@ namespace Weapon_shop
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Process p = new Process();
+            //p.StartInfo = new ProcessStartInfo()
+            //{
+            //    CreateNoWindow = true,
+            //    Verb = "print",
+            //    FileName = path //put the correct path here
+            //};
+            //p.Start();
+        }
     }
 }

@@ -56,6 +56,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textAccountHolderName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelX = new System.Windows.Forms.Label();
+            this.labelchk = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.grouper1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -212,6 +216,10 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox2.Controls.Add(this.labelchk);
+            this.groupBox2.Controls.Add(this.labelX);
+            this.groupBox2.Controls.Add(this.textAccountHolderName);
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.btnOk);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.texBank);
@@ -226,6 +234,7 @@
             this.groupBox2.Controls.Add(this.A);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(5, 211);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(399, 309);
@@ -239,9 +248,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOk.BackColor = System.Drawing.Color.AliceBlue;
             this.btnOk.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.Location = new System.Drawing.Point(116, 226);
+            this.btnOk.Location = new System.Drawing.Point(90, 245);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(115, 57);
+            this.btnOk.Size = new System.Drawing.Size(109, 57);
             this.btnOk.TabIndex = 17;
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = false;
@@ -254,53 +263,53 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(83, 216);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 13);
+            this.label8.Size = new System.Drawing.Size(0, 16);
             this.label8.TabIndex = 16;
             // 
             // texBank
             // 
             this.texBank.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.texBank.Location = new System.Drawing.Point(108, 166);
+            this.texBank.Location = new System.Drawing.Point(148, 175);
             this.texBank.Name = "texBank";
-            this.texBank.Size = new System.Drawing.Size(150, 20);
+            this.texBank.Size = new System.Drawing.Size(217, 22);
             this.texBank.TabIndex = 10;
             // 
             // texAddress
             // 
             this.texAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.texAddress.Location = new System.Drawing.Point(108, 87);
+            this.texAddress.Location = new System.Drawing.Point(148, 96);
             this.texAddress.Multiline = true;
             this.texAddress.Name = "texAddress";
-            this.texAddress.Size = new System.Drawing.Size(257, 47);
+            this.texAddress.Size = new System.Drawing.Size(217, 47);
             this.texAddress.TabIndex = 9;
             // 
             // texContact
             // 
             this.texContact.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.texContact.Location = new System.Drawing.Point(108, 140);
+            this.texContact.Location = new System.Drawing.Point(148, 149);
             this.texContact.Name = "texContact";
-            this.texContact.Size = new System.Drawing.Size(257, 20);
+            this.texContact.Size = new System.Drawing.Size(217, 22);
             this.texContact.TabIndex = 9;
             // 
             // texMail
             // 
             this.texMail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.texMail.Location = new System.Drawing.Point(108, 62);
+            this.texMail.Location = new System.Drawing.Point(148, 71);
             this.texMail.Name = "texMail";
-            this.texMail.Size = new System.Drawing.Size(257, 20);
+            this.texMail.Size = new System.Drawing.Size(217, 22);
             this.texMail.TabIndex = 8;
             // 
             // texShopName
             // 
             this.texShopName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.texShopName.Location = new System.Drawing.Point(108, 38);
+            this.texShopName.Location = new System.Drawing.Point(148, 27);
             this.texShopName.Name = "texShopName";
-            this.texShopName.Size = new System.Drawing.Size(257, 20);
+            this.texShopName.Size = new System.Drawing.Size(217, 22);
             this.texShopName.TabIndex = 7;
             // 
             // btnCancel
@@ -309,7 +318,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.BackColor = System.Drawing.Color.AliceBlue;
             this.btnCancel.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(246, 227);
+            this.btnCancel.Location = new System.Drawing.Point(253, 245);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 57);
             this.btnCancel.TabIndex = 6;
@@ -322,7 +331,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_staff_add.BackColor = System.Drawing.Color.AliceBlue;
             this.btn_staff_add.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_staff_add.Location = new System.Drawing.Point(104, 226);
+            this.btn_staff_add.Location = new System.Drawing.Point(129, 245);
             this.btn_staff_add.Name = "btn_staff_add";
             this.btn_staff_add.Size = new System.Drawing.Size(115, 57);
             this.btn_staff_add.TabIndex = 5;
@@ -336,7 +345,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(11, 169);
+            this.label6.Location = new System.Drawing.Point(57, 180);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 15);
             this.label6.TabIndex = 4;
@@ -348,11 +357,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 141);
+            this.label5.Location = new System.Drawing.Point(90, 150);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 15);
+            this.label5.Size = new System.Drawing.Size(54, 15);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Contact    :";
+            this.label5.Text = "Contact :";
             // 
             // A
             // 
@@ -360,11 +369,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.A.AutoSize = true;
             this.A.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A.Location = new System.Drawing.Point(19, 88);
+            this.A.Location = new System.Drawing.Point(87, 97);
             this.A.Name = "A";
-            this.A.Size = new System.Drawing.Size(72, 15);
+            this.A.Size = new System.Drawing.Size(57, 15);
             this.A.TabIndex = 2;
-            this.A.Text = "Address      :";
+            this.A.Text = "Address :";
             // 
             // label3
             // 
@@ -372,11 +381,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 63);
+            this.label3.Location = new System.Drawing.Point(107, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 15);
+            this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Mail          :";
+            this.label3.Text = "Mail :";
             // 
             // label2
             // 
@@ -384,11 +393,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 39);
+            this.label2.Location = new System.Drawing.Point(65, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 15);
+            this.label2.Size = new System.Drawing.Size(79, 15);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Shop Name       :";
+            this.label2.Text = "Shop Name :";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dataGridView1
@@ -402,6 +411,46 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(689, 278);
             this.dataGridView1.TabIndex = 12;
+            // 
+            // textAccountHolderName
+            // 
+            this.textAccountHolderName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textAccountHolderName.Location = new System.Drawing.Point(148, 201);
+            this.textAccountHolderName.Name = "textAccountHolderName";
+            this.textAccountHolderName.Size = new System.Drawing.Size(217, 22);
+            this.textAccountHolderName.TabIndex = 19;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(11, 204);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 15);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Account Holder Name :";
+            // 
+            // labelX
+            // 
+            this.labelX.AutoSize = true;
+            this.labelX.ForeColor = System.Drawing.Color.Red;
+            this.labelX.Location = new System.Drawing.Point(371, 30);
+            this.labelX.Name = "labelX";
+            this.labelX.Size = new System.Drawing.Size(16, 16);
+            this.labelX.TabIndex = 20;
+            this.labelX.Text = "X";
+            // 
+            // labelchk
+            // 
+            this.labelchk.AutoSize = true;
+            this.labelchk.ForeColor = System.Drawing.Color.Red;
+            this.labelchk.Location = new System.Drawing.Point(151, 51);
+            this.labelchk.Name = "labelchk";
+            this.labelchk.Size = new System.Drawing.Size(0, 16);
+            this.labelchk.TabIndex = 21;
             // 
             // SupplierInfoForm
             // 
@@ -458,5 +507,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textAccountHolderName;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelchk;
+        private System.Windows.Forms.Label labelX;
     }
 }

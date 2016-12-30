@@ -13,10 +13,10 @@ namespace WCSA_Service_Classes
         {
         }
 
-        public void Add(string shopName, string mail, string address, string contact, string bankAccount)
+        public void Add(string shopName, string mail, string address, string contact, string bankAccount, string accountHolderName)
         {
             SupplierDatasource sds = new SupplierDatasource();
-            WCSA_Entity_Classes.Supplier sup = new WCSA_Entity_Classes.Supplier(shopName,mail,address,contact,bankAccount);
+            WCSA_Entity_Classes.Supplier sup = new WCSA_Entity_Classes.Supplier(shopName,mail,address,contact,bankAccount,accountHolderName);
             sds.AddToList(sup);
         }
 
@@ -27,10 +27,10 @@ namespace WCSA_Service_Classes
 
         }
 
-        public void modifySupplierDetails(string shopName, string mail, string address, string contact, string bankAccount)
+        public void modifySupplierDetails(string shopName, string mail, string address, string contact, string bankAccount, string accountHolderName)
         {
             SupplierDatasource sds = new SupplierDatasource();
-            sds.ModifyList(new WCSA_Entity_Classes.Supplier(shopName, mail, address, contact, bankAccount));
+            sds.ModifyList(new WCSA_Entity_Classes.Supplier(shopName, mail, address, contact, bankAccount,accountHolderName));
         }
 
 
@@ -40,6 +40,10 @@ namespace WCSA_Service_Classes
             SupplierDatasource sds = new SupplierDatasource();
             sds.returnEntireList(supplierList);
             return supplierList;
+        }
+        public int returnMatching(string name)
+        {
+            return new StaffDataSource().returnMatching(name);
         }
     }
 }

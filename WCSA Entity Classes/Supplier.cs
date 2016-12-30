@@ -13,6 +13,7 @@ namespace WCSA_Entity_Classes
         string address;
         string contact;
         string bankAccount;
+        string accountHolderName;
         public string ShopName
         {
             set
@@ -60,15 +61,23 @@ namespace WCSA_Entity_Classes
                 return bankAccount;
             }
         }
+        public string AccountHolderName
+        {
+            set { accountHolderName = value; }
+            get
+            {
+                return accountHolderName;
+            }
+        }
 
-        public Supplier(string shopName, string mail, string address, string contact,
-            string bankAccount)
+        public Supplier(string shopName, string mail, string address, string contact,string bankAccount, string accountHolderName)
         {
             this.shopName = shopName;
             this.mail = mail;
             this.address = address;
             this.contact = contact;
             this.bankAccount = bankAccount;
+            this.accountHolderName = accountHolderName;
         }
         public Supplier()
         {
@@ -77,6 +86,7 @@ namespace WCSA_Entity_Classes
             this.address = null;
             this.contact = null;
             this.bankAccount = null;
+            this.accountHolderName = null;
         }
     }
 }

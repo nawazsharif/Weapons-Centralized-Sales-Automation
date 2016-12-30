@@ -50,5 +50,17 @@ namespace WCSA_Data_Source_Layer
         {
             return list.Find(list => list.ShopName.Equals(sname));
         }
+        public int returnMatching(string name)
+        {
+            WCSA_Entity_Classes.Supplier requiredSupplier= list.Find(staffList => staffList.ShopName.Equals(name));
+            if (requiredSupplier != null)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }

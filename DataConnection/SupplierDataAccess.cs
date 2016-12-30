@@ -11,7 +11,7 @@ namespace DataConnection
     {
         public int Add(WCSA_Entity_Classes.Supplier supplier)
         {
-            string query = string.Format("INSERT INTO SUPPLIER (ShopName,mail,Address,Contact,BankAccount) VALUES('{0}', '{1}', '{2}', '{3}', '{4}')", supplier.ShopName,supplier.Mail,supplier.Address,supplier.Contact,supplier.BankAccount);
+            string query = string.Format("INSERT INTO SUPPLIER (ShopName,mail,Address,Contact,BankAccount,AccountHolderName) VALUES('{0}', '{1}', '{2}', '{3}', '{4}','{5}')", supplier.ShopName,supplier.Mail,supplier.Address,supplier.Contact,supplier.BankAccount,supplier.AccountHolderName);
             return DataAccess.ExecuteQuery(query);
         }
 
@@ -23,13 +23,13 @@ namespace DataConnection
 
         public int Edit(WCSA_Entity_Classes.Supplier supplier)
         {
-            string query = "UPDATE SUPPLIER SET Mail='" + supplier.Mail + "', Address='" + supplier.Address + "',Contact='" + supplier.Contact + "', BankAccount='" + supplier.BankAccount + "' WHERE ShopName='" + supplier.ShopName + "'";
+            string query = "UPDATE SUPPLIER SET Mail='" + supplier.Mail + "', Address='" + supplier.Address + "',Contact='" + supplier.Contact + "', BankAccount='" + supplier.BankAccount + "', AccountHolderName='" + supplier.AccountHolderName + "' WHERE ShopName='" + supplier.ShopName + "'";
             return DataAccess.ExecuteQuery(query);
         }
 
         public List<WCSA_Entity_Classes.Supplier> GetAll()
         {
-            string query = "SELECT ShopName,mail,Address,Contact,BankAccount FROM SUPPLIER";
+            string query = "SELECT ShopName,mail,Address,Contact,BankAccount,AccountHolderName FROM SUPPLIER";
             SqlDataReader reader = DataAccess.GetData(query);
 
             WCSA_Entity_Classes.Supplier supplier = null;
@@ -42,29 +42,13 @@ namespace DataConnection
                 supplier.Contact = reader["Contact"].ToString();
                 supplier.Address = reader["Address"].ToString();
                 supplier.BankAccount = reader["BankAccount"].ToString();
+                supplier.AccountHolderName = reader["AccountHolderName"].ToString();
 
                 supplierList.Add(supplier);
             }
             return supplierList;
         }
 
-        public WCSA_Entity_Classes.Supplier GetByName(string shopname)
-        {
-            string query = "SELECT Name, Mail Phone,Address,NickName,Password FROM STAFF WHERE Name=" + shopname;
-            SqlDataReader reader = DataAccess.GetData(query);
-            reader.Read();
-
-            WCSA_Entity_Classes.Supplier supplier = null;
-            if (reader.HasRows)
-            {
-                supplier = new WCSA_Entity_Classes.Supplier();
-                supplier.ShopName = reader["ShopName"].ToString();
-                supplier.Mail = reader["Mail"].ToString();
-                supplier.Contact = reader["Contact"].ToString();
-                supplier.Address = reader["Address"].ToString();
-                supplier.BankAccount = reader["BankAccount"].ToString();
-            }
-            return supplier;
-        }
+        
     }
 }
