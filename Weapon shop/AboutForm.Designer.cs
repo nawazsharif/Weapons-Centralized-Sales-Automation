@@ -128,6 +128,7 @@
             this.INFO.TabIndex = 8;
             this.INFO.TabStop = false;
             this.INFO.Text = "INFO";
+            this.INFO.Enter += new System.EventHandler(this.INFO_Enter);
             // 
             // AboutForm
             // 

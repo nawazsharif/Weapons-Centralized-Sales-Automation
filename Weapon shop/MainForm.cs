@@ -11,8 +11,7 @@ using CodeVendor.Controls;
 
 namespace Weapon_shop
 {
-    
-    
+
     public partial class MainForm : Form
     {
         static double vat;

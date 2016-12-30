@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using WCSA_Entity_Classes;
 using WCSA_Service_Classes;
 
@@ -23,6 +24,11 @@ namespace Weapon_shop
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = tempList;
             dataGridView1.Show();
+
+            chartSalesInfo.Series.Add("Series2");
+            chartSalesInfo.Series["Series2"].ChartType = SeriesChartType.Column;
+            chartSalesInfo.Series["Series2"].Points.AddY(20);
+            chartSalesInfo.Series["Series2"].ChartArea = "ChartArea1";
 
             this.WindowState = FormWindowState.Maximized;
         }
@@ -54,6 +60,11 @@ namespace Weapon_shop
                 dataGridView1.Show();
             }
             
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

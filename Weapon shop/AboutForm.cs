@@ -14,6 +14,11 @@ namespace Weapon_shop
     {
         public static string name, mail, phone, address;
 
+        private void INFO_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         public AboutForm()
         {
             InitializeComponent();
