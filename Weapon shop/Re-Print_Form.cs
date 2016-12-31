@@ -107,6 +107,7 @@ namespace Weapon_shop
         private void Re_Print_Form_Load(object sender, EventArgs e)
         {
             disable();
+            //this.ControlBox = false;
         }
 
         private void axAcroPDF1_Enter(object sender, EventArgs e)
@@ -128,14 +129,7 @@ namespace Weapon_shop
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //Process p = new Process();
-            //p.StartInfo = new ProcessStartInfo()
-            //{
-            //    CreateNoWindow = true,
-            //    Verb = "print",
-            //    FileName = path //put the correct path here
-            //};
-            //p.Start();
+            
         }
     }
 }

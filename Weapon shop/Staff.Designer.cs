@@ -529,7 +529,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.grouper1);
             this.Controls.Add(this.groupBox1);
-           
+            //this.Name = "Staff";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Staff_Load);
             this.grouper1.ResumeLayout(false);
             this.grouper1.PerformLayout();

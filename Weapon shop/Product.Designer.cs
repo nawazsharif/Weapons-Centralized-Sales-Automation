@@ -41,6 +41,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Labelchk = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -66,7 +67,6 @@
             this.textBarcode = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Labelchk = new System.Windows.Forms.Label();
             this.grouper1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -242,6 +242,14 @@
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add new product";
+            // 
+            // Labelchk
+            // 
+            this.Labelchk.AutoSize = true;
+            this.Labelchk.Location = new System.Drawing.Point(89, 49);
+            this.Labelchk.Name = "Labelchk";
+            this.Labelchk.Size = new System.Drawing.Size(0, 16);
+            this.Labelchk.TabIndex = 14;
             // 
             // btnOk
             // 
@@ -499,14 +507,6 @@
             this.deleteRowToolStripMenuItem.Text = "Delete Row";
             this.deleteRowToolStripMenuItem.Click += new System.EventHandler(this.deleteRowToolStripMenuItem_Click);
             // 
-            // Labelchk
-            // 
-            this.Labelchk.AutoSize = true;
-            this.Labelchk.Location = new System.Drawing.Point(89, 49);
-            this.Labelchk.Name = "Labelchk";
-            this.Labelchk.Size = new System.Drawing.Size(0, 16);
-            this.Labelchk.TabIndex = 14;
-            // 
             // Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,6 +520,7 @@
             this.Controls.Add(this.grouper1);
             this.Name = "Product";
             this.Text = "Product";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Product_Load_1);
             this.grouper1.ResumeLayout(false);
             this.grouper1.PerformLayout();

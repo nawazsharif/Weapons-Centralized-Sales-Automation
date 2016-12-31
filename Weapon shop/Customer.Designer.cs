@@ -147,6 +147,7 @@
             this.Controls.Add(this.grouper1);
             this.Controls.Add(this.textSearch);
             this.Name = "CustomerForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Customer_Load);
             this.grouper1.ResumeLayout(false);
             this.grouper1.PerformLayout();

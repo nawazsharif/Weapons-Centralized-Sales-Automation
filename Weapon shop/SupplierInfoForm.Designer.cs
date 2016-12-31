@@ -473,6 +473,7 @@
             this.Controls.Add(this.grouper1);
             this.Name = "SupplierInfoForm";
             this.Text = "SupplierInfoForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.SupplierInfoForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.grouper1.ResumeLayout(false);

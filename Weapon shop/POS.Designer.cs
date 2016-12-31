@@ -33,18 +33,19 @@
             this.labelClock = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textTotalPrice = new System.Windows.Forms.TextBox();
-            this.textQuantity = new System.Windows.Forms.TextBox();
-            this.textUnitPrice = new System.Windows.Forms.TextBox();
-            this.text_P_Name = new System.Windows.Forms.TextBox();
-            this.textPCode = new System.Windows.Forms.TextBox();
             this.textBarCode = new System.Windows.Forms.TextBox();
+            this.textPCode = new System.Windows.Forms.TextBox();
+            this.textQuantity = new System.Windows.Forms.TextBox();
+            this.text_P_Name = new System.Windows.Forms.TextBox();
+            this.textUnitPrice = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.LabelInvoice = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -78,9 +79,9 @@
             this.deletRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.grouper1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grouper2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -88,7 +89,6 @@
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grouper1
@@ -154,6 +154,31 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 6;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72F));
+            this.tableLayoutPanel1.Controls.Add(this.textTotalPrice, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textBarCode, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textPCode, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textQuantity, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.text_P_Name, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textUnitPrice, 3, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 15);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(512, 33);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
             // textTotalPrice
             // 
             this.textTotalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -164,6 +189,32 @@
             this.textTotalPrice.Name = "textTotalPrice";
             this.textTotalPrice.Size = new System.Drawing.Size(66, 27);
             this.textTotalPrice.TabIndex = 11;
+            // 
+            // textBarCode
+            // 
+            this.textBarCode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBarCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBarCode.Location = new System.Drawing.Point(3, 3);
+            this.textBarCode.Multiline = true;
+            this.textBarCode.Name = "textBarCode";
+            this.textBarCode.Size = new System.Drawing.Size(44, 27);
+            this.textBarCode.TabIndex = 6;
+            this.textBarCode.TextChanged += new System.EventHandler(this.textBarCode_TextChanged);
+            // 
+            // textPCode
+            // 
+            this.textPCode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textPCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textPCode.Location = new System.Drawing.Point(53, 3);
+            this.textPCode.Multiline = true;
+            this.textPCode.Name = "textPCode";
+            this.textPCode.Size = new System.Drawing.Size(44, 27);
+            this.textPCode.TabIndex = 7;
+            this.textPCode.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textQuantity
             // 
@@ -179,18 +230,6 @@
             this.textQuantity.TextChanged += new System.EventHandler(this.textQuantity_TextChanged);
             this.textQuantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textQuantity_KeyDown);
             // 
-            // textUnitPrice
-            // 
-            this.textUnitPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textUnitPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textUnitPrice.Location = new System.Drawing.Point(303, 3);
-            this.textUnitPrice.Multiline = true;
-            this.textUnitPrice.Name = "textUnitPrice";
-            this.textUnitPrice.Size = new System.Drawing.Size(64, 27);
-            this.textUnitPrice.TabIndex = 9;
-            // 
             // text_P_Name
             // 
             this.text_P_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -203,31 +242,27 @@
             this.text_P_Name.Size = new System.Drawing.Size(194, 27);
             this.text_P_Name.TabIndex = 8;
             // 
-            // textPCode
+            // textUnitPrice
             // 
-            this.textPCode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.textUnitPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textPCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textPCode.Location = new System.Drawing.Point(53, 3);
-            this.textPCode.Multiline = true;
-            this.textPCode.Name = "textPCode";
-            this.textPCode.Size = new System.Drawing.Size(44, 27);
-            this.textPCode.TabIndex = 7;
-            this.textPCode.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textUnitPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textUnitPrice.Location = new System.Drawing.Point(303, 3);
+            this.textUnitPrice.Multiline = true;
+            this.textUnitPrice.Name = "textUnitPrice";
+            this.textUnitPrice.Size = new System.Drawing.Size(64, 27);
+            this.textUnitPrice.TabIndex = 9;
             // 
-            // textBarCode
+            // label1
             // 
-            this.textBarCode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBarCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBarCode.Location = new System.Drawing.Point(3, 3);
-            this.textBarCode.Multiline = true;
-            this.textBarCode.Name = "textBarCode";
-            this.textBarCode.Size = new System.Drawing.Size(44, 27);
-            this.textBarCode.TabIndex = 6;
-            this.textBarCode.TextChanged += new System.EventHandler(this.textBarCode_TextChanged);
+            this.label1.Location = new System.Drawing.Point(14, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Barcode";
             // 
             // label7
             // 
@@ -239,16 +274,6 @@
             this.label7.TabIndex = 5;
             this.label7.Text = "Total Price";
             // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Location = new System.Drawing.Point(388, 2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Quantity";
-            // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -258,6 +283,16 @@
             this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 3;
             this.label5.Text = "Unit Price";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.Location = new System.Drawing.Point(388, 2);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Quantity";
             // 
             // label4
             // 
@@ -279,16 +314,6 @@
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Code";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Location = new System.Drawing.Point(14, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Barcode";
             // 
             // groupBox2
             // 
@@ -640,31 +665,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel1.Controls.Add(this.textTotalPrice, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBarCode, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textPCode, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textQuantity, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.text_P_Name, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textUnitPrice, 3, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 15);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(512, 33);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
             // POS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -678,10 +678,13 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grouper1);
             this.Name = "POS";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.POS_Load);
             this.grouper1.ResumeLayout(false);
             this.grouper1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.grouper2.ResumeLayout(false);
@@ -692,8 +695,6 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -164,6 +164,7 @@
             this.Controls.Add(this.grouper1);
             this.Name = "ManagerInfo";
             this.Text = "ManagerInfo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.grouper1.ResumeLayout(false);
             this.grouper1.PerformLayout();
