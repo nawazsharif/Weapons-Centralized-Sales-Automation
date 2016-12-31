@@ -29,9 +29,10 @@ namespace WCSA_Data_Source_Layer
             //new StaffDataAccess().Add(requiredStaff);
             new SupplierDataAccess().Add(entity);
         }
-        void DeleteFromList(string sname)
+        public void DeleteFromList(string sname)
         {
             list.RemoveAll(list => list.ShopName.Equals(sname));
+            new SupplierDataAccess().Remove(sname);
         }
 
         //List modify from Database

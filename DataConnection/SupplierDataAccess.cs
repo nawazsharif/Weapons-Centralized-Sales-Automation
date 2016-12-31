@@ -17,7 +17,7 @@ namespace DataConnection
 
         public int Remove(string shopname)
         {
-            string query = "DELETE FROM SUPPLIER WHERE Name=" + shopname;
+            string query = "DELETE FROM SUPPLIER WHERE ShopName='" + shopname+"'";
             return DataAccess.ExecuteQuery(query);
         }
 

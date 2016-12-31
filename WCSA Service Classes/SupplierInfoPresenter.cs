@@ -27,6 +27,13 @@ namespace WCSA_Service_Classes
 
         }
 
+        public void DeleteSupplier(string name)
+        {
+            SupplierDatasource sds = new SupplierDatasource();
+            sds.DeleteFromList(name);
+        }
+
+
         public void modifySupplierDetails(string shopName, string mail, string address, string contact, string bankAccount, string accountHolderName)
         {
             SupplierDatasource sds = new SupplierDatasource();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SupplierInfoForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -38,9 +39,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.textSearch = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelchk = new System.Windows.Forms.Label();
+            this.labelX = new System.Windows.Forms.Label();
+            this.textAccountHolderName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.texBank = new System.Windows.Forms.TextBox();
@@ -56,15 +60,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textAccountHolderName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labelX = new System.Windows.Forms.Label();
-            this.labelchk = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.grouper1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -175,7 +178,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 26);
+            this.label1.Location = new System.Drawing.Point(58, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 27);
             this.label1.TabIndex = 1;
@@ -184,33 +187,22 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(43, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnSearch.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(625, 204);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 33);
-            this.btnSearch.TabIndex = 14;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // textSearch
             // 
             this.textSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textSearch.Location = new System.Drawing.Point(444, 211);
             this.textSearch.Name = "textSearch";
-            this.textSearch.Size = new System.Drawing.Size(175, 20);
+            this.textSearch.Size = new System.Drawing.Size(256, 20);
             this.textSearch.TabIndex = 15;
+            this.textSearch.TextChanged += new System.EventHandler(this.textSearch_TextChanged);
+            this.textSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textSearch_KeyDown);
             // 
             // groupBox2
             // 
@@ -242,13 +234,53 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add new Supplier";
             // 
+            // labelchk
+            // 
+            this.labelchk.AutoSize = true;
+            this.labelchk.ForeColor = System.Drawing.Color.Red;
+            this.labelchk.Location = new System.Drawing.Point(151, 51);
+            this.labelchk.Name = "labelchk";
+            this.labelchk.Size = new System.Drawing.Size(0, 16);
+            this.labelchk.TabIndex = 21;
+            // 
+            // labelX
+            // 
+            this.labelX.AutoSize = true;
+            this.labelX.ForeColor = System.Drawing.Color.Red;
+            this.labelX.Location = new System.Drawing.Point(371, 30);
+            this.labelX.Name = "labelX";
+            this.labelX.Size = new System.Drawing.Size(16, 16);
+            this.labelX.TabIndex = 20;
+            this.labelX.Text = "X";
+            // 
+            // textAccountHolderName
+            // 
+            this.textAccountHolderName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textAccountHolderName.Location = new System.Drawing.Point(148, 201);
+            this.textAccountHolderName.Name = "textAccountHolderName";
+            this.textAccountHolderName.Size = new System.Drawing.Size(217, 22);
+            this.textAccountHolderName.TabIndex = 19;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(11, 204);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 15);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Account Holder Name :";
+            // 
             // btnOk
             // 
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOk.BackColor = System.Drawing.Color.AliceBlue;
             this.btnOk.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.Location = new System.Drawing.Point(90, 245);
+            this.btnOk.Location = new System.Drawing.Point(135, 246);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(109, 57);
             this.btnOk.TabIndex = 17;
@@ -324,6 +356,7 @@
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btn_staff_add
             // 
@@ -331,9 +364,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_staff_add.BackColor = System.Drawing.Color.AliceBlue;
             this.btn_staff_add.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_staff_add.Location = new System.Drawing.Point(129, 245);
+            this.btn_staff_add.Location = new System.Drawing.Point(135, 245);
             this.btn_staff_add.Name = "btn_staff_add";
-            this.btn_staff_add.Size = new System.Drawing.Size(115, 57);
+            this.btn_staff_add.Size = new System.Drawing.Size(109, 57);
             this.btn_staff_add.TabIndex = 5;
             this.btn_staff_add.Text = "Add";
             this.btn_staff_add.UseVisualStyleBackColor = false;
@@ -411,53 +444,28 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(689, 278);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            this.dataGridView1.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseUp);
             // 
-            // textAccountHolderName
+            // contextMenuStrip1
             // 
-            this.textAccountHolderName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textAccountHolderName.Location = new System.Drawing.Point(148, 201);
-            this.textAccountHolderName.Name = "textAccountHolderName";
-            this.textAccountHolderName.Size = new System.Drawing.Size(217, 22);
-            this.textAccountHolderName.TabIndex = 19;
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteRowToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(134, 26);
             // 
-            // label4
+            // deleteRowToolStripMenuItem
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 204);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 15);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Account Holder Name :";
-            // 
-            // labelX
-            // 
-            this.labelX.AutoSize = true;
-            this.labelX.ForeColor = System.Drawing.Color.Red;
-            this.labelX.Location = new System.Drawing.Point(371, 30);
-            this.labelX.Name = "labelX";
-            this.labelX.Size = new System.Drawing.Size(16, 16);
-            this.labelX.TabIndex = 20;
-            this.labelX.Text = "X";
-            // 
-            // labelchk
-            // 
-            this.labelchk.AutoSize = true;
-            this.labelchk.ForeColor = System.Drawing.Color.Red;
-            this.labelchk.Location = new System.Drawing.Point(151, 51);
-            this.labelchk.Name = "labelchk";
-            this.labelchk.Size = new System.Drawing.Size(0, 16);
-            this.labelchk.TabIndex = 21;
+            this.deleteRowToolStripMenuItem.Name = "deleteRowToolStripMenuItem";
+            this.deleteRowToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteRowToolStripMenuItem.Text = "Delete Row";
+            this.deleteRowToolStripMenuItem.Click += new System.EventHandler(this.deleteRowToolStripMenuItem_Click);
             // 
             // SupplierInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 525);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.textSearch);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
@@ -473,6 +481,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -487,7 +496,6 @@
         private CodeVendor.Controls.Grouper grouper1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox textSearch;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnOk;
@@ -511,5 +519,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelchk;
         private System.Windows.Forms.Label labelX;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem deleteRowToolStripMenuItem;
     }
 }
