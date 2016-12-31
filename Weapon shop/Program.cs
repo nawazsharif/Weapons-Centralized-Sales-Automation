@@ -16,7 +16,7 @@ namespace Weapon_shop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new Staff());
         }
     }
 }
