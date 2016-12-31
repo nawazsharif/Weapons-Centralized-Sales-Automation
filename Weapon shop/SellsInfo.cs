@@ -25,12 +25,18 @@ namespace Weapon_shop
             dataGridView1.DataSource = tempList;
             dataGridView1.Show();
 
+            //dateTimePicker2.Hide();
+
+            chartSalesInfo.Hide();
+
+            /*
             chartSalesInfo.Series.Add("Series2");
             chartSalesInfo.Series["Series2"].ChartType = SeriesChartType.Column;
             chartSalesInfo.Series["Series2"].Points.AddY(20);
             chartSalesInfo.Series["Series2"].ChartArea = "ChartArea1";
+            */
 
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
         }
 
         private void SellsInfo_Load(object sender, EventArgs e)
@@ -38,32 +44,137 @@ namespace Weapon_shop
             
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+
+        private void chart1_Click(object sender, EventArgs e)
         {
-            if(radioButton1.Checked == true)
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine("Combobox text changed function called");
+            if(comboBox1.Text.Equals("All-Sorted- Sales Person"))
             {
+                Console.WriteLine("Entering first if :: Sorted by sales person");
                 List<Invoice> tempList = new SellsInfoPresenter().returnInvoiceListOrderByStaffName();
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = tempList;
                 dataGridView1.Show();
             }
-            
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            if(radioButton2.Checked)
+            else if (comboBox1.Text.Equals("All-Sorted-Invoice Number"))
             {
+                Console.WriteLine("Entering first else if :: sorted by invoice number");
                 List<Invoice> tempList = new SellsInfoPresenter().returnInvoiceListOrderByInvoiceNumber();
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = tempList;
                 dataGridView1.Show();
             }
-            
-        }
+            else if (comboBox1.Text.Equals("Daily Report") )
+            {
+                Console.WriteLine("Entering second else if :: daily report");
 
-        private void chart1_Click(object sender, EventArgs e)
-        {
+                Console.WriteLine("Date on date time picker  : {0}", dateTimePicker1.Text.ToString());
+                itemListTuple<double, String> temp = new SellsInfoPresenter().getDailyRecord(dateTimePicker1.Text.ToString());
+                List<Tuple<double, String>> templList = temp.getEntireList();
+
+                chartSalesInfo.Series["Series1"].ChartType = SeriesChartType.Column;
+
+                int dataIndex = 1;
+
+                foreach(Tuple<double,string> t in templList)
+                {
+                    chartSalesInfo.Series["Series1"].Points.AddXY(dataIndex, t.Item1);
+                    //Console.WriteLine("Final(In SalesInfo)  X : {0}    Y : {1}",t.Item1,dataIndex);
+                    dataIndex++;
+                }
+
+
+                chartSalesInfo.Series["Series1"].ChartArea = "ChartArea1";
+                chartSalesInfo.Show();
+            }
+            else if (comboBox1.Text.Equals("Weekly Report"))
+            {
+                Console.WriteLine("Entering third else if :: weekly report");
+
+                itemListTuple<double, String> temp = new SellsInfoPresenter().getWeeklyRecord(dateTimePicker1.Text.ToString());
+                List<Tuple<double, String>> templList = temp.getEntireList();
+
+                chartSalesInfo.Series["Series1"].ChartType = SeriesChartType.Stock;
+
+                int dataIndex = 1;
+
+                foreach (Tuple<double, string> t in templList)
+                {
+                    chartSalesInfo.Series["Series1"].Points.AddXY(dataIndex, t.Item1);
+                    //Console.WriteLine("Final(In SalesInfo)  X : {0}    Y : {1}",t.Item1,dataIndex);
+                    dataIndex++;
+                }
+
+
+                chartSalesInfo.Series["Series1"].ChartArea = "ChartArea1";
+                chartSalesInfo.Show();
+            }
+            else if (comboBox1.Text.Equals("Mothly Report"))
+            {
+                Console.WriteLine("Entering fourth else if :: monthly report");
+
+                itemListTuple<double, String> temp = new SellsInfoPresenter().getMonthlyRecord(dateTimePicker1.Text.ToString());
+                List<Tuple<double, String>> templList = temp.getEntireList();
+
+                chartSalesInfo.Series["Series1"].ChartType = SeriesChartType.Stock;
+
+                int dataIndex = 1;
+
+                foreach (Tuple<double, string> t in templList)
+                {
+                    chartSalesInfo.Series["Series1"].Points.AddXY(dataIndex, t.Item1);
+                    dataIndex++;
+                }
+
+
+                chartSalesInfo.Series["Series1"].ChartArea = "ChartArea1";
+                chartSalesInfo.Show();
+            }
+            else if(comboBox1.Text.Equals("Date Range"))
+            {
+                Console.WriteLine("Entering fifth else if :: time period");
+
+                dateTimePicker2.Show();
+
+                itemListTuple<double, DateTime> temp = new SellsInfoPresenter().getDayRangeRecord(dateTimePicker1.Text.ToString(),
+                    dateTimePicker2.Text.ToString());
+                List<Tuple<double, DateTime>> templList = temp.getEntireList();
+
+                chartSalesInfo.Series["Series1"].ChartType = SeriesChartType.Stock;
+
+                int dataIndex = 1;
+
+                foreach (Tuple<double, DateTime> t in templList)
+                {
+                    chartSalesInfo.Series["Series1"].Points.AddXY(dataIndex, t.Item1);
+                    //Console.WriteLine("Final(In SalesInfo)  X : {0}    Y : {1}",t.Item1,dataIndex);
+                    dataIndex++;
+                }
+
+
+                chartSalesInfo.Series["Series1"].ChartArea = "ChartArea1";
+                chartSalesInfo.Show();
+            }
 
         }
     }

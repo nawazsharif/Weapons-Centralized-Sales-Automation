@@ -22,15 +22,123 @@ namespace WCSA_Factory_Layer
                 if (inv.Date.Equals(day, StringComparison.OrdinalIgnoreCase))
                 {
                     tempTuple.Add(inv.SalesAmount, inv.Admin);
-                } 
+                }
+            }
+            return tempTuple;
+        }
+
+        public itemListTuple<double, string> getWeeklyRecord(string startDay)
+        {
+
+            double[] arr = new double[7];
+            int arrIndex = 0;
+
+            string date = startDay;
+            DateTime datevalue = (Convert.ToDateTime(date.ToString()));
+
+            String dy = datevalue.Day.ToString();
+
+            DateTime dayStart = datevalue;
+            DateTime dayLimit = datevalue.AddDays(7);
+
+            itemListTuple<double, string> tempTuple = new itemListTuple<double, string>();
+
+            List<Invoice> tempInvoiceList = new InvoiceDataSource().returnInvoiceList();
+
+            foreach (Invoice inv in tempInvoiceList)
+            {
+                DateTime cdate = (Convert.ToDateTime(inv.Date.ToString()));
+
+                if (cdate > dayLimit) break;
+                else if ((cdate.Day - dayStart.Day) > arrIndex) arrIndex++;
+                else if ((cdate.Day - dayStart.Day) == arrIndex)
+                {
+                    arr[arrIndex] += inv.SalesAmount;
+                }
+            }
+
+            for(int i=0; i<7; i++)
+            {
+                Console.WriteLine("Adding to tuple : {0} ", arr[i]);
+                tempTuple.Add(arr[i], "Day : " + (i + 1));
+            }
+            return tempTuple;
+        }
+
+        public itemListTuple<double, string> getMonthlyRecord(string startDay)
+        {
+            Console.WriteLine("Date from function parameter  :  {0}", startDay);
+
+            double[] arr = new double[30];
+            int arrIndex = 0;
+
+            string date = startDay;
+            DateTime datevalue = (Convert.ToDateTime(date.ToString()));
+
+            Console.WriteLine("Date from function parameter after conversion to date time  :  {0}", datevalue);
+
+
+            String dy = datevalue.Day.ToString();
+
+            DateTime dayStart = datevalue;
+            DateTime dayLimit = datevalue.AddDays(30);
+            Console.WriteLine("Start day :  {0}", dayStart);
+            Console.WriteLine("End  day :  {0}", dayLimit);
+
+
+            itemListTuple<double, string> tempTuple = new itemListTuple<double, string>();
+
+            List<Invoice> tempInvoiceList = new InvoiceDataSource().returnInvoiceList();
+
+            foreach (Invoice inv in tempInvoiceList)
+            {
+                DateTime cdate = (Convert.ToDateTime(inv.Date.ToString()));
+
+                if (cdate > dayLimit) break;
+                else if ((cdate.Day - dayStart.Day) > arrIndex) arrIndex++;
+                else if ((cdate.Day - dayStart.Day) == arrIndex)
+                {
+                    arr[arrIndex] += inv.SalesAmount;
+                    Console.WriteLine("array element new size : {0}", arr[arrIndex]);
+                }
+            }
+
+            for (int i = 0; i < 30; i++)
+            {
+                tempTuple.Add(arr[i], "Day : " + (i + 1));
+            }
+            return tempTuple;
+        }
+
+        public itemListTuple<double, DateTime> getDayRangeRecord(string startDay, string endDay)
+        {
+            double amt=0;
+
+            DateTime currentDay;
+            DateTime dayStart = (Convert.ToDateTime(startDay.ToString()));
+            DateTime dayLimit = (Convert.ToDateTime(endDay.ToString()));
+
+            itemListTuple<double, DateTime> tempTuple = new itemListTuple<double, DateTime>();
+
+            List<Invoice> tempInvoiceList = new InvoiceDataSource().returnInvoiceList();
+
+            currentDay = dayStart;
+            foreach (Invoice inv in tempInvoiceList)
+            {
+                DateTime invoiceDate = (Convert.ToDateTime(inv.Date));
+                if (invoiceDate > dayLimit) break;
+                else if(invoiceDate == currentDay)
+                {
+                    amt += inv.SalesAmount;
+                }
+                else if(invoiceDate > currentDay)
+                {
+                    tempTuple.Add(amt, currentDay);
+                    currentDay = currentDay.AddDays(1);
+                }
             }
 
             return tempTuple;
         }
-
-
-
-
-
     }
 }
