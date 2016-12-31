@@ -353,12 +353,6 @@ namespace Weapon_shop
                     
                     groupBox2.Hide();
                     dataGridView1.DataSource = null;
-                    //List<WCSA_Entity_Classes.Staff> stflist = new List<WCSA_Entity_Classes.Staff>();
-                    //stflist.Add(new StaffInfoPresenter().checkStaffDetails(textBox_search.Text));
-                    //foreach (WCSA_Entity_Classes.Staff st in stflist)
-                    //{
-                    //    Console.WriteLine("Staff name : " + st.Name);
-                    //}
                     dataGridView1.DataSource = new StaffInfoPresenter().returnMatchingStaffList(textBox_search.Text);
                     dataGridView1.Show();
                 }
@@ -372,15 +366,7 @@ namespace Weapon_shop
                     textBox_search.Hide();
                     
                     groupBox2.Show();
-                    //btnOk.Hide();
-                    //WCSA_Entity_Classes.Staff srcStaf = new StaffInfoPresenter().checkStaffDetails(textBox_search.Text);
-                    //textBoxName.Text = srcStaf.Name;
-                    //textBoxName.Enabled = false;
-                    //textBoxMail.Text = srcStaf.Mail;
-                    //textBoxAddress.Text = srcStaf.Phone;
-                    //textBoxPhone.Text = srcStaf.Address;
-                    //textBoxNickName.Text = srcStaf.NickName;
-                    //textBoxPassword.Text = srcStaf.Password;
+                    
 
                 }
                 else//update button

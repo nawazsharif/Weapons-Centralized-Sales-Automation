@@ -34,8 +34,11 @@ namespace WCSA_Service_Classes
             ProductDataSource pds = new ProductDataSource();
             return pds.ReturnAnItem(code);
         }
-
-
+        public WCSA_Entity_Classes.Product checkDetails(string name)
+        {
+            ProductDataSource pds = new ProductDataSource();
+            return pds.ReturnProductItem(name);
+        }
 
         //This method is for calling from Browse method ???
         public WCSA_Entity_Classes.Product ReturnItemDetail(string code)
@@ -69,30 +72,15 @@ namespace WCSA_Service_Classes
             sds.DeleteFromList(code);
         }
 
-        //public bool generatebarcode (Image image)
-        //{
-        //    Document myDocument = new Document(PageSize.A4.Rotate());
+        public int returnMatching(string code)
+        {
+            return new ProductDataSource().returnMatching(code);
+        }
 
-        //        // step 2:
-        //        // Now create a writer that listens to this doucment and writes the document to desired Stream.
-        //        string documentPath = @"C:\\Users\\ahmed\\Desktop\\PDF\\";
-        //        string filename = "barcode.pdf";
-        //        string documentFullPath = documentPath + filename;
+        public List<WCSA_Entity_Classes.Product> returnMatchingProductList(string name)
+        {
+            return new ProductDataSource().returnMatchingProductList(name);
+        }
 
-        //        PdfWriter.GetInstance(myDocument, new FileStream(documentFullPath, FileMode.Create));
-
-        //        // step 3:  Open the document now using
-        //        myDocument.Open();
-        //    // step 4: Now add some contents to the document
-        //    iTextSharp.text.Image png = iTextSharp.text.Image.GetInstance(image);
-        //    png.ScalePercent(25f);    
-        //    //myDocument.Add(new Paragraph("                           time: "));
-        //        myDocument.Add(png);
-        //    // step 5: Remember to close the documnet
-
-        //    myDocument.Close();
-
-        //    return true;
-        //}
     }
 }

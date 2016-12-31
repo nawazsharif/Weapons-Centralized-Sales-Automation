@@ -58,7 +58,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textSearch = new System.Windows.Forms.TextBox();
-            this.btn_P_Search = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -67,6 +66,7 @@
             this.textBarcode = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Labelchk = new System.Windows.Forms.Label();
             this.grouper1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -219,6 +219,7 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox2.Controls.Add(this.Labelchk);
             this.groupBox2.Controls.Add(this.btnOk);
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.button3);
@@ -235,7 +236,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 207);
+            this.groupBox2.Location = new System.Drawing.Point(12, 209);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(347, 332);
             this.groupBox2.TabIndex = 6;
@@ -256,23 +257,23 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(142, 226);
+            this.textBox5.Location = new System.Drawing.Point(167, 236);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(188, 22);
+            this.textBox5.Size = new System.Drawing.Size(163, 22);
             this.textBox5.TabIndex = 12;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(86, 226);
+            this.button3.Location = new System.Drawing.Point(86, 236);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 23);
+            this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 11;
             this.button3.Text = "Browse";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(86, 140);
+            this.pictureBox2.Location = new System.Drawing.Point(86, 150);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(94, 80);
             this.pictureBox2.TabIndex = 10;
@@ -281,7 +282,7 @@
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(86, 86);
+            this.textBoxPrice.Location = new System.Drawing.Point(86, 96);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(244, 22);
             this.textBoxPrice.TabIndex = 9;
@@ -289,14 +290,14 @@
             // 
             // textBoxQuantity
             // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(86, 114);
+            this.textBoxQuantity.Location = new System.Drawing.Point(86, 124);
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(244, 22);
             this.textBoxQuantity.TabIndex = 9;
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(86, 57);
+            this.textBoxName.Location = new System.Drawing.Point(86, 67);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(244, 22);
             this.textBoxName.TabIndex = 8;
@@ -337,7 +338,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 150);
+            this.label6.Location = new System.Drawing.Point(13, 160);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 18);
             this.label6.TabIndex = 4;
@@ -348,7 +349,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(5, 114);
+            this.label5.Location = new System.Drawing.Point(5, 124);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 18);
             this.label5.TabIndex = 3;
@@ -358,7 +359,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(26, 86);
+            this.label4.Location = new System.Drawing.Point(26, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 18);
             this.label4.TabIndex = 2;
@@ -368,7 +369,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 57);
+            this.label3.Location = new System.Drawing.Point(20, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 18);
             this.label3.TabIndex = 1;
@@ -392,10 +393,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 250);
+            this.dataGridView1.Location = new System.Drawing.Point(58, 250);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(881, 278);
+            this.dataGridView1.Size = new System.Drawing.Size(767, 278);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
@@ -404,22 +405,10 @@
             this.textSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textSearch.Location = new System.Drawing.Point(605, 214);
             this.textSearch.Name = "textSearch";
-            this.textSearch.Size = new System.Drawing.Size(175, 20);
+            this.textSearch.Size = new System.Drawing.Size(272, 20);
             this.textSearch.TabIndex = 13;
             this.textSearch.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
-            // 
-            // btn_P_Search
-            // 
-            this.btn_P_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_P_Search.BackColor = System.Drawing.Color.AliceBlue;
-            this.btn_P_Search.Font = new System.Drawing.Font("Kristen ITC", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_P_Search.Location = new System.Drawing.Point(786, 209);
-            this.btn_P_Search.Name = "btn_P_Search";
-            this.btn_P_Search.Size = new System.Drawing.Size(90, 28);
-            this.btn_P_Search.TabIndex = 4;
-            this.btn_P_Search.Text = "Search";
-            this.btn_P_Search.UseVisualStyleBackColor = false;
-            this.btn_P_Search.Click += new System.EventHandler(this.button4_Click);
+            this.textSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textSearch_KeyDown);
             // 
             // groupBox3
             // 
@@ -431,7 +420,7 @@
             this.groupBox3.Controls.Add(this.pictureBox3);
             this.groupBox3.Controls.Add(this.button6);
             this.groupBox3.Controls.Add(this.textBarcode);
-            this.groupBox3.Location = new System.Drawing.Point(264, 215);
+            this.groupBox3.Location = new System.Drawing.Point(258, 214);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(423, 324);
             this.groupBox3.TabIndex = 14;
@@ -510,6 +499,14 @@
             this.deleteRowToolStripMenuItem.Text = "Delete Row";
             this.deleteRowToolStripMenuItem.Click += new System.EventHandler(this.deleteRowToolStripMenuItem_Click);
             // 
+            // Labelchk
+            // 
+            this.Labelchk.AutoSize = true;
+            this.Labelchk.Location = new System.Drawing.Point(89, 49);
+            this.Labelchk.Name = "Labelchk";
+            this.Labelchk.Size = new System.Drawing.Size(0, 16);
+            this.Labelchk.TabIndex = 14;
+            // 
             // Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,7 +515,6 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.btn_P_Search);
             this.Controls.Add(this.textSearch);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grouper1);
@@ -568,7 +564,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textSearch;
-        private System.Windows.Forms.Button btn_P_Search;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnBack;
@@ -581,5 +576,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem deleteRowToolStripMenuItem;
+        private System.Windows.Forms.Label Labelchk;
     }
 }

@@ -82,13 +82,16 @@ namespace WCSA_Data_Source_Layer
         {
             return list.Find(list => list.ProductCode.Equals(code));
         }
+
+        public WCSA_Entity_Classes.Product ReturnProductItem(string name)
+        {
+            return list.Find(list => list.ProductName.Equals(name));
+        }
         public int returnMatching(string code)
         {
             WCSA_Entity_Classes.Product requiredProduct = list.Find(productList => productList.ProductCode.Equals(code));
             if (requiredProduct != null)
             {
-                
-                new ProductDataAccess().Remove(code);
                 return 1;
             }
             else
@@ -113,6 +116,18 @@ namespace WCSA_Data_Source_Layer
                 }
             }
 
+            return tempList;
+        }
+        public List<WCSA_Entity_Classes.Product> returnMatchingProductList(string nameSubstring)
+        {
+            List<Product> tempList = new List<Product>();
+            foreach (Product st in list)
+            {
+                if (st.ProductName.Contains(nameSubstring))
+                {
+                    tempList.Add(st);
+                }
+            }
             return tempList;
         }
 
