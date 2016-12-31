@@ -34,5 +34,26 @@ namespace WCSA_Service_Classes
             List<Invoice> SortedList = lst.OrderBy(o => o.InvoiceNumber).ToList();
             return SortedList;
         }
+
+
+        public itemListTuple<double, string> getDailyRecord(string day)
+        {
+            return new SellsInfoFactory().getOneDayRecord(day);
+        }
+
+        public itemListTuple<double, string> getWeeklyRecord(string day)
+        {
+            return new SellsInfoFactory().getWeeklyRecord(day);
+        }
+
+        public itemListTuple<double, string> getMonthlyRecord(string day)
+        {
+            return new SellsInfoFactory().getMonthlyRecord(day);
+        }
+
+        public itemListTuple<double, DateTime> getDayRangeRecord(string startDay, string endDay)
+        {
+            return new SellsInfoFactory().getDayRangeRecord(startDay,endDay);
+        }
     }
 }

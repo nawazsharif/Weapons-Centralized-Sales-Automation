@@ -27,6 +27,7 @@ namespace Weapon_shop
         WCSA_Entity_Classes.Product reference;
         MainForm mainFormReference;
 
+
         public POS()
         {
             InitializeComponent();
@@ -34,6 +35,8 @@ namespace Weapon_shop
             timer1.Start();
            
         }
+
+
         public POS(MainForm mf )
         {
             InitializeComponent();
@@ -44,17 +47,21 @@ namespace Weapon_shop
             textinvoiceVAT.Text = VatForm.vat.ToString();
             LabelInvoice.Text = new POSPresenter().getCurrentInvoiceNumber().ToString();
             timer1.Start();
-
+            textBoxInvoiceTotalCost.Enabled = false;
         }
+
+
         private void label4_Click(object sender, EventArgs e)
         {
 
         }
 
+
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
         }
+
 
         private void POS_Load(object sender, EventArgs e)
         {
@@ -65,11 +72,10 @@ namespace Weapon_shop
             labelClock.Text = DateTime.Now.ToLongTimeString();
             time = labelClock.Text;
             date = DateTime.Now.ToShortDateString() ;
-            this.dataGridView1.RowsDefaultCellStyle.BackColor = Color.Bisque;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
+            dataGridView1.RowsDefaultCellStyle.BackColor = Color.Bisque;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
             
         }
-     
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -360,12 +366,15 @@ namespace Weapon_shop
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text != null)
+            String amtString = textBox1.Text.Trim();
+            string amtString2 = textBoxInvoiceTotalCost.Text.Trim();
+            if (amtString != null && amtString2 != null)
             {
-                if(textBox1.Text != "")
+                if(amtString != "" && amtString2 != "")
                 {
-                    double paidAmount = Convert.ToDouble(textBox1.Text);
-                    double totalCost = Convert.ToDouble(textBoxInvoiceTotalCost.Text);
+                    
+                    double paidAmount = Convert.ToDouble(amtString);
+                    double totalCost = Convert.ToDouble(amtString2);
                     double balance = paidAmount - totalCost;
                     textBox2.Text = balance.ToString();
                 }
