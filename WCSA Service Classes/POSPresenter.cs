@@ -100,7 +100,7 @@ namespace WCSA_Service_Classes
         */
         public uint generateInvoice( double vat,double totalprice , string date,string time,string admin,string paid,string moneyreturn)
         {
-            Document myDocument = new Document(PageSize.A4.Rotate());
+            Document myDocument = new Document(PageSize.LETTER,10,10,42,35);
 
             InvoiceFactory ifc = new InvoiceFactory();
             uint invNumber = ifc.makeNewTransactionNumber();
@@ -135,31 +135,63 @@ namespace WCSA_Service_Classes
                 
                 //myDocument.Add(new Paragraph("                           time: "));
                 //myDocument.Add(new Paragraph("                Welcome            "));
-                myDocument.Add(new Paragraph("        Weapon Centralized Sales Automation        "));
-                myDocument.Add(new Paragraph("                    Nikunjo-2                      "));
-                myDocument.Add(new Paragraph("                    Road : 11                      "));
-                myDocument.Add(new Paragraph("                   House : 2A                      "));
-                myDocument.Add(new Paragraph("          Contact Number : "+"012863772"+"         "));
+                myDocument.Add(new Paragraph("                                                         Weapon Centralized Sales Automation                                                      "));
+                myDocument.Add(new Paragraph("                                                                   Nikunjo-2                      "));
+                myDocument.Add(new Paragraph("                                                                   Road : 11                      "));
+                myDocument.Add(new Paragraph("                                                                   House : 2A                      "));
+                myDocument.Add(new Paragraph("                                                        Contact Number : "+"012863772"+"         "));
 
-                myDocument.Add(new Paragraph("Invoice Number = "+ invNumber                    ));
-                myDocument.Add(new Paragraph("                          "+ date + " " + time      ));
-               // myDocument.Add(new Paragraph("                   "));
-                myDocument.Add(new Paragraph("           VAT percentage = " + vat));
-                string str= String.Format("{0,-12}{1,8}{2,12}\n", "Name", "Quantity", "Price");
-                myDocument.Add(new Paragraph(str));
+                myDocument.Add(new Paragraph("Invoice Number = "+ invNumber+"                                                                                             Date :"+date  ));
+                myDocument.Add(new Paragraph("                                                                                                                               Time :"+ time      ));
+               
+                
+                myDocument.Add(new Paragraph("                   "));
+                myDocument.Add(new Paragraph("                   "));
+                myDocument.Add(new Paragraph("                   "));
+
+                PdfPTable table = new PdfPTable(3);
+                table.AddCell("Name");
+                table.AddCell("Quantity");
+                table.AddCell("Total Price");
+                //myDocument.Add(table);
+                PdfPTable table2 = new PdfPTable(3);
                 foreach (Product P in purchaseList)
                 {
-                    string printstr = string.Format("{0,-12}{1,8:NO}{2,12:C}", P.ProductName,P.Quantity,P.Price);
-                    myDocument.Add(new Paragraph(printstr));
+                    table.AddCell(new Phrase(P.ProductName));
+                    table.AddCell(new Phrase(P.Quantity.ToString()));
+                    table.AddCell(new Phrase(P.Price.ToString()));
+
+                    table2 = table;
                 }
-                myDocument.Add(new Paragraph("                          total cost :  "  +totalCost) );
-                myDocument.Add(new Paragraph("                          Cash Paid :"+paid ));
-                myDocument.Add(new Paragraph("                          cash return : "+moneyreturn ));
+                myDocument.Add(table2);
+                //table.AddCell(" ");
+                //table.AddCell(" ");
+                //table.AddCell("Vat :"+vat);
+                //table.AddCell(" ");
+                //table.AddCell(" ");
+                //table.AddCell("Total Cost :" + totalCost);
+                //table.AddCell(" ");
+                //table.AddCell(" ");
+                //table.AddCell("Paid :" + paid);
+                //table.AddCell(" ");
+                //table.AddCell(" ");
+                //table.AddCell("Cash Return :" + moneyreturn);
+                //myDocument.Add(table);
 
+                myDocument.Add(new Paragraph("                                                                                                       VAT :  " + vat+"%"));
+                myDocument.Add(new Paragraph("                                                                                                total cost :  "  +totalCost) );
+                myDocument.Add(new Paragraph("                                                                                                Cash Paid :  "+paid ));
+                myDocument.Add(new Paragraph("                                                                                              cash return :  "+moneyreturn ));
                 myDocument.Add(new Paragraph("Cashair : "+admin+""));
+                myDocument.Add(new Paragraph("                   "));
+                myDocument.Add(new Paragraph("                   "));
+                myDocument.Add(new Paragraph("                   "));
+                myDocument.Add(new Paragraph("                   "));
+                myDocument.Add(new Paragraph("                   "));
+                myDocument.Add(new Paragraph("                   "));
 
-                myDocument.Add(new Paragraph("            Thank you For Your Visit           "));
-                myDocument.Add(new Paragraph("                 Have A Nice Day              "));
+                myDocument.Add(new Paragraph("                                                                      Thank you For Your Visit           "));
+                myDocument.Add(new Paragraph("                                                                            Have A Nice Day              "));
 
 
             }

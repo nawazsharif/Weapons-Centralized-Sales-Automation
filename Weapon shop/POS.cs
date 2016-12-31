@@ -154,16 +154,17 @@ namespace Weapon_shop
         */
         private void textQuantity_TextChanged(object sender, EventArgs e)
         {
-            if (textQuantity.Text == "") {  }
+            string quan = textQuantity.Text.Trim();
+            if (quan == "") {  }
             else {
-                if (textQuantity.Text == null) textQuantity.Text = "0";
+                if (quan == null) quan = "0";
 
 
                 if (reference != null)
                 {
                     Debug.Assert(reference != null);
 
-                    double quantity = Convert.ToDouble(textQuantity.Text);
+                    double quantity = Convert.ToDouble(quan);
                     double unitPrice = Convert.ToDouble(textUnitPrice.Text);
                     double totalPrice = Convert.ToDouble(quantity * unitPrice);
                     textTotalPrice.Text = Convert.ToString(totalPrice);

@@ -68,7 +68,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_search = new System.Windows.Forms.TextBox();
-            this.btnsearch = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grouper1.SuspendLayout();
@@ -197,7 +196,7 @@
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.AliceBlue;
             this.button2.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(824, 26);
+            this.button2.Location = new System.Drawing.Point(823, 42);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 33);
             this.button2.TabIndex = 12;
@@ -223,7 +222,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(4, 236);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(904, 284);
+            this.dataGridView1.Size = new System.Drawing.Size(904, 293);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseUp_1);
             // 
@@ -297,7 +296,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(11, 209);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(402, 313);
+            this.groupBox2.Size = new System.Drawing.Size(402, 326);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add New Staff";
@@ -307,24 +306,26 @@
             // 
             this.labelchk.AutoSize = true;
             this.labelchk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelchk.Location = new System.Drawing.Point(141, 34);
+            this.labelchk.Location = new System.Drawing.Point(144, 38);
             this.labelchk.Name = "labelchk";
-            this.labelchk.Size = new System.Drawing.Size(0, 15);
+            this.labelchk.Size = new System.Drawing.Size(25, 15);
             this.labelchk.TabIndex = 23;
+            this.labelchk.Text = "Bal";
             // 
             // labelComent
             // 
             this.labelComent.AutoSize = true;
             this.labelComent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelComent.Location = new System.Drawing.Point(135, 227);
+            this.labelComent.Location = new System.Drawing.Point(135, 228);
             this.labelComent.Name = "labelComent";
             this.labelComent.Size = new System.Drawing.Size(0, 15);
             this.labelComent.TabIndex = 22;
             // 
             // textBoxConfirmPassword
             // 
-            this.textBoxConfirmPassword.Location = new System.Drawing.Point(138, 206);
+            this.textBoxConfirmPassword.Location = new System.Drawing.Point(138, 217);
             this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
+            this.textBoxConfirmPassword.PasswordChar = '*';
             this.textBoxConfirmPassword.Size = new System.Drawing.Size(171, 22);
             this.textBoxConfirmPassword.TabIndex = 21;
             this.textBoxConfirmPassword.TextChanged += new System.EventHandler(this.textBoxConfirmPassword_TextChanged);
@@ -333,7 +334,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(7, 211);
+            this.label9.Location = new System.Drawing.Point(7, 222);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(113, 15);
             this.label9.TabIndex = 20;
@@ -341,9 +342,10 @@
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(138, 184);
+            this.textBoxPassword.Location = new System.Drawing.Point(138, 191);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(139, 22);
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(171, 22);
             this.textBoxPassword.TabIndex = 19;
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             // 
@@ -351,7 +353,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(51, 185);
+            this.label7.Location = new System.Drawing.Point(51, 192);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 15);
             this.label7.TabIndex = 18;
@@ -361,41 +363,41 @@
             // 
             this.btnOk.BackColor = System.Drawing.Color.AliceBlue;
             this.btnOk.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.Location = new System.Drawing.Point(145, 245);
+            this.btnOk.Location = new System.Drawing.Point(144, 257);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(115, 57);
             this.btnOk.TabIndex = 17;
-            this.btnOk.Text = "Ok";
+            this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(83, 216);
+            this.label8.Location = new System.Drawing.Point(83, 223);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 16);
             this.label8.TabIndex = 16;
             // 
             // textBoxNickName
             // 
-            this.textBoxNickName.Location = new System.Drawing.Point(138, 156);
+            this.textBoxNickName.Location = new System.Drawing.Point(138, 163);
             this.textBoxNickName.Name = "textBoxNickName";
-            this.textBoxNickName.Size = new System.Drawing.Size(139, 22);
+            this.textBoxNickName.Size = new System.Drawing.Size(171, 22);
             this.textBoxNickName.TabIndex = 10;
             this.textBoxNickName.TextChanged += new System.EventHandler(this.textBoxNickName_TextChanged);
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(138, 77);
+            this.textBoxPhone.Location = new System.Drawing.Point(138, 84);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(139, 22);
+            this.textBoxPhone.Size = new System.Drawing.Size(246, 22);
             this.textBoxPhone.TabIndex = 9;
             this.textBoxPhone.TextChanged += new System.EventHandler(this.textBoxPhone_TextChanged);
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(138, 102);
+            this.textBoxAddress.Location = new System.Drawing.Point(138, 109);
             this.textBoxAddress.Multiline = true;
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(246, 51);
@@ -404,7 +406,7 @@
             // 
             // textBoxMail
             // 
-            this.textBoxMail.Location = new System.Drawing.Point(138, 52);
+            this.textBoxMail.Location = new System.Drawing.Point(138, 57);
             this.textBoxMail.Name = "textBoxMail";
             this.textBoxMail.Size = new System.Drawing.Size(246, 22);
             this.textBoxMail.TabIndex = 8;
@@ -422,7 +424,7 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.AliceBlue;
             this.btnCancel.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(275, 246);
+            this.btnCancel.Location = new System.Drawing.Point(275, 257);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 57);
             this.btnCancel.TabIndex = 6;
@@ -434,7 +436,7 @@
             // 
             this.btn_staff_add.BackColor = System.Drawing.Color.AliceBlue;
             this.btn_staff_add.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_staff_add.Location = new System.Drawing.Point(133, 245);
+            this.btn_staff_add.Location = new System.Drawing.Point(144, 256);
             this.btn_staff_add.Name = "btn_staff_add";
             this.btn_staff_add.Size = new System.Drawing.Size(115, 57);
             this.btn_staff_add.TabIndex = 5;
@@ -446,7 +448,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(44, 157);
+            this.label6.Location = new System.Drawing.Point(44, 164);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 15);
             this.label6.TabIndex = 4;
@@ -456,7 +458,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(61, 103);
+            this.label5.Location = new System.Drawing.Point(61, 110);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 15);
             this.label5.TabIndex = 3;
@@ -466,7 +468,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(69, 77);
+            this.label4.Location = new System.Drawing.Point(69, 84);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 15);
             this.label4.TabIndex = 2;
@@ -476,7 +478,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(81, 53);
+            this.label3.Location = new System.Drawing.Point(81, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 1;
@@ -495,24 +497,13 @@
             // textBox_search
             // 
             this.textBox_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_search.Location = new System.Drawing.Point(652, 207);
+            this.textBox_search.Location = new System.Drawing.Point(621, 209);
             this.textBox_search.Name = "textBox_search";
-            this.textBox_search.Size = new System.Drawing.Size(175, 20);
+            this.textBox_search.Size = new System.Drawing.Size(282, 20);
             this.textBox_search.TabIndex = 11;
             this.textBox_search.TextChanged += new System.EventHandler(this.textBox_search_TextChanged);
-            // 
-            // btnsearch
-            // 
-            this.btnsearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnsearch.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnsearch.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsearch.Location = new System.Drawing.Point(833, 200);
-            this.btnsearch.Name = "btnsearch";
-            this.btnsearch.Size = new System.Drawing.Size(75, 33);
-            this.btnsearch.TabIndex = 11;
-            this.btnsearch.Text = "Search";
-            this.btnsearch.UseVisualStyleBackColor = false;
-            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
+            this.textBox_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_search_KeyDown);
+            this.textBox_search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_search_KeyPress);
             // 
             // contextMenuStrip1
             // 
@@ -533,12 +524,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 547);
-            this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.textBox_search);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.grouper1);
             this.Controls.Add(this.groupBox1);
+           
             this.Load += new System.EventHandler(this.Staff_Load);
             this.grouper1.ResumeLayout(false);
             this.grouper1.PerformLayout();
@@ -576,7 +567,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_search;
-        private System.Windows.Forms.Button btnsearch;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
