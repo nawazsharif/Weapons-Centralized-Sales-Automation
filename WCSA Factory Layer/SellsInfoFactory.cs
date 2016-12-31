@@ -22,7 +22,7 @@ namespace WCSA_Factory_Layer
                 if (inv.Date.Equals(day, StringComparison.OrdinalIgnoreCase))
                 {
                     tempTuple.Add(inv.SalesAmount, inv.Admin);
-                } 
+                }
             }
             return tempTuple;
         }
@@ -59,6 +59,7 @@ namespace WCSA_Factory_Layer
 
             for(int i=0; i<7; i++)
             {
+                Console.WriteLine("Adding to tuple : {0} ", arr[i]);
                 tempTuple.Add(arr[i], "Day : " + (i + 1));
             }
             return tempTuple;
@@ -66,6 +67,7 @@ namespace WCSA_Factory_Layer
 
         public itemListTuple<double, string> getMonthlyRecord(string startDay)
         {
+            Console.WriteLine("Date from function parameter  :  {0}", startDay);
 
             double[] arr = new double[30];
             int arrIndex = 0;
@@ -73,10 +75,16 @@ namespace WCSA_Factory_Layer
             string date = startDay;
             DateTime datevalue = (Convert.ToDateTime(date.ToString()));
 
+            Console.WriteLine("Date from function parameter after conversion to date time  :  {0}", datevalue);
+
+
             String dy = datevalue.Day.ToString();
 
             DateTime dayStart = datevalue;
             DateTime dayLimit = datevalue.AddDays(30);
+            Console.WriteLine("Start day :  {0}", dayStart);
+            Console.WriteLine("End  day :  {0}", dayLimit);
+
 
             itemListTuple<double, string> tempTuple = new itemListTuple<double, string>();
 
@@ -91,6 +99,7 @@ namespace WCSA_Factory_Layer
                 else if ((cdate.Day - dayStart.Day) == arrIndex)
                 {
                     arr[arrIndex] += inv.SalesAmount;
+                    Console.WriteLine("array element new size : {0}", arr[arrIndex]);
                 }
             }
 

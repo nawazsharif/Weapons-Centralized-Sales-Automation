@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellsInfo));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.grouper1 = new CodeVendor.Controls.Grouper();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -143,6 +143,8 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "mm/dd/yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(87, 16);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
@@ -151,16 +153,16 @@
             // 
             // chartSalesInfo
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chartSalesInfo.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartSalesInfo.Legends.Add(legend6);
+            chartArea9.Name = "ChartArea1";
+            this.chartSalesInfo.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.chartSalesInfo.Legends.Add(legend9);
             this.chartSalesInfo.Location = new System.Drawing.Point(466, 96);
             this.chartSalesInfo.Name = "chartSalesInfo";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chartSalesInfo.Series.Add(series6);
+            series9.ChartArea = "ChartArea1";
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            this.chartSalesInfo.Series.Add(series9);
             this.chartSalesInfo.Size = new System.Drawing.Size(459, 260);
             this.chartSalesInfo.TabIndex = 5;
             this.chartSalesInfo.Text = "chart1";
@@ -174,7 +176,8 @@
             "Weekly Report",
             "Mothly Report",
             "All-Sorted- Sales Person",
-            "All-Sorted-Invoice Number"});
+            "All-Sorted-Invoice Number",
+            "Date Range"});
             this.comboBox1.Location = new System.Drawing.Point(293, 16);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(158, 21);
@@ -183,6 +186,7 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(87, 42);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
