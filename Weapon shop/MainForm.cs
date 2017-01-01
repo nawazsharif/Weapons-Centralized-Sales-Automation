@@ -79,7 +79,8 @@ namespace Weapon_shop
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            StockInfoForm sf = new StockInfoForm();
+            sf.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)

@@ -116,3 +116,4 @@ C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\PagedList.dll
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\bin\Debug\PagedList.xml
 C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.FakeChartForm1.resources
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\Weapon shop\obj\Debug\Weapon_shop.StockInfoForm.resources

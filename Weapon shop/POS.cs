@@ -33,6 +33,9 @@ namespace Weapon_shop
             InitializeComponent();
             //this.ControlBox = false;
             timer1.Start();
+            textBox2.Enabled = false;
+            textinvoiceVAT.Enabled = false;
+            textBoxInvoiceTotalItems.Enabled = false;
            
         }
 
@@ -48,6 +51,9 @@ namespace Weapon_shop
             LabelInvoice.Text = new POSPresenter().getCurrentInvoiceNumber().ToString();
             timer1.Start();
             textBoxInvoiceTotalCost.Enabled = false;
+            textBox2.Enabled = false;
+            textinvoiceVAT.Enabled = false;
+            textBoxInvoiceTotalItems.Enabled = false;
         }
 
 
@@ -249,6 +255,8 @@ namespace Weapon_shop
 
                     customernid = null;
                     MessageBox.Show("Successfull");
+                    textBox1.Text = "";
+                    textBox2.Text = "";
                 }
             }
         }
