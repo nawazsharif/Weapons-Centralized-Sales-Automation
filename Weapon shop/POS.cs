@@ -418,6 +418,10 @@ namespace Weapon_shop
         {
             if (!this.dataGridView1.Rows[this.rowIndex].IsNewRow)
             {
+                double currentTotalCost = Convert.ToDouble(textBoxInvoiceTotalCost.Text.ToString().Trim());
+                double itemCost =(double)dataGridView1.Rows[this.rowIndex].Cells[2].Value;
+                textBoxInvoiceTotalItems.Text = (Convert.ToDouble(textBoxInvoiceTotalItems.Text.ToString().Trim()) - 1).ToString();
+                textBoxInvoiceTotalCost.Text = (currentTotalCost - itemCost).ToString();
                 this.dataGridView1.Rows.RemoveAt(this.rowIndex);
             }
         }

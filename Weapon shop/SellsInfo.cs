@@ -25,18 +25,13 @@ namespace Weapon_shop
             dataGridView1.DataSource = tempList;
             dataGridView1.Show();
 
-            //dateTimePicker2.Hide();
+            dateTimePicker1.Text = DateTime.Today.ToString();
+            dateTimePicker2.Text = DateTime.Today.ToString();
 
             chartSalesInfo.Hide();
 
-            /*
-            chartSalesInfo.Series.Add("Series2");
-            chartSalesInfo.Series["Series2"].ChartType = SeriesChartType.Column;
-            chartSalesInfo.Series["Series2"].Points.AddY(20);
-            chartSalesInfo.Series["Series2"].ChartArea = "ChartArea1";
-            */
 
-            //this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void SellsInfo_Load(object sender, EventArgs e)
@@ -175,6 +170,11 @@ namespace Weapon_shop
                 chartSalesInfo.Series["Series1"].ChartArea = "ChartArea1";
                 chartSalesInfo.Show();
             }
+
+        }
+
+        private void grouper1_Load(object sender, EventArgs e)
+        {
 
         }
     }

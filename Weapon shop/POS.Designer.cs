@@ -132,9 +132,9 @@
             this.label2.Font = new System.Drawing.Font("Kristen ITC", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(130, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(551, 40);
+            this.label2.Size = new System.Drawing.Size(567, 40);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Weapon Centralized Sels Automation";
+            this.label2.Text = "Weapon Centralized Sales Automation";
             // 
             // groupBox1
             // 
@@ -612,7 +612,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 67);
             this.button2.TabIndex = 0;
-            this.button2.Text = "New Tranjection";
+            this.button2.Text = "New Transaction";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

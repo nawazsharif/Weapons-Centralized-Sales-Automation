@@ -75,6 +75,7 @@
             this.grouper1.ShadowThickness = 3;
             this.grouper1.Size = new System.Drawing.Size(931, 77);
             this.grouper1.TabIndex = 3;
+            this.grouper1.Load += new System.EventHandler(this.grouper1_Load);
             // 
             // button4
             // 
@@ -94,9 +95,9 @@
             this.label1.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(62, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 27);
+            this.label1.Size = new System.Drawing.Size(115, 27);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Sells Info";
+            this.label1.Text = "Sales Info";
             // 
             // pictureBox1
             // 
@@ -178,7 +179,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "mm/dd/yyyy";
+            this.dateTimePicker1.CustomFormat = "";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(87, 16);
             this.dateTimePicker1.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
