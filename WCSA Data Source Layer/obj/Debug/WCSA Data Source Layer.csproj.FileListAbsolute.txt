@@ -1,0 +1,9 @@
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Data Source Layer\bin\Debug\WCSA Data Source Layer.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Data Source Layer\bin\Debug\WCSA Data Source Layer.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Data Source Layer\bin\Debug\DataConnection.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Data Source Layer\bin\Debug\WCSA Entity Classes.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Data Source Layer\bin\Debug\DataConnection.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Data Source Layer\bin\Debug\WCSA Entity Classes.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Data Source Layer\obj\Debug\WCSA Data Source Layer.csprojResolveAssemblyReference.cache
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Data Source Layer\obj\Debug\WCSA Data Source Layer.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Data Source Layer\obj\Debug\WCSA Data Source Layer.pdb

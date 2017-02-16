@@ -51,7 +51,8 @@ namespace Weapon_shop
         private void MainForm_Load(object sender, EventArgs e)
         {
             labelClock.Text = DateTime.Now.ToLongTimeString();
-            
+            string time = labelClock.Text;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -163,6 +164,12 @@ namespace Weapon_shop
         private void grouper2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime datetime = DateTime.Now;
+            this.labelClock.Text = datetime.ToString();
         }
     }
 }

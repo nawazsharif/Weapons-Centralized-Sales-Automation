@@ -149,7 +149,7 @@ namespace Weapon_shop
             {
                 Console.WriteLine("Entering fifth else if :: time period");
 
-                dateTimePicker2.Show();
+                //dateTimePicker2.Show();
 
                 itemListTuple<double, DateTime> temp = new SellsInfoPresenter().getDayRangeRecord(dateTimePicker1.Text.ToString(),
                     dateTimePicker2.Text.ToString());

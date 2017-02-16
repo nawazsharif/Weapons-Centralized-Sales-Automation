@@ -1,0 +1,5 @@
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Entity Classes\bin\Debug\WCSA Entity Classes.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Entity Classes\bin\Debug\WCSA Entity Classes.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Entity Classes\obj\Debug\WCSA Entity Layer.csprojResolveAssemblyReference.cache
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Entity Classes\obj\Debug\WCSA Entity Classes.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Entity Classes\obj\Debug\WCSA Entity Classes.pdb

@@ -44,7 +44,7 @@ namespace Weapon_shop
             textBoxPrice.Text = "";
             textBoxQuantity.Text = "";
             textBoxCode.Text = "";
-            pictureBox2.Image = null;
+            //pictureBox2.Image = null;
         }
         public Product()
         {

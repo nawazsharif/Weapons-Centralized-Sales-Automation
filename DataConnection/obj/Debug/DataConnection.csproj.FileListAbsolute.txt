@@ -1,0 +1,7 @@
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\DataConnection\bin\Debug\DataConnection.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\DataConnection\bin\Debug\DataConnection.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\DataConnection\bin\Debug\WCSA Entity Classes.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\DataConnection\bin\Debug\WCSA Entity Classes.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\DataConnection\obj\Debug\DataConnection.csprojResolveAssemblyReference.cache
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\DataConnection\obj\Debug\DataConnection.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\DataConnection\obj\Debug\DataConnection.pdb

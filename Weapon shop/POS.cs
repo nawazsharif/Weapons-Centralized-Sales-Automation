@@ -437,6 +437,11 @@ namespace Weapon_shop
             this.labelClock.Text = datetime.ToString();
         }
 
+        private void labelClock_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //void dataGridView1_MouseClick(object sender, MouseEventArgs e)
         //{
         //    if (e.Button == MouseButtons.Left)

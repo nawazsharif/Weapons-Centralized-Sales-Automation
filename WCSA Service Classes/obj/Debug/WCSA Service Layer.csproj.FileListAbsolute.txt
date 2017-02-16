@@ -1,0 +1,14 @@
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Service Classes\bin\Debug\WCSA Service Classes.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Service Classes\bin\Debug\WCSA Service Classes.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Service Classes\bin\Debug\itextsharp.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Service Classes\bin\Debug\WCSA Data Source Layer.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Service Classes\bin\Debug\WCSA Entity Classes.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Service Classes\bin\Debug\WCSA Factory Layer.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Service Classes\bin\Debug\DataConnection.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Service Classes\bin\Debug\WCSA Data Source Layer.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Service Classes\bin\Debug\WCSA Entity Classes.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Service Classes\bin\Debug\WCSA Factory Layer.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Service Classes\bin\Debug\DataConnection.pdb
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Service Classes\obj\Debug\WCSA Service Layer.csprojResolveAssemblyReference.cache
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Service Classes\obj\Debug\WCSA Service Classes.dll
+C:\Users\ahmed\Source\Repos\Weapon Centralized Sales Automation\WCSA Service Classes\obj\Debug\WCSA Service Classes.pdb
